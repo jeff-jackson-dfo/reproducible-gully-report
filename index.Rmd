@@ -1,29 +1,32 @@
 ---
-title: "Title Here (*Latin Species Name*)"
-year: 20XX
+title: "Oceanographic monitoring of the Gully MPA – A synopsis of data collected by the Atlantic Zone Monitoring Program"
+year: 2021
 report_number: nnn
 author: |
-  First. M. Last^1^ and
-  Alex B. Smith^2^
-author_list: "Last, F.M. and Smith, A.B."
-region: Pacific Region
+  Jeffrey W. Jackson^1^,
+  Erica J. H. Head^1^,
+  Lindsay I. Beazley^1^, and
+  Andrew T. Cogswell^1^
+author_list: "Jackson, J.W., Head, E.J.H., Beazley, L.I. and Cogswell, A.T."
+region: Maritimes Region
 isbn: ""
 address: |
-  ^1^Pacific Biological Station\
-     Fisheries and Oceans Canada, 3190 Hammond Bay Road\
-     Nanaimo, British Columbia, V9T 6N7, Canada\
-  ^2^Far, far away\
-     Another Galaxy
-phone: "(555) 555-5555"
-author_footnote: "Email: First.Author@dfo-mpo.gc.ca | telephone: (250) 756-5555"
+  ^1^Ocean and Ecosystem Sciences Division\
+     Fisheries and Oceans Canada\
+     Bedford Institute of Oceanography\
+     P.O. Box 1006\
+     Dartmouth, Nova Scotia\
+     Canada, B2Y 4A2
+phone: "(902) 426-2373"
+author_footnote: "Email: Jeffrey.Jackson@dfo-mpo.gc.ca | telephone: (902) 426-9670"
 abstract: |
-  Here is the abstract text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Brief summary of the report goes here.
 abstract_other: |
-  Voici le résumé. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Voici le résumé.
 output:
  csasdown::techreport_pdf:
    french: false
-   copy_sty: true
+   copy_sty: false
    line_nums: true
    line_nums_mod: 1
 type:
