@@ -1,0 +1,247 @@
+# TABLES {#sec:tables}
+
+```{r table-setup, include=FALSE, echo=FALSE}
+options(tinytex.verbose = TRUE)
+
+library(oce)
+library(stringr)
+library(kableExtra)
+library(dplyr)
+library(tibble)
+
+```
+
+(ref:ctd-metadata) Summary of CTD casts at monitoring stations.
+
+```{r ctd-metadata, results="asis", include=TRUE, echo=FALSE}
+
+# Load the CTD data acquired at the four monitoring stations.
+load("data/monitoringSitesAllCtd.RData")
+load("data/monitoringSitesAllCtdPrograms.RData")
+
+# Load the CTD data acquired at the four monitoring stations (only used to 
+# produce the CTD table to identify casts for analysis.
+# load("data/monitoringSitesCtdForAnalysis.RData")
+# load("data/monitoringSitesCtdForAnalysisPrograms.RData")
+
+# Data sets.
+dsets <- c("guld03_ctd", "guld04_ctd", "sg23_ctd", "sg28_ctd")
+
+# Modify the station name metadata attribute to be the appropriate Gully
+# monitoring station name in each ctd object of each data set.
+for (j in 1:4) {
+  ds <- dsets[j]
+  dset <- eval(parse(text=paste0(ds)))
+  nctds <- length(dset)
+  bits <- unlist(str_split(ds, "_"))
+  sName <- bits[1]
+  # Note that underscore characters in latex output must be escaped.
+  if (sName == "guld03") stn <- "GULD\\_03"
+  else if (sName == "guld04") stn <- "GULD\\_04"
+  else if (sName == "sg23") stn <- "SG\\_23"
+  else if (sName == "sg28") stn <- "SG\\_28"
+  for (z in 1:nctds) {
+    dset[[z]]@metadata$stationName <- stn
+  }
+  eval(parse(text=paste0(ds, " <- dset")))
+}
+
+# Combine the four lists of ctd objects into a new list so that the table that
+# will to be produced will have all of the data listed by cruise in
+# chronological order.
+gullyCTD <- c(guld03_ctd, guld04_ctd, sg23_ctd, sg28_ctd)
+gullyCTDprograms <- c(guld03_programs, guld04_programs, sg23_programs, sg28_programs)
+
+# Get all of the start times for all Gully CTD objects.
+startTime <- as.character(as.POSIXct(unlist(lapply(gullyCTD, function(k) k[['startTime']])),
+                                     origin = '1970-01-01',
+                                     tz = 'UTC'))
+
+# Get the sorted indices of the list so that the list can be sorted in
+# chronological order.
+ix <- order(startTime)
+
+# Put the CTD objects into chronological order.
+gullyCTD <- gullyCTD[ix]
+gullyCTDprograms <- gullyCTDprograms[ix]
+
+# Get the metadata required to build the table for the report.
+cruiseNumber <- unlist(lapply(gullyCTD, function(k) k@metadata$cruiseNumber))
+eventNumber <- unlist(lapply(gullyCTD, function(k) k@metadata$eventNumber))
+origStationName <- unlist(lapply(gullyCTD, function(k) k@metadata$originalStation))
+stationName <- unlist(lapply(gullyCTD, function(k) k@metadata$stationName))
+program <- unlist(lapply(gullyCTDprograms, function(k) k))
+longitude <- unlist(lapply(gullyCTD, function(k) k[['longitude']][1]))
+latitude <- unlist(lapply(gullyCTD, function(k) k[['latitude']][1]))
+sounding <- unlist(lapply(gullyCTD, function(k) k[['sounding']]))
+maxDepth <- unlist(lapply(gullyCTD, function(k) k[['depthMax']]))
+startTime <- startTime[ix]
+ucn <- unique(cruiseNumber)
+lucn <- unlist(lapply(ucn, function(k) length(which(cruiseNumber == k))))
+
+# Fix the station strings by replacing the "\\" with an empty string "". Since
+# backslash is the escape sequence character you have to escape each backslash
+# in the replace call.
+stationName <- str_replace(stationName, "\\\\", "")
+
+#for ordering by year and cruise number
+# note that this might not be the best if multiple charters for once year
+# e.g. could have been an issue if both the COR and EN had event num 001
+# but they're different so I got lucky.
+cruise <- str_extract(string = cruiseNumber, pattern = '[0-9]{7}')
+cruiseYear <- substr(x = cruise, start = 1, stop = 4)
+cruiseNum <- substr(x = cruise, start = 5, stop = 7)
+
+header <- c('Cruise Name', 'Event Number', 'Original Station Name', 
+            'Station Name', 'Program', 'Longitude (decimal degrees)', 
+            'Latitude (decimal degrees)', 'Sounding (m)', 'Maximum Depth (m)', 
+            'Start time (UTC)')
+
+ctable <- tibble(cruiseNumber, eventNumber, origStationName, stationName, program, 
+                 format(longitude, digits = 6), format(latitude, digits = 6), 
+                 sounding, maxDepth, startTime, row.names = NULL)
+
+kbl(ctable,
+    format = 'latex',
+    align = 'cccccccccc',
+    caption = '(ref:ctd-metadata)',
+    longtable = TRUE,
+    col.names = header
+    ) %>%
+kable_styling(full_width = FALSE,
+              font_size = 9,
+              bootstrap_options = c("bordered"),
+              latex_options = c("repeat_header"),
+              repeat_header_method = "replace") %>%
+row_spec(row = 0, bold = TRUE) %>%
+column_spec(1, width = "7em", border_left = TRUE) %>%
+column_spec(2, width = "4em") %>%
+column_spec(3, width = "6em") %>%
+column_spec(4, width = "6em") %>%
+column_spec(5, width = "6em") %>%
+column_spec(6, width = "6em") %>%
+column_spec(7, width = "6em") %>%
+column_spec(8, width = "6em") %>%
+column_spec(9, width = "6em") %>%
+column_spec(10, width = "11em", border_right = TRUE) %>%
+landscape()
+
+```
+
+\clearpage
+
+(ref:bio-table1) Zooplankton sampling stations occupied in spring and fall between 1999 and 2018.  The numbers are the months when samples were collected: April-June in spring and September-December in fall.
+
+```{r bio-table1, results = "asis", include=TRUE, echo=FALSE}
+
+year <- c(1999:2018)
+hl6s <- c("4,6","6","5","6","4","4,5","4","5","4","","4","4","4","","4","4,5","4","4","4","4,5")
+sg28s <- c("","","","","","","","","","","4","","","","4","","4","","4","4")
+guld4s <- c("","","","","","","","","4","","4","","","","4","","4","","4","4")
+sg23s <- c("","","","","","","","","","","4","","","","","","4","","4","4")
+guld3s <- c("","","","","","","","","4","","4","","","","","","4","4","4","4")
+ll7s <- c("4","4","5","","4","4","4","4","4","4","4","4","4","","4","4","4","","4","4")
+spring_tbl <- tibble(year,hl6s,sg28s,guld4s,sg23s,guld3s,ll7s, row.names = NULL)
+
+hl6f <- c("11","10","10","10","10","10","10","10","10","10","10","11","9","9","9","9","10","9","11","9")
+sg28f <- c("","","","","","","","","","10","","","","","9","9","","9","","9")
+guld4f <- c("","","","","","","","","","","","","","","9","","9","","12","9")
+sg23f <- c("","","","","","","","","","","","","","","9","9","9","9","12","9")
+guld3f <- c("","","","","","","10","","10","10","","","","","9","9","9","9","12","9")
+ll7f <- c("10","10","11","10","10","10","10","10","10","10","10","","10","","9","10","9","","12","9")
+fall_tbl <- tibble(year,hl6f,sg28f,guld4f,sg23f,guld3f,ll7f, row.names = NULL)
+
+full_tbl <- full_join(spring_tbl,fall_tbl)
+
+header <- c("Year", "HL_06", "SG_28", "GULD04", "SG_23", "GULD_03", "LL_07", "HL_06", "SG_28", "GULD04", "SG_23", "GULD_03", "LL_07")
+
+kbl(full_tbl, 
+    format = 'latex',
+    align = 'ccccccccccc',
+    caption = '(ref:bio-table1)',
+    col.names = header) %>%
+kable_styling(bootstrap_options = c("bordered"), font_size = 10) %>%
+add_header_above(c(" " = 1, " " = 1, "Gully Mouth" = 3, " " = 2, " " = 1, "Gully Mouth" = 3, " " = 2)) %>%
+add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6)) %>%
+landscape()
+
+```
+
+\clearpage
+
+```{r bio-table2-parts, results = "asis", include=TRUE, echo=FALSE}
+
+col1a <- c("Year","Clausocalanus","Pleuromamma","Pseudocalanus")
+col2a <- c("","0.34 *","0.50 **","")
+col3a <- c("","0.48 **","0.69 ***","-0.34*")
+col4a <- c("","","","")
+HL06_spring_tbl <- tibble(col1a,col2a,col3a,col4a)
+
+header2a <- c("HL_06/April", "5 m T", "0-200 m T", "Year")
+
+col1b <- c("Year","C. finmarchicus","M. clausi","M. lucens","O. atlantica","O. similis","Paracalanus","Pleuromamma")
+col2b <- c("","-0.21 *","","","","","","")
+col3b <- c("","","","-0.34 **","-0.27 *","-0.47 **","-0.30 *","0.21 *")
+col4b <- c("","","-0.25 *","","","","","")
+HL06_fall_tbl <- tibble(col1b,col2b,col3b,col4b)
+
+header2b <- c("HL_06/Fall", "5 m T", "0-200 m T", "Year")
+
+# # Display the two tables for HL_06 side by side.
+# knitr::kables(
+# 
+#   list(
+# 
+#     # Spring table
+#     knitr::kable(HL06_spring_tbl, align = 'cccc', col.names = header2a, valign = 't'),
+# 
+#     # Fall table
+#     knitr::kable(HL06_fall_tbl, align = 'cccc', col.names = header2b, valign = 't')
+# 
+#   ),
+#   caption = '(ref:bio-table2a)'
+# )  %>%
+# kable_styling(bootstrap_options = c("bordered"), font_size = 9)
+
+# Spring table
+t1 <- knitr::kable(HL06_spring_tbl, format = "latex", align = 'cccc', col.names = header2a, valign = 't')
+
+# Fall table
+t2 <- knitr::kable(HL06_fall_tbl, format = "latex", align = 'cccc', col.names = header2b, valign = 't')
+
+```
+
+```{r bio-table2-revised}
+
+# t1 <- gsub("\\", "\\\\", t1, fixed = TRUE)
+ 
+# t2 <- gsub("\\", "\\\\", t2, fixed = TRUE)
+
+```
+
+(ref:bio-table2) Correlations between zooplankton abundances and near surface temperatures and trends in both over time at HL_06 in spring (April) and fall (Sept-Dec) between 1999 and 2018. Numbers are r2 values and negative relationships are denoted by minus signs.  Levels of significance are * P <0.05, ** P <0.01 and *** P <0.001.
+
+```{r bio-table2, include=TRUE, echo=FALSE}
+
+table2_raw_latex <- paste0("
+\\begin{table}[H]
+\\captionsetup{skip=0.333\\baselineskip}
+\\centering
+\\begin{subtable}{0.45\\linewidth}
+\\centering",
+t1,
+"\\label{tab:bio-table2a}
+\\end{subtable}%
+\\hspace*{3em}
+\\begin{subtable}{0.45\\linewidth}
+\\centering",
+t2,
+"\\label{tab:bio-table2b}
+\\end{subtable}
+\\label{tab:bio-table2}
+\\end{table}"
+)
+
+knitr::raw_latex(table2_raw_latex)
+
+```
