@@ -5,8 +5,8 @@ rmd_files: [
             "02_data.Rmd",
             "03_results.Rmd",
             "04_discussion.Rmd",
-            # "05_summary.Rmd",
-            # "06_acknowledgements.Rmd",
+            "05_summary.Rmd",
+            "06_acknowledgements.Rmd",
             "07_bibliography.Rmd"
             # "08_tables.Rmd",
             # "09_figures.Rmd"
