@@ -7,8 +7,8 @@ rmd_files: [
             "04_discussion.Rmd",
             "05_summary.Rmd",
             "06_acknowledgements.Rmd",
-            "07_bibliography.Rmd"
-            # "08_tables.Rmd",
+            "07_bibliography.Rmd",
+            "08_tables.Rmd"
             # "09_figures.Rmd"
             ]
 delete_merged_file: false
