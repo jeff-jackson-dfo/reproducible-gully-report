@@ -108,7 +108,6 @@ colnames(ctable) <- header
 csasdown::csas_table(ctable,
                      format = "latex",
                      font_size = 10,
-                     escape = FALSE,
                      align = rep("c", 9),
                      repeat_header = TRUE,
                      caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report."
@@ -116,32 +115,4 @@ csasdown::csas_table(ctable,
 ```
 \end{landscapepage}
 
-
 \clearpage
-
-
-<!-- ```{r table2, results="asis", include=TRUE, echo=FALSE}  -->
-
-<!-- seasons <- c("Spring", "Fall") -->
-<!-- stations <- list(c("GULD_03", "GULD_04", "SG_23", "SG_28"), c("GULD_03", "GULD_04", "SG_23", "SG_28")) -->
-<!-- nprof <- list(c(12, 10, 7, 8), c(15,11,9,10)) -->
-<!-- years <- list(list(c(2000,2018), c(2000,2018), c(2008,2017), c(2008,2018)), list(c(2000,2018), c(2000,2018), c(2007,2018), c(2007,2018))) -->
-
-<!-- header <- c("Season", "Station", "Number of CTD Profiles", "Year") -->
-
-<!-- ctable <- tibble(seasons, stations, nprof, years) -->
-
-<!-- colnames(ctable) <- header -->
-
-<!-- csasdown::csas_table(ctable, -->
-<!--                      format = "latex", -->
-<!--                      font_size = 10, -->
-<!--                      align = rep("c", 9), -->
-<!--                      caption = "Number of CTD profiles collected in spring and fall at each of the four AZMP fixed stations in the Gully MPA. The range in year of collection is also shown for each station and season." -->
-<!--                      ) %>% -->
-<!--   add_header_above(c(" ", " ", " ", "Year" = 2)) -->
-
-
-<!-- ``` -->
-
-<!-- \clearpage -->
