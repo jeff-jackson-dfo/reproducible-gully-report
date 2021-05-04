@@ -29,7 +29,7 @@ output:
    copy_sty: false
    line_nums: false
    line_nums_mod: 1
-   latex_engine: lualatex
+   latex_engine: xelatex
 type:
   techreport
 # ------------
@@ -38,8 +38,7 @@ knit: bookdown::render_book
 site: bookdown::bookdown_site
 link-citations: true
 bibliography: bib/refs.bib
-lot: true
-lof: true
+lot_lof: true
 # Any extra LaTeX code for the header:
 header-includes:
  - \usepackage{float} \usepackage{xfrac} \usepackage{gensymb}

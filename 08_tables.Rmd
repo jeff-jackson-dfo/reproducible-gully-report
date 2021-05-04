@@ -12,10 +12,9 @@ library(tibble)
 
 ```
 
+<!-- (ref:table1-caption) Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG_23, SG_28, GULD_03, and GULD_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report. -->
 
-<!-- \begin{landscapepage} -->
-
-(ref:table1) Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG_23, SG_28, GULD_03, and GULD_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.
+\begin{landscapepage}
 
 ```{r table1, results="asis", include=TRUE, echo=FALSE}
 
@@ -78,80 +77,71 @@ Longitude <- unlist(lapply(gullyCTD, function(k) k[['longitude']][1]))
 Latitude <- unlist(lapply(gullyCTD, function(k) k[['latitude']][1]))
 Maximum_Depth <- unlist(lapply(gullyCTD, function(k) k[['depthMax']]))
 Start_Date_Time <- startTime[ix]
-mon <- month(startTime, label = TRUE, abbr = FALSE)
 
-# ucn <- unique(cruiseNumber)
-# lucn <- unlist(lapply(ucn, function(k) length(which(cruiseNumber == k))))
+# Get the name of the month  when the profile occurred.  Change the output to a
+# character array from "ordered" "factor".
+mon <- month(startTime, label = TRUE, abbr = FALSE)
+mon <- as.character(mon)
+
+# Change the maximum depth from a number to a string without any decimals.
+Maximum_Depth <- as.character(round(Maximum_Depth,0))
 
 # Fix the station strings by replacing the "\\" with an empty string "". Since
 # backslash is the escape sequence character you have to escape each backslash
-# in the replace call.
-Station <- str_replace(stationName, "\\\\", "")
+# in the replace call.  This line is used if calling kable() directly.  It is 
+# commented out if using csas_table() instead.
+# Station <- str_replace(stationName, "\\\\", "")
 
 #for ordering by year and cruise number
-# note that this might not be the best if multiple charters for once year
-# e.g. could have been an issue if both the COR and EN had event num 001
+# note that this might not be the best if multiple charters for one year
+# e.g. could have been an issue if both the COR and EN had event number 001
 # but they're different so I got lucky.
-Cruise <- str_extract(string = cruiseNumber, pattern = '[0-9]{7}')
+Cruise <- str_extract(string = cruiseNumber, pattern = '[0-9]*$')
 
-# cruiseYear <- substr(x = cruise, start = 1, stop = 4)
-# cruiseNum <- substr(x = cruise, start = 5, stop = 7)
+header <- c("Cruise", "Station", "Event", "Survey", "Month", "Longitude (DD)", 
+            "Latitude (DD)", "Maximum Depth (m)", "Date/Start Time (UTC)")
 
-header <- c('Cruise', 'Station', 'Event', 'Survey', 'Month', 'Longitude (DD)', 
-            'Latitude (DD)', 'Maximum Depth (m)', 'Data/start time (UTC)')
-
-#format(longitude, digits = 6)
-# format(latitude, digits = 6)
-
-ctable <- tibble(Cruise, Station, Event, Survey, mon, Latitude, 
-                 Longitude, Maximum_Depth, Start_Date_Time, row.names = NULL)
+ctable <- tibble(Cruise, stationName, Event, Survey, mon, Latitude, Longitude, Maximum_Depth, Start_Date_Time)
 
 colnames(ctable) <- header
 
-# kbl(ctable,
-#     format = 'latex',
-#     align = 'cccccccccc',
-#     caption = '(ref:table1)',
-#     longtable = TRUE,
-#     col.names = header
-#     ) %>%
-# kable_styling(full_width = FALSE,
-#               font_size = 11,
-#               bootstrap_options = c("bordered"),
-#               latex_options = c("repeat_header"),
-#               repeat_header_method = "replace") %>%
-# row_spec(row = 0, bold = TRUE) %>%
-# column_spec(1, width = "7em", border_left = TRUE) %>%
-# column_spec(2, width = "4em") %>%
-# column_spec(3, width = "6em") %>%
-# column_spec(4, width = "6em") %>%
-# column_spec(5, width = "6em") %>%
-# column_spec(6, width = "6em") %>%
-# column_spec(7, width = "6em") %>%
-# column_spec(8, width = "6em") %>%
-# column_spec(9, width = "6em") %>%
-# column_spec(10, width = "6em", border_right = TRUE) %>%
-# landscape()
-
 csasdown::csas_table(ctable,
                      format = "latex",
-                     font_size = 11)
-                     # repeat_header = TRUE)
-
-# %>%
-# kableExtra::row_spec(row = 0, bold = TRUE) %>%
-# kableExtra::column_spec(1, width = "7em", border_left = TRUE) %>%
-# kableExtra::column_spec(2, width = "4em") %>%
-# kableExtra::column_spec(3, width = "6em") %>%
-# kableExtra::column_spec(4, width = "6em") %>%
-# kableExtra::column_spec(5, width = "6em") %>%
-# kableExtra::column_spec(6, width = "6em") %>%
-# kableExtra::column_spec(7, width = "6em") %>%
-# kableExtra::column_spec(8, width = "6em") %>%
-# kableExtra::column_spec(9, width = "6em") %>%
-# kableExtra::column_spec(10, width = "11em", border_right = TRUE)
-
+                     font_size = 10,
+                     escape = FALSE,
+                     align = rep("c", 9),
+                     repeat_header = TRUE,
+                     caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report."
+                     )
 ```
-<!-- \end{landscapepage} -->
+\end{landscapepage}
+
 
 \clearpage
+
+
+<!-- ```{r table2, results="asis", include=TRUE, echo=FALSE}  -->
+
+<!-- seasons <- c("Spring", "Fall") -->
+<!-- stations <- list(c("GULD_03", "GULD_04", "SG_23", "SG_28"), c("GULD_03", "GULD_04", "SG_23", "SG_28")) -->
+<!-- nprof <- list(c(12, 10, 7, 8), c(15,11,9,10)) -->
+<!-- years <- list(list(c(2000,2018), c(2000,2018), c(2008,2017), c(2008,2018)), list(c(2000,2018), c(2000,2018), c(2007,2018), c(2007,2018))) -->
+
+<!-- header <- c("Season", "Station", "Number of CTD Profiles", "Year") -->
+
+<!-- ctable <- tibble(seasons, stations, nprof, years) -->
+
+<!-- colnames(ctable) <- header -->
+
+<!-- csasdown::csas_table(ctable, -->
+<!--                      format = "latex", -->
+<!--                      font_size = 10, -->
+<!--                      align = rep("c", 9), -->
+<!--                      caption = "Number of CTD profiles collected in spring and fall at each of the four AZMP fixed stations in the Gully MPA. The range in year of collection is also shown for each station and season." -->
+<!--                      ) %>% -->
+<!--   add_header_above(c(" ", " ", " ", "Year" = 2)) -->
+
+
+<!-- ``` -->
+
+<!-- \clearpage -->
