@@ -151,7 +151,7 @@
     },
     "csasdown": {
       "Package": "csasdown",
-      "Version": "0.0.9.9000",
+      "Version": "0.0.10.9000",
       "Source": "GitHub",
       "Remotes": "pbs-assess/rosettafish",
       "RemoteType": "github",
@@ -159,8 +159,8 @@
       "RemoteRepo": "csasdown",
       "RemoteUsername": "pbs-assess",
       "RemoteRef": "HEAD",
-      "RemoteSha": "6c4fe90b3c464f25f6368fa71bc34b4975e28384",
-      "Hash": "bfba8d3d98c1547c28e546ebfd597c7b"
+      "RemoteSha": "23371a40721ed87922bcd51d8dbf958bbabe3755",
+      "Hash": "57f2cf63e839d922570cf1fe22c1f26b"
     },
     "curl": {
       "Package": "curl",

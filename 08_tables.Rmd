@@ -116,3 +116,30 @@ csasdown::csas_table(ctable,
 \end{landscapepage}
 
 \clearpage
+
+
+```{r table2, results="asis", include=TRUE, echo=FALSE}
+
+seasons <- c(rep("Spring", 4), rep("Fall", 4))
+stations <- c("GULD\\_03", "GULD\\_04", "SG\\_23", "SG\\_28", "GULD\\_03", "GULD\\_04", "SG\\_23", "SG\\_28")
+nprof <- c(12, 10, 7, 8, 15, 11, 9, 10)
+minYears <- c(2000, 2000, 2008, 2008, 2000, 2000, 2007, 2007)
+maxYears <- c(2018, 2018, 2017, 2018, 2018, 2018, 2018, 2018)
+
+header2 <- c("Season", "Station", "Number of CTD Profiles", "Min", "Max")
+
+ctable2 <- tibble(seasons, stations, nprof, minYears, maxYears)
+
+colnames(ctable2) <- header2
+
+csasdown::csas_table(ctable2,
+                     font_size = 12,
+                     format = "latex",
+                     caption = "Number of CTD profiles collected in spring and fall at each of the four AZMP fixed stations in the Gully MPA. The range in year of collection is also shown for each station and season.") %>% 
+  add_header_above(c(" ", " ", " ", "Year" = 2), bold = TRUE) 
+# %>% collapse_rows(columns = 1, latex_hline = "major", valign = "middle")
+
+
+```
+
+\clearpage
