@@ -662,5 +662,67 @@ csasdown::csas_table(ctable2,
 
 \clearpage
 
+
+\begin{landscapepage}
+
+```{r table3, results="asis", include=TRUE, echo=FALSE}
+
+stations <- c(rep("GULD\\_03", 11), rep("SG\\_28", 13), rep("SG\\_23", 13), rep("GULD\\_04", 14))
+approxDepth <- c(rep("$\\sim$445 m", 11), rep("$\\sim$804 m", 13), rep("$\\sim$1102 m", 13), rep("$\\sim$1914 m", 14))
+nominalDepth <- c(c("BTM", "250", "100", "80", "60", "50", "40", "30", "20", "10", "1"), rep(c("BTM", "750", "500", "250", "100", "80", "60", "50", "40", "30", "20", "10", "1"), 2), c("BTM", "1500", "750", "500", "250", "100", "80", "60", "50", "40", "30", "20", "10", "1"))
+
+# Get the number of rows in the table.
+nx <- length(nominalDepth)
+
+# Coerce the nominalDepth array to numeric so it is easier to find the indices 
+# for the depths where the different parameters were sampled.
+ndepth <- as.numeric(nominalDepth)
+
+# Create arrays for the parameter columns to indicate where samples were taken
+chl <- rep("", nx)
+ix1 <- which(ndepth <= 100)
+chl[ix1] <- "XX"
+nuts <- rep("XX", nx)
+sal <- rep("", nx)
+ix2 <- which((nominalDepth == "BTM") | (nominalDepth == "250") | (nominalDepth == "10"))
+sal[ix2] <- "XX"
+oxy <- sal
+pco2 <- rep("", nx)
+ix3 <- which(nominalDepth == "BTM")
+pco2[ix3] <- "XX"
+ix4 <- stations == "GULD\\_04"
+ix5 <- which(stations == "GULD\\_04")
+g4nd <- nominalDepth[ix4]
+ix6 <- which((g4nd == "1500") | (g4nd == "500") | (g4nd == "100") | (g4nd == "10") | (g4nd == "1"))
+pco2[ix5[ix6]] <- "XX"
+tic <- pco2
+poc <- rep("", nx)
+ix7 <- which(nominalDepth == "1")
+poc[ix7] <- "XX"
+hplc <- poc
+abs <- poc
+cyto <- poc
+
+# Create the table header
+header3 <- c("Station", "Station Depth", "Nominal Depth", "CHL", "NUTS", "SAL", "O~2~", "pCO~2~", "TIC/TA", "POC", "HPLC", "ABS", "CYTO")
+
+# Create the table
+ctable3 <- tibble(stations, approxDepth, nominalDepth, chl, nuts, sal, oxy, pco2, tic, poc, hplc, abs, cyto)
+
+colnames(ctable3) <- header3
+
+csasdown::csas_table(ctable3,
+                     font_size = 12,
+                     format = "latex",
+                     align = rep("c", 12),
+                     caption = "Summary of nominal depths of water sample collection and variables measured on the four AZMP fixed stations in the Gully MPA. Stations are organized from shallowest to deepest and include the approximate maximum depth based on station bathymetry extracted from GEBCO (2019). The ‘X’ and ‘XX’ indicate the nominal depth at which single (‘X’) and duplicate (‘XX’) samples are collected. ‘BTM’ indicates ‘near-bottom’. CHL = chlorophyll, NUTS = nutrients, SAL = salinity, O2 = dissolved oxygen, pCO2 =  partial pressure of CO2, TIC/TA = Total Inorganic Carbon and Total Alkalinity, POC = particulate organic carbon, HPLC = high performance liquid chromatography, ABS = phytoplankton absorption, and CYTO = flow cytometry for microbial plankton. \"$\\sim$\" represents approximately.")
+  # kableExtra::collapse_rows(columns = 1:2)
+
+```
+
+\end{landscapepage}
+
+\clearpage
+
 <!--chapter:end:08_tables.Rmd-->
 
