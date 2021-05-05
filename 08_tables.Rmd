@@ -12,9 +12,8 @@ library(tibble)
 
 ```
 
-<!-- (ref:table1-caption) Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG_23, SG_28, GULD_03, and GULD_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report. -->
-
 \begin{landscapepage}
+
 
 ```{r table1, results="asis", include=TRUE, echo=FALSE}
 
@@ -117,7 +116,6 @@ csasdown::csas_table(ctable,
 
 \clearpage
 
-
 ```{r table2, results="asis", include=TRUE, echo=FALSE}
 
 seasons <- c(rep("Spring", 4), rep("Fall", 4))
@@ -135,9 +133,10 @@ colnames(ctable2) <- header2
 csasdown::csas_table(ctable2,
                      font_size = 12,
                      format = "latex",
+                     align = c("l","l","c","c","c"),
                      caption = "Number of CTD profiles collected in spring and fall at each of the four AZMP fixed stations in the Gully MPA. The range in year of collection is also shown for each station and season.") %>% 
-  add_header_above(c(" ", " ", " ", "Year" = 2), bold = TRUE) 
-# %>% collapse_rows(columns = 1, latex_hline = "major", valign = "middle")
+  kableExtra::add_header_above(c(" ", " ", " ", "Year" = 2), bold = TRUE)
+  # kableExtra::collapse_rows(columns = 1)
 
 
 ```
