@@ -130,14 +130,24 @@ ctable2 <- tibble(seasons, stations, nprof, minYears, maxYears)
 
 colnames(ctable2) <- header2
 
-csasdown::csas_table(ctable2,
-                     font_size = 12,
-                     format = "latex",
-                     align = c("l","l","c","c","c"),
-                     caption = "Number of CTD profiles collected in spring and fall at each of the four AZMP fixed stations in the Gully MPA. The range in year of collection is also shown for each station and season.") %>% 
-  kableExtra::add_header_above(c(" ", " ", " ", "Year" = 2), bold = TRUE)
-  # kableExtra::collapse_rows(columns = 1)
+# csasdown::csas_table(ctable2,
+#                      font_size = 12,
+#                      format = "latex",
+#                      align = c("l","l","c","c","c"),
+#                      caption = "Number of CTD profiles collected in spring and fall at each of the four AZMP fixed stations in the Gully MPA. The range in year of collection is also shown for each station and season.") %>% 
+#   kableExtra::add_header_above(c(" ", " ", " ", "Year" = 2), bold = TRUE)
+#   # kableExtra::collapse_rows(columns = 1)
 
+kbl(ctable2, 
+    booktabs = TRUE,
+    longtable = TRUE,
+    format = "latex",
+    escape = FALSE,
+    align = "llcccc",
+    caption = "Number of CTD profiles collected in spring and fall at each of the four AZMP fixed stations in the Gully MPA. The range in year of collection is also shown for each station and season.") %>% 
+  kableExtra::add_header_above(c(" ", " ", " ", "Year" = 2), bold = TRUE, font_size = 12) %>%
+  kableExtra::row_spec(0, bold = TRUE, font_size = 12) %>%
+  kableExtra::collapse_rows(columns = 1, latex_hline = "major", valign = "middle")
 
 ```
 
@@ -149,7 +159,8 @@ csasdown::csas_table(ctable2,
 ```{r table3, results="asis", include=TRUE, echo=FALSE}
 
 stations <- c(rep("GULD\\_03", 11), rep("SG\\_28", 13), rep("SG\\_23", 13), rep("GULD\\_04", 14))
-approxDepth <- c(rep("$\\sim$445 m", 11), rep("$\\sim$804 m", 13), rep("$\\sim$1102 m", 13), rep("$\\sim$1914 m", 14))
+# stations <- c(rep("GULD_03", 11), rep("SG_28", 13), rep("SG_23", 13), rep("GULD_04", 14))
+approxDepth <- c(rep("$\\sim$ 445 m", 11), rep("$\\sim$ 804 m", 13), rep("$\\sim$ 1102 m", 13), rep("$\\sim$ 1914 m", 14))
 nominalDepth <- c(c("BTM", "250", "100", "80", "60", "50", "40", "30", "20", "10", "1"), rep(c("BTM", "750", "500", "250", "100", "80", "60", "50", "40", "30", "20", "10", "1"), 2), c("BTM", "1500", "750", "500", "250", "100", "80", "60", "50", "40", "30", "20", "10", "1"))
 
 # Get the number of rows in the table.
@@ -171,8 +182,10 @@ oxy <- sal
 pco2 <- rep("", nx)
 ix3 <- which(nominalDepth == "BTM")
 pco2[ix3] <- "XX"
-ix4 <- stations == "GULD\\_04"
-ix5 <- which(stations == "GULD\\_04")
+# ix4 <- stations == "GULD\\_04"
+# ix5 <- which(stations == "GULD\\_04")
+ix4 <- stations == "GULD_04"
+ix5 <- which(stations == "GULD_04")
 g4nd <- nominalDepth[ix4]
 ix6 <- which((g4nd == "1500") | (g4nd == "500") | (g4nd == "100") | (g4nd == "10") | (g4nd == "1"))
 pco2[ix5[ix6]] <- "XX"
@@ -185,19 +198,67 @@ abs <- poc
 cyto <- poc
 
 # Create the table header
-header3 <- c("Station", "Station Depth", "Nominal Depth", "CHL", "NUTS", "SAL", "O~2~", "pCO~2~", "TIC/TA", "POC", "HPLC", "ABS", "CYTO")
+header3 <- c("Station", "Station Depth", "Nominal Depth", "CHL", "NUTS", "SAL", "O2", "pCO2", "TIC/TA", "POC", "HPLC", "ABS", "CYTO")
 
 # Create the table
 ctable3 <- tibble(stations, approxDepth, nominalDepth, chl, nuts, sal, oxy, pco2, tic, poc, hplc, abs, cyto)
 
 colnames(ctable3) <- header3
 
-csasdown::csas_table(ctable3,
-                     font_size = 12,
+kbl(ctable3, 
+    booktabs = TRUE,
+    longtable = TRUE,
+    format = "latex",
+    escape = FALSE,
+    align = "cccccccccccc",
+    caption = "Summary of nominal depths of water sample collection and variables measured on the four AZMP fixed stations in the Gully MPA. Stations are organized from shallowest to deepest and include the approximate maximum depth based on station bathymetry extracted from GEBCO (2019). The ‘X’ and ‘XX’ indicate the nominal depth at which single (‘X’) and duplicate (‘XX’) samples are collected. ‘BTM’ indicates ‘near-bottom’. CHL = chlorophyll, NUTS = nutrients, SAL = salinity, O2 = dissolved oxygen, pCO2 =  partial pressure of CO2, TIC/TA = Total Inorganic Carbon and Total Alkalinity, POC = particulate organic carbon, HPLC = high performance liquid chromatography, ABS = phytoplankton absorption, and CYTO = flow cytometry for microbial plankton. \"$\\sim$\" represents approximately.") %>%
+  kableExtra::collapse_rows(columns = 1:2, latex_hline = "major", valign = "middle") %>%
+  # Make the header row bold text
+  kableExtra::row_spec(0, bold = TRUE)
+
+```
+
+\end{landscapepage}
+
+\clearpage
+
+
+\begin{landscapepage}
+
+```{r table4, results="asis", include=TRUE, echo=FALSE}
+
+years <- c(1999:2018)
+years <- c(as.character(years), "Tow total:")
+hl6s <- c("4,6","6","5","6","4","4,5","4","5","4","","4","4","4","","4","4,5","4","4","4","4,5","22")
+sg28s <- c("","","","","","","","","","","4","","","","4","","4","","4","4","5")
+guld4s <- c("","","","","","","","","4","","4","","","","4","","4","","4","4","6")
+sg23s <- c("","","","","","","","","","","4","","","","","","4","","4","4","4")
+guld3s <- c("","","","","","","","","4","","4","","","","","","4","4","4","4","6")
+ll7s <- c("4","4","5","","4","4","4","4","4","4","4","4","4","","4","4","4","","4","4","17")
+spring_tbl <- tibble(years,hl6s,sg28s,guld4s,sg23s,guld3s,ll7s, row.names = NULL)
+
+hl6f <- c("11","10","10","10","10","10","10","10","10","10","10","11","9","9","9","9","10","9","11","9","20")
+sg28f <- c("","","","","","","","","","10","","","","","9","9","","9","","9","5")
+guld4f <- c("","","","","","","","","","","","","","","9","","9","","12","9","4")
+sg23f <- c("","","","","","","","","","","","","","","9","9","9","9","12","9","6")
+guld3f <- c("","","","","","","10","","10","10","","","","","9","9","9","9","12","9","9")
+ll7f <- c("10","10","11","10","10","10","10","10","10","10","10","","10","","9","10","9","","12","9","17")
+fall_tbl <- tibble(years,hl6f,sg28f,guld4f,sg23f,guld3f,ll7f, row.names = NULL)
+
+ctable4 <- full_join(spring_tbl,fall_tbl)
+
+header4 <- c("Year", "HL\\_06", "SG\\_28", "GULD\\_04", "SG\\_23", "GULD\\_03", "LL\\_07", "HL\\_06", "SG\\_28", "GULD\\_04", "SG\\_23", "GULD\\_03", "LL\\_07")
+
+colnames(ctable4) <- header4
+
+csasdown::csas_table(ctable4,
+                     font_size = 11,
                      format = "latex",
-                     align = rep("c", 12),
-                     caption = "Summary of nominal depths of water sample collection and variables measured on the four AZMP fixed stations in the Gully MPA. Stations are organized from shallowest to deepest and include the approximate maximum depth based on station bathymetry extracted from GEBCO (2019). The ‘X’ and ‘XX’ indicate the nominal depth at which single (‘X’) and duplicate (‘XX’) samples are collected. ‘BTM’ indicates ‘near-bottom’. CHL = chlorophyll, NUTS = nutrients, SAL = salinity, O2 = dissolved oxygen, pCO2 =  partial pressure of CO2, TIC/TA = Total Inorganic Carbon and Total Alkalinity, POC = particulate organic carbon, HPLC = high performance liquid chromatography, ABS = phytoplankton absorption, and CYTO = flow cytometry for microbial plankton. \"$\\sim$\" represents approximately.")
-  # kableExtra::collapse_rows(columns = 1:2)
+                     align = rep("c", 13),
+                     caption = "Ring net samples collected at the four AZMP fixed stations in the Gully MPA and at core AZMP stations HL\\_06 and LL\\_07 in spring and fall between 1999 and 2018. The numbers represent the month of sample collection, where April-June represent spring and September-December represent fall. The total number of ring net tows collected at each station in each season is given below.") %>%
+  kableExtra::add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6), bold = TRUE, font_size = 12) %>%
+  kableExtra::row_spec(20, hline_after = TRUE) %>%
+  kableExtra::row_spec(21, bold = TRUE)
 
 ```
 
