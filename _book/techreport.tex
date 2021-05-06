@@ -715,8 +715,7 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \section{TABLES}\label{sec:tables}}
 \begin{landscapepage}
 
-
-\begingroup\fontsize{10}{12}\selectfont
+\renewcommand{\arraystretch}{2}   
 \begingroup\fontsize{10}{12}\selectfont
 \begin{longtable}[t]{ccccccccc}
 \caption{\label{tab:table1}Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\_23, SG\_28, GULD\_03, and GULD\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.}\\
@@ -724,7 +723,7 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \textbf{Cruise} & \textbf{Station} & \textbf{Event} & \textbf{Survey} & \textbf{Month} & \textbf{Longitude (DD)} & \textbf{Latitude (DD)} & \textbf{Maximum Depth (m)} & \textbf{Date/Start Time (UTC)}\\
 \midrule
 \endfirsthead
-\caption*{}\\
+\caption[]{\textit{(continued)}}\\
 \toprule
 \textbf{Cruise} & \textbf{Station} & \textbf{Event} & \textbf{Survey} & \textbf{Month} & \textbf{Longitude (DD)} & \textbf{Latitude (DD)} & \textbf{Maximum Depth (m)} & \textbf{Date/Start Time (UTC)}\\
 \midrule
@@ -733,104 +732,103 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \endfoot
 \bottomrule
 \endlastfoot
-99054 & GULD\_04 & 173 & Fall AZMP & April & 43.8093 & -58.9102 & 2055 & 1999-11-02 19:08:58\\
+\cellcolor{gray!6}{99054} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{173} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8093} & \cellcolor{gray!6}{-58.9102} & \cellcolor{gray!6}{2055} & \cellcolor{gray!6}{1999-11-02 19:08:58}\\
 2000002 & GULD\_03 & 112 & Spring AZMP & December & 44.0163 & -59.0415 & 403 & 2000-04-16 09:34:26\\
-2000002 & GULD\_04 & 117 & Spring AZMP & October & 43.8083 & -58.9087 & 2003 & 2000-04-16 14:23:45\\
+\cellcolor{gray!6}{2000002} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{117} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8083} & \cellcolor{gray!6}{-58.9087} & \cellcolor{gray!6}{2003} & \cellcolor{gray!6}{2000-04-16 14:23:45}\\
 2000050 & GULD\_04 & 190 & Fall AZMP & November & 43.8090 & -58.9182 & 1893 & 2000-10-10 08:55:00\\
-2000050 & GULD\_03 & 194 & Fall AZMP & October & 44.0212 & -59.0427 & 553 & 2000-10-10 14:33:29\\
+\cellcolor{gray!6}{2000050} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{194} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0212} & \cellcolor{gray!6}{-59.0427} & \cellcolor{gray!6}{553} & \cellcolor{gray!6}{2000-10-10 14:33:29}\\
 2001061 & GULD\_03 & 179 & Fall AZMP & April & 44.0173 & -59.0370 & 530 & 2001-11-01 03:18:35\\
-2002064 & GULD\_03 & 167 & Fall AZMP & October & 44.0177 & -59.0417 & 419 & 2002-10-26 03:28:23\\
+\cellcolor{gray!6}{2002064} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{167} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0177} & \cellcolor{gray!6}{-59.0417} & \cellcolor{gray!6}{419} & \cellcolor{gray!6}{2002-10-26 03:28:23}\\
 2003005 & GULD\_03 & 044 & Spring AZMP & April & 44.0172 & -59.0423 & 502 & 2003-04-15 19:54:50\\
-2003067 & GULD\_03 & 084 & Fall AZMP & October & 44.0183 & -59.0397 & 480 & 2003-10-25 06:55:54\\
+\cellcolor{gray!6}{2003067} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{084} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0183} & \cellcolor{gray!6}{-59.0397} & \cellcolor{gray!6}{480} & \cellcolor{gray!6}{2003-10-25 06:55:54}\\
 2004009 & GULD\_03 & 021 & Spring AZMP & October & 44.0200 & -59.0398 & 589 & 2004-04-28 04:18:29\\
-2005004 & GULD\_03 & 050 & Groundfish & April & 44.0697 & -59.0540 & 771 & 2005-04-06 11:25:03\\
+\cellcolor{gray!6}{2005004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{050} & \cellcolor{gray!6}{Groundfish} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0697} & \cellcolor{gray!6}{-59.0540} & \cellcolor{gray!6}{771} & \cellcolor{gray!6}{2005-04-06 11:25:03}\\
 2005055 & GULD\_03 & 069 & Fall AZMP & October & 44.0200 & -59.0382 & 526 & 2005-10-22 16:17:03\\
-2006052 & GULD\_03 & 091 & Fall AZMP & October & 44.0167 & -59.0333 & 496 & 2006-10-14 16:27:59\\
+\cellcolor{gray!6}{2006052} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{091} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0167} & \cellcolor{gray!6}{-59.0333} & \cellcolor{gray!6}{496} & \cellcolor{gray!6}{2006-10-14 16:27:59}\\
 2006052 & GULD\_04 & 097 & Fall AZMP & April & 43.8000 & -58.9167 & 2040 & 2006-10-14 23:57:32\\
-2007001 & GULD\_03 & 071 & Spring AZMP & October & 44.0167 & -59.0333 & 416 & 2007-04-12 16:45:55\\
+\cellcolor{gray!6}{2007001} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{071} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0167} & \cellcolor{gray!6}{-59.0333} & \cellcolor{gray!6}{416} & \cellcolor{gray!6}{2007-04-12 16:45:55}\\
 2007001 & GULD\_04 & 073 & Spring AZMP & April & 43.8000 & -58.9167 & 2149 & 2007-04-12 19:49:48\\
-2007033 & SG\_23 & 048 & Non-AZMP & October & 43.8667 & -58.7333 & 1065 & 2007-08-05 17:51:06\\
+\cellcolor{gray!6}{2007033} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{048} & \cellcolor{gray!6}{Non-AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8667} & \cellcolor{gray!6}{-58.7333} & \cellcolor{gray!6}{1065} & \cellcolor{gray!6}{2007-08-05 17:51:06}\\
 2007033 & SG\_28 & 058 & Non-AZMP & October & 43.7122 & -59.0117 & 778 & 2007-08-06 08:45:00\\
-2007045 & SG\_28 & 120 & Fall AZMP & April & 43.7000 & -59.0002 & 769 & 2007-10-13 14:25:43\\
+\cellcolor{gray!6}{2007045} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{120} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7000} & \cellcolor{gray!6}{-59.0002} & \cellcolor{gray!6}{769} & \cellcolor{gray!6}{2007-10-13 14:25:43}\\
 2007045 & GULD\_03 & 124 & Fall AZMP & September & 44.0167 & -59.0333 & 484 & 2007-10-13 20:19:23\\
-2007045 & GULD\_04 & 126 & Fall AZMP & April & 43.8000 & -58.9000 & 2072 & 2007-10-13 23:27:24\\
+\cellcolor{gray!6}{2007045} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{126} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8000} & \cellcolor{gray!6}{-58.9000} & \cellcolor{gray!6}{2072} & \cellcolor{gray!6}{2007-10-13 23:27:24}\\
 2007045 & SG\_23 & 128 & Fall AZMP & September & 43.8667 & -58.7333 & 944 & 2007-10-14 03:20:46\\
-2007045 & SG\_23 & 130 & Fall AZMP & April & 43.8667 & -58.7333 & 53 & 2007-10-14 05:42:41\\
+\cellcolor{gray!6}{2007045} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{130} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8667} & \cellcolor{gray!6}{-58.7333} & \cellcolor{gray!6}{53} & \cellcolor{gray!6}{2007-10-14 05:42:41}\\
 2008004 & SG\_23 & 076 & Spring AZMP & September & 43.8655 & -58.7325 & 1096 & 2008-04-21 20:29:16\\
-2008004 & GULD\_04 & 078 & Spring AZMP & April & 43.8043 & -58.9168 & 2174 & 2008-04-21 23:39:50\\
+\cellcolor{gray!6}{2008004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{078} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8043} & \cellcolor{gray!6}{-58.9168} & \cellcolor{gray!6}{2174} & \cellcolor{gray!6}{2008-04-21 23:39:50}\\
 2008004 & SG\_28 & 080 & Spring AZMP & September & 43.7008 & -59.0005 & 994 & 2008-04-22 03:18:43\\
-2008037 & SG\_23 & 220 & Fall AZMP & April & 43.8695 & -58.7357 & 927 & 2008-10-19 12:11:45\\
+\cellcolor{gray!6}{2008037} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{220} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8695} & \cellcolor{gray!6}{-58.7357} & \cellcolor{gray!6}{927} & \cellcolor{gray!6}{2008-10-19 12:11:45}\\
 2008037 & GULD\_03 & 223 & Fall AZMP & September & 44.0197 & -59.0403 & 447 & 2008-10-19 18:05:41\\
-2008037 & GULD\_04 & 226 & Fall AZMP & April & 43.7875 & -58.9108 & 2262 & 2008-10-19 22:42:48\\
+\cellcolor{gray!6}{2008037} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{226} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7875} & \cellcolor{gray!6}{-58.9108} & \cellcolor{gray!6}{2262} & \cellcolor{gray!6}{2008-10-19 22:42:48}\\
 2008037 & SG\_28 & 228 & Fall AZMP & April & 43.7083 & -59.0183 & 724 & 2008-10-20 01:52:35\\
-2009005 & SG\_23 & 149 & Spring AZMP & March & 43.8687 & -58.7427 & 941 & 2009-04-27 13:53:40\\
+\cellcolor{gray!6}{2009005} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{149} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{March} & \cellcolor{gray!6}{43.8687} & \cellcolor{gray!6}{-58.7427} & \cellcolor{gray!6}{941} & \cellcolor{gray!6}{2009-04-27 13:53:40}\\
 2009005 & GULD\_04 & 152 & Spring AZMP & November & 43.7858 & -58.9090 & 2359 & 2009-04-27 17:02:11\\
-2009005 & SG\_28 & 154 & Spring AZMP & April & 43.7045 & -59.0182 & 906 & 2009-04-27 20:08:47\\
+\cellcolor{gray!6}{2009005} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{154} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7045} & \cellcolor{gray!6}{-59.0182} & \cellcolor{gray!6}{906} & \cellcolor{gray!6}{2009-04-27 20:08:47}\\
 2009005 & GULD\_03 & 156 & Spring AZMP & December & 44.0222 & -59.0450 & 464 & 2009-04-27 23:13:18\\
-2009048 & SG\_28 & 200 & Fall AZMP & October & 43.7100 & -59.0102 & 846 & 2009-10-16 07:05:57\\
+\cellcolor{gray!6}{2009048} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{200} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.7100} & \cellcolor{gray!6}{-59.0102} & \cellcolor{gray!6}{846} & \cellcolor{gray!6}{2009-10-16 07:05:57}\\
 2009048 & GULD\_03 & 202 & Fall AZMP & October & 44.0200 & -59.0380 & 467 & 2009-10-16 12:39:26\\
-2010900 & GULD\_04 & 020 & Non-AZMP & April & 43.8105 & -58.9102 & 1203 & 2010-03-18 11:23:45\\
+\cellcolor{gray!6}{2010900} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{020} & \cellcolor{gray!6}{Non-AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8105} & \cellcolor{gray!6}{-58.9102} & \cellcolor{gray!6}{1203} & \cellcolor{gray!6}{2010-03-18 11:23:45}\\
 2010900 & GULD\_03 & 042 & Non-AZMP & October & 44.0218 & -59.0401 & 482 & 2010-03-21 10:03:07\\
-2010900 & SG\_23 & 048 & Non-AZMP & April & 43.8686 & -58.7387 & 900 & 2010-03-22 10:37:44\\
+\cellcolor{gray!6}{2010900} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{048} & \cellcolor{gray!6}{Non-AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8686} & \cellcolor{gray!6}{-58.7387} & \cellcolor{gray!6}{900} & \cellcolor{gray!6}{2010-03-22 10:37:44}\\
 2010900 & SG\_28 & 049 & Non-AZMP & October & 43.7103 & -59.0128 & 699 & 2010-03-22 13:11:16\\
-2011004 & SG\_23 & 168 & Spring AZMP & April & 43.8703 & -58.7418 & 1023 & 2011-04-21 09:18:59\\
+\cellcolor{gray!6}{2011004} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{168} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8703} & \cellcolor{gray!6}{-58.7418} & \cellcolor{gray!6}{1023} & \cellcolor{gray!6}{2011-04-21 09:18:59}\\
 2011004 & GULD\_04 & 170 & Spring AZMP & April & 43.7895 & -58.9162 & 2135 & 2011-04-21 12:22:03\\
-2011004 & SG\_28 & 172 & Spring AZMP & October & 43.7095 & -59.0187 & 695 & 2011-04-21 15:39:44\\
+\cellcolor{gray!6}{2011004} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{172} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.7095} & \cellcolor{gray!6}{-59.0187} & \cellcolor{gray!6}{695} & \cellcolor{gray!6}{2011-04-21 15:39:44}\\
 2011004 & GULD\_03 & 175 & Spring AZMP & October & 44.0182 & -59.0373 & 523 & 2011-04-21 20:28:13\\
-2011043 & GULD\_03 & 168 & Fall AZMP & April & 44.0197 & -59.0417 & 483 & 2011-10-10 19:53:54\\
+\cellcolor{gray!6}{2011043} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{168} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0197} & \cellcolor{gray!6}{-59.0417} & \cellcolor{gray!6}{483} & \cellcolor{gray!6}{2011-10-10 19:53:54}\\
 2011043 & SG\_23 & 172 & Fall AZMP & September & 43.8640 & -58.7480 & 914 & 2011-10-11 00:45:03\\
-2011043 & GULD\_04 & 174 & Fall AZMP & April & 43.8107 & -58.9132 & 2163 & 2011-10-11 03:30:14\\
+\cellcolor{gray!6}{2011043} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{174} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8107} & \cellcolor{gray!6}{-58.9132} & \cellcolor{gray!6}{2163} & \cellcolor{gray!6}{2011-10-11 03:30:14}\\
 2011043 & SG\_28 & 177 & Fall AZMP & September & 43.7078 & -59.0067 & 896 & 2011-10-11 08:26:11\\
-2012042 & GULD\_03 & 194 & Fall AZMP & April & 44.0072 & -59.0197 & 467 & 2012-10-13 02:53:21\\
+\cellcolor{gray!6}{2012042} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{194} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0072} & \cellcolor{gray!6}{-59.0197} & \cellcolor{gray!6}{467} & \cellcolor{gray!6}{2012-10-13 02:53:21}\\
 2012042 & SG\_23 & 196 & Fall AZMP & September & 43.8643 & -58.7283 & 1235 & 2012-10-13 06:21:55\\
-2012042 & GULD\_04 & 198 & Fall AZMP & September & 43.7890 & -58.8987 & 2233 & 2012-10-13 10:22:25\\
+\cellcolor{gray!6}{2012042} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{198} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.7890} & \cellcolor{gray!6}{-58.8987} & \cellcolor{gray!6}{2233} & \cellcolor{gray!6}{2012-10-13 10:22:25}\\
 2012042 & SG\_28 & 200 & Fall AZMP & April & 43.7100 & -59.0068 & 938 & 2012-10-13 14:35:08\\
-2013004 & SG\_23 & 050 & Spring AZMP & September & 43.8593 & -58.7315 & 1155 & 2013-04-10 18:50:13\\
+\cellcolor{gray!6}{2013004} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{050} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.8593} & \cellcolor{gray!6}{-58.7315} & \cellcolor{gray!6}{1155} & \cellcolor{gray!6}{2013-04-10 18:50:13}\\
 2013004 & GULD\_04 & 053 & Spring AZMP & April & 43.7955 & -58.9083 & 2131 & 2013-04-10 23:19:30\\
-2013004 & GULD\_03 & 055 & Spring AZMP & March & 44.0002 & -59.0193 & 428 & 2013-04-11 03:05:20\\
+\cellcolor{gray!6}{2013004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{055} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{March} & \cellcolor{gray!6}{44.0002} & \cellcolor{gray!6}{-59.0193} & \cellcolor{gray!6}{428} & \cellcolor{gray!6}{2013-04-11 03:05:20}\\
 2013004 & SG\_28 & 058 & Spring AZMP & April & 43.7085 & -58.9990 & 840 & 2013-04-11 07:28:52\\
-2013037 & GULD\_04 & 059 & Fall AZMP & December & 43.7910 & -58.8967 & 2086 & 2013-09-25 15:11:07\\
+\cellcolor{gray!6}{2013037} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{059} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{December} & \cellcolor{gray!6}{43.7910} & \cellcolor{gray!6}{-58.8967} & \cellcolor{gray!6}{2086} & \cellcolor{gray!6}{2013-09-25 15:11:07}\\
 2013037 & SG\_28 & 063 & Fall AZMP & August & 43.7093 & -59.0057 & 794 & 2013-09-25 19:53:02\\
-2013037 & GULD\_03 & 067 & Fall AZMP & October & 44.0012 & -59.0190 & 465 & 2013-09-26 00:23:46\\
+\cellcolor{gray!6}{2013037} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{067} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0012} & \cellcolor{gray!6}{-59.0190} & \cellcolor{gray!6}{465} & \cellcolor{gray!6}{2013-09-26 00:23:46}\\
 2013037 & SG\_23 & 071 & Fall AZMP & October & 43.8605 & -58.7250 & 1291 & 2013-09-26 03:45:07\\
-2014004 & GULD\_03 & 029 & Spring AZMP & April & 44.0002 & -59.0172 & 495 & 2014-04-07 06:09:13\\
+\cellcolor{gray!6}{2014004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{029} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0002} & \cellcolor{gray!6}{-59.0172} & \cellcolor{gray!6}{495} & \cellcolor{gray!6}{2014-04-07 06:09:13}\\
 2014004 & SG\_28 & 031 & Spring AZMP & October & 43.7103 & -59.0008 & 864 & 2014-04-07 09:44:12\\
-2014004 & GULD\_04 & 033 & Spring AZMP & April & 43.7908 & -58.9022 & 2095 & 2014-04-07 12:44:36\\
+\cellcolor{gray!6}{2014004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{033} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7908} & \cellcolor{gray!6}{-58.9022} & \cellcolor{gray!6}{2095} & \cellcolor{gray!6}{2014-04-07 12:44:36}\\
 2014004 & SG\_23 & 037 & Spring AZMP & April & 43.8602 & -58.7305 & 1179 & 2014-04-07 23:22:22\\
-2014030 & SG\_23 & 072 & Fall AZMP & October & 43.8620 & -58.7263 & 1221 & 2014-09-26 15:51:35\\
+\cellcolor{gray!6}{2014030} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{072} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8620} & \cellcolor{gray!6}{-58.7263} & \cellcolor{gray!6}{1221} & \cellcolor{gray!6}{2014-09-26 15:51:35}\\
 2014030 & GULD\_03 & 075 & Fall AZMP & October & 43.9988 & -59.0200 & 404 & 2014-09-26 20:51:35\\
-2014030 & GULD\_04 & 077 & Fall AZMP & April & 43.7925 & -58.9015 & 2089 & 2014-09-27 00:24:47\\
+\cellcolor{gray!6}{2014030} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{077} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7925} & \cellcolor{gray!6}{-58.9015} & \cellcolor{gray!6}{2089} & \cellcolor{gray!6}{2014-09-27 00:24:47}\\
 2014030 & SG\_28 & 080 & Fall AZMP & September & 43.7100 & -58.9995 & 831 & 2014-09-27 05:08:42\\
-2015004 & SG\_28 & 079 & Spring AZMP & April & 43.7127 & -59.0043 & 821 & 2015-04-23 01:03:53\\
+\cellcolor{gray!6}{2015004} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{079} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7127} & \cellcolor{gray!6}{-59.0043} & \cellcolor{gray!6}{821} & \cellcolor{gray!6}{2015-04-23 01:03:53}\\
 2015004 & GULD\_03 & 081 & Spring AZMP & September & 43.9998 & -59.0203 & 471 & 2015-04-23 04:15:41\\
-2015004 & GULD\_04 & 083 & Spring AZMP & April & 43.7903 & -58.8987 & 2144 & 2015-04-23 07:20:09\\
+\cellcolor{gray!6}{2015004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{083} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7903} & \cellcolor{gray!6}{-58.8987} & \cellcolor{gray!6}{2144} & \cellcolor{gray!6}{2015-04-23 07:20:09}\\
 2015004 & SG\_23 & 085 & Spring AZMP & September & 43.8503 & -58.7350 & 1204 & 2015-04-23 11:22:49\\
-2015030 & SG\_28 & 013 & Fall AZMP & September & 43.7097 & -59.0005 & 865 & 2015-09-21 17:00:48\\
+\cellcolor{gray!6}{2015030} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{013} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.7097} & \cellcolor{gray!6}{-59.0005} & \cellcolor{gray!6}{865} & \cellcolor{gray!6}{2015-09-21 17:00:48}\\
 2015030 & GULD\_04 & 015 & Fall AZMP & September & 43.7852 & -58.8995 & 2225 & 2015-09-21 20:39:04\\
-2015030 & SG\_23 & 017 & Fall AZMP & March & 43.8515 & -58.7203 & 1431 & 2015-09-22 00:56:35\\
+\cellcolor{gray!6}{2015030} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{017} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{March} & \cellcolor{gray!6}{43.8515} & \cellcolor{gray!6}{-58.7203} & \cellcolor{gray!6}{1431} & \cellcolor{gray!6}{2015-09-22 00:56:35}\\
 2015030 & GULD\_03 & 019 & Fall AZMP & April & 43.9907 & -59.0183 & 462 & 2015-09-22 05:29:49\\
-2016003 & GULD\_03 & 118 & Spring AZMP & November & 43.9990 & -59.0202 & 408 & 2016-04-23 21:53:03\\
+\cellcolor{gray!6}{2016003} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{118} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{November} & \cellcolor{gray!6}{43.9990} & \cellcolor{gray!6}{-59.0202} & \cellcolor{gray!6}{408} & \cellcolor{gray!6}{2016-04-23 21:53:03}\\
 2016027 & GULD\_04 & 067 & Fall AZMP & August & 43.7888 & -58.9002 & 2055 & 2016-09-20 17:44:03\\
-2016027 & SG\_28 & 070 & Fall AZMP & October & 43.7112 & -59.0010 & 823 & 2016-09-20 22:34:56\\
+\cellcolor{gray!6}{2016027} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{070} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.7112} & \cellcolor{gray!6}{-59.0010} & \cellcolor{gray!6}{823} & \cellcolor{gray!6}{2016-09-20 22:34:56}\\
 2016027 & GULD\_03 & 072 & Fall AZMP & April & 44.0055 & -59.0190 & 586 & 2016-09-21 01:47:11\\
-2016027 & SG\_23 & 075 & Fall AZMP & October & 43.8600 & -58.7297 & 1196 & 2016-09-21 07:06:25\\
+\cellcolor{gray!6}{2016027} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{075} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8600} & \cellcolor{gray!6}{-58.7297} & \cellcolor{gray!6}{1196} & \cellcolor{gray!6}{2016-09-21 07:06:25}\\
 2017001 & SG\_28 & 079 & Spring AZMP & April & 43.7007 & -59.0090 & 969 & 2017-04-24 21:05:16\\
-2017001 & GULD\_03 & 084 & Spring AZMP & October & 44.0017 & -59.0163 & 465 & 2017-04-25 08:09:31\\
+\cellcolor{gray!6}{2017001} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{084} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0017} & \cellcolor{gray!6}{-59.0163} & \cellcolor{gray!6}{465} & \cellcolor{gray!6}{2017-04-25 08:09:31}\\
 2017001 & GULD\_04 & 086 & Spring AZMP & April & 43.7877 & -58.8973 & 2098 & 2017-04-25 11:34:05\\
-2017001 & SG\_23 & 089 & Spring AZMP & October & 43.8565 & -58.7255 & 1334 & 2017-04-25 16:11:39\\
+\cellcolor{gray!6}{2017001} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{089} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8565} & \cellcolor{gray!6}{-58.7255} & \cellcolor{gray!6}{1334} & \cellcolor{gray!6}{2017-04-25 16:11:39}\\
 2017606 & SG\_28 & 043 & Fall AZMP & October & 43.7065 & -59.0077 & 846 & 2017-11-30 05:26:02\\
-2017606 & GULD\_03 & 048 & Fall AZMP & April & 43.9903 & -59.0238 & 394 & 2017-12-01 03:26:02\\
+\cellcolor{gray!6}{2017606} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{048} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.9903} & \cellcolor{gray!6}{-59.0238} & \cellcolor{gray!6}{394} & \cellcolor{gray!6}{2017-12-01 03:26:02}\\
 2017606 & GULD\_04 & 050 & Fall AZMP & September & 43.7837 & -58.8922 & 2166 & 2017-12-01 07:22:19\\
-2017606 & SG\_23 & 052 & Fall AZMP & April & 43.8608 & -58.7283 & 1159 & 2017-12-01 12:05:26\\
+\cellcolor{gray!6}{2017606} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{052} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8608} & \cellcolor{gray!6}{-58.7283} & \cellcolor{gray!6}{1159} & \cellcolor{gray!6}{2017-12-01 12:05:26}\\
 2018004 & SG\_28 & 117 & Spring AZMP & September & 43.7108 & -59.0002 & 822 & 2018-04-17 04:45:39\\
-2018004 & GULD\_03 & 119 & Spring AZMP & April & 44.0008 & -59.0200 & 417 & 2018-04-17 08:23:49\\
+\cellcolor{gray!6}{2018004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{119} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0008} & \cellcolor{gray!6}{-59.0200} & \cellcolor{gray!6}{417} & \cellcolor{gray!6}{2018-04-17 08:23:49}\\
 2018004 & GULD\_04 & 121 & Spring AZMP & September & 43.7898 & -58.9000 & 2134 & 2018-04-17 12:20:16\\
-2018030 & SG\_28 & 146 & Fall AZMP & September & 43.7097 & -59.0000 & 839 & 2018-09-26 23:17:30\\
+\cellcolor{gray!6}{2018030} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{146} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.7097} & \cellcolor{gray!6}{-59.0000} & \cellcolor{gray!6}{839} & \cellcolor{gray!6}{2018-09-26 23:17:30}\\
 2018030 & GULD\_03 & 148 & Fall AZMP & April & 43.9998 & -59.0197 & 423 & 2018-09-27 02:50:28\\
-2018030 & GULD\_04 & 150 & Fall AZMP & September & 43.7895 & -58.8998 & 2093 & 2018-09-27 06:27:03\\
+\cellcolor{gray!6}{2018030} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{150} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.7895} & \cellcolor{gray!6}{-58.8998} & \cellcolor{gray!6}{2093} & \cellcolor{gray!6}{2018-09-27 06:27:03}\\
 2018030 & SG\_23 & 156 & Fall AZMP & March & 43.8597 & -58.7290 & 1202 & 2018-09-27 18:20:51\\*
 \end{longtable}
-\endgroup{}
 \endgroup{}
 \end{landscapepage}
 \clearpage
@@ -866,6 +864,16 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \toprule
 \textbf{Station} & \textbf{Station Depth} & \textbf{Nominal Depth} & \textbf{CHL} & \textbf{NUTS} & \textbf{SAL} & \textbf{O2} & \textbf{pCO2} & \textbf{TIC/TA} & \textbf{POC} & \textbf{HPLC} & \textbf{ABS} & \textbf{CYTO}\\
 \midrule
+\endfirsthead
+\caption[]{\textit{(continued)}}\\
+\toprule
+\textbf{Station} & \textbf{Station Depth} & \textbf{Nominal Depth} & \textbf{CHL} & \textbf{NUTS} & \textbf{SAL} & \textbf{O2} & \textbf{pCO2} & \textbf{TIC/TA} & \textbf{POC} & \textbf{HPLC} & \textbf{ABS} & \textbf{CYTO}\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
  &  & BTM &  & XX & XX & XX & XX & XX &  &  &  & \\
 \nopagebreak
  &  & 250 &  & XX & XX & XX &  &  &  &  &  & \\
@@ -966,15 +974,12 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \nopagebreak
  &  & 10 & XX & XX & XX & XX &  &  &  &  &  & \\
 \nopagebreak
-\multirow{-14}{*}{\centering\arraybackslash GULD\_04} & \multirow{-14}{*}{\centering\arraybackslash $\sim$ 1914 m} & 1 & XX & XX &  &  &  &  & XX & XX & XX & XX\\
-\bottomrule
+\multirow{-14}{*}{\centering\arraybackslash GULD\_04} & \multirow{-14}{*}{\centering\arraybackslash $\sim$ 1914 m} & 1 & XX & XX &  &  &  &  & XX & XX & XX & XX\\*
 \end{longtable}
 \end{landscapepage}
 \clearpage
 \begin{landscapepage}
 
-\begingroup\fontsize{11}{13}\selectfont
-\begingroup\fontsize{11}{13}\selectfont
 \begin{longtable}[t]{ccccccccccccc}
 \caption{\label{tab:table4}Ring net samples collected at the four AZMP fixed stations in the Gully MPA and at core AZMP stations HL\_06 and LL\_07 in spring and fall between 1999 and 2018. The numbers represent the month of sample collection, where April-June represent spring and September-December represent fall. The total number of ring net tows collected at each station in each season is given below.}\\
 \toprule
@@ -982,38 +987,58 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \cmidrule(l{3pt}r{3pt}){2-7} \cmidrule(l{3pt}r{3pt}){8-13}
 \textbf{Year} & \textbf{HL\_06} & \textbf{SG\_28} & \textbf{GULD\_04} & \textbf{SG\_23} & \textbf{GULD\_03} & \textbf{LL\_07} & \textbf{HL\_06} & \textbf{SG\_28} & \textbf{GULD\_04} & \textbf{SG\_23} & \textbf{GULD\_03} & \textbf{LL\_07}\\
 \midrule
+\cellcolor{gray!6}{1999} & \cellcolor{gray!6}{4,6} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{10}\\
+2000 & 6 &  &  &  &  & 4 & 10 &  &  &  &  & 10\\
+\cellcolor{gray!6}{2001} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{11}\\
+2002 & 6 &  &  &  &  &  & 10 &  &  &  &  & 10\\
+\cellcolor{gray!6}{2003} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{10}\\
+2004 & 4,5 &  &  &  &  & 4 & 10 &  &  &  &  & 10\\
+\cellcolor{gray!6}{2005} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{10}\\
+2006 & 5 &  &  &  &  & 4 & 10 &  &  &  &  & 10\\
+\cellcolor{gray!6}{2007} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{10}\\
+2008 &  &  &  &  &  & 4 & 10 & 10 &  &  & 10 & 10\\
+\cellcolor{gray!6}{2009} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{10}\\
+2010 & 4 &  &  &  &  & 4 & 11 &  &  &  &  & \\
+\cellcolor{gray!6}{2011} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{10}\\
+2012 &  &  &  &  &  &  & 9 &  &  &  &  & \\
+\cellcolor{gray!6}{2013} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9}\\
+2014 & 4,5 &  &  &  &  & 4 & 9 & 9 &  & 9 & 9 & 10\\
+\cellcolor{gray!6}{2015} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{9}\\
+2016 & 4 &  &  &  & 4 &  & 9 & 9 &  & 9 & 9 & \\
+\cellcolor{gray!6}{2017} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{12}\\
+2018 & 4,5 & 4 & 4 & 4 & 4 & 4 & 9 & 9 & 9 & 9 & 9 & 9\\
+\midrule
+\cellcolor{gray!6}{\textbf{No. of Tows:}} & \cellcolor{gray!6}{\textbf{22}} & \cellcolor{gray!6}{\textbf{5}} & \cellcolor{gray!6}{\textbf{6}} & \cellcolor{gray!6}{\textbf{4}} & \cellcolor{gray!6}{\textbf{6}} & \cellcolor{gray!6}{\textbf{17}} & \cellcolor{gray!6}{\textbf{20}} & \cellcolor{gray!6}{\textbf{5}} & \cellcolor{gray!6}{\textbf{4}} & \cellcolor{gray!6}{\textbf{6}} & \cellcolor{gray!6}{\textbf{9}} & \cellcolor{gray!6}{\textbf{17}}\\
+\bottomrule
+\end{longtable}
+\end{landscapepage}
+\clearpage
+\begin{landscapepage}
+
+\begingroup\fontsize{12}{14}\selectfont
+\begingroup\fontsize{12}{14}\selectfont
+\begin{longtable}[t]{>{}c|ccc>{}c|cccc}
+\caption{\label{tab:table5}Pearson correlation coefficients (R2) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}\\
+\toprule
+\multicolumn{1}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{ }\egroup{}} & \multicolumn{4}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{Spring}\egroup{}} & \multicolumn{4}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{Fall}\egroup{}} \\
+\cmidrule(l{3pt}r{3pt}){2-5} \cmidrule(l{3pt}r{3pt}){6-9}
+\textbf{\textbf{Depth interval (m)}} & \textbf{\textbf{GULD\_03}} & \textbf{\textbf{SG\_28}} & \textbf{\textbf{GULD\_04}} & \textbf{\textbf{SG\_23}} & \textbf{\textbf{GULD\_03}} & \textbf{\textbf{SG\_28}} & \textbf{\textbf{GULD\_04}} & \textbf{\textbf{SG\_23}}\\
+\midrule
 \endfirsthead
 \caption*{}\\
 \toprule
-\textbf{Year} & \textbf{HL\_06} & \textbf{SG\_28} & \textbf{GULD\_04} & \textbf{SG\_23} & \textbf{GULD\_03} & \textbf{LL\_07} & \textbf{HL\_06} & \textbf{SG\_28} & \textbf{GULD\_04} & \textbf{SG\_23} & \textbf{GULD\_03} & \textbf{LL\_07}\\
+\textbf{\textbf{Depth interval (m)}} & \textbf{\textbf{GULD\_03}} & \textbf{\textbf{SG\_28}} & \textbf{\textbf{GULD\_04}} & \textbf{\textbf{SG\_23}} & \textbf{\textbf{GULD\_03}} & \textbf{\textbf{SG\_28}} & \textbf{\textbf{GULD\_04}} & \textbf{\textbf{SG\_23}}\\
 \midrule
 \endhead
 
 \endfoot
 \bottomrule
 \endlastfoot
-1999 & 4,6 &  &  &  &  & 4 & 11 &  &  &  &  & 10\\
-2000 & 6 &  &  &  &  & 4 & 10 &  &  &  &  & 10\\
-2001 & 5 &  &  &  &  & 5 & 10 &  &  &  &  & 11\\
-2002 & 6 &  &  &  &  &  & 10 &  &  &  &  & 10\\
-2003 & 4 &  &  &  &  & 4 & 10 &  &  &  &  & 10\\
-2004 & 4,5 &  &  &  &  & 4 & 10 &  &  &  &  & 10\\
-2005 & 4 &  &  &  &  & 4 & 10 &  &  &  & 10 & 10\\
-2006 & 5 &  &  &  &  & 4 & 10 &  &  &  &  & 10\\
-2007 & 4 &  & 4 &  & 4 & 4 & 10 &  &  &  & 10 & 10\\
-2008 &  &  &  &  &  & 4 & 10 & 10 &  &  & 10 & 10\\
-2009 & 4 & 4 & 4 & 4 & 4 & 4 & 10 &  &  &  &  & 10\\
-2010 & 4 &  &  &  &  & 4 & 11 &  &  &  &  & \\
-2011 & 4 &  &  &  &  & 4 & 9 &  &  &  &  & 10\\
-2012 &  &  &  &  &  &  & 9 &  &  &  &  & \\
-2013 & 4 & 4 & 4 &  &  & 4 & 9 & 9 & 9 & 9 & 9 & 9\\
-2014 & 4,5 &  &  &  &  & 4 & 9 & 9 &  & 9 & 9 & 10\\
-2015 & 4 & 4 & 4 & 4 & 4 & 4 & 10 &  & 9 & 9 & 9 & 9\\
-2016 & 4 &  &  &  & 4 &  & 9 & 9 &  & 9 & 9 & \\
-2017 & 4 & 4 & 4 & 4 & 4 & 4 & 11 &  & 12 & 12 & 12 & 12\\
-2018 & 4,5 & 4 & 4 & 4 & 4 & 4 & 9 & 9 & 9 & 9 & 9 & 9\\
-\midrule
-\textbf{Tow total:} & \textbf{22} & \textbf{5} & \textbf{6} & \textbf{4} & \textbf{6} & \textbf{17} & \textbf{20} & \textbf{5} & \textbf{4} & \textbf{6} & \textbf{9} & \textbf{17}\\*
+0 to 50 &  & 0.598* &  &  &  &  &  & \\
+50 to 100 & 0.550** & 0.838** & 0.694** &  &  &  &  & \\
+100 to 400 & 0.806*** & 0.790** & 0.835*** & 0.638* & 0.380* & 0.431* &  & 0.533*\\
+400 to 750 & 0.611*** &  & 0.532* &  & 0.541** & 0.540* & 0.641** & \\
+750 to near-bottom &  &  &  &  &  &  &  & 0.471*\\*
 \end{longtable}
 \endgroup{}
 \endgroup{}

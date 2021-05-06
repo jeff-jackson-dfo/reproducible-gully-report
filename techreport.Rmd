@@ -531,10 +531,13 @@ library(tibble)
 
 ```
 
+
 \begin{landscapepage}
 
-
 ```{r table1, results="asis", include=TRUE, echo=FALSE}
+
+#array stretch increases row height
+cat("\\renewcommand{\\arraystretch}{2}   \n")
 
 # Load the CTD data acquired at the four monitoring stations.
 load("data/monitoringSitesAllCtd.RData")
@@ -616,24 +619,40 @@ Maximum_Depth <- as.character(round(Maximum_Depth,0))
 # but they're different so I got lucky.
 Cruise <- str_extract(string = cruiseNumber, pattern = '[0-9]*$')
 
-header <- c("Cruise", "Station", "Event", "Survey", "Month", "Longitude (DD)", 
+header1 <- c("Cruise", "Station", "Event", "Survey", "Month", "Longitude (DD)", 
             "Latitude (DD)", "Maximum Depth (m)", "Date/Start Time (UTC)")
 
-ctable <- tibble(Cruise, stationName, Event, Survey, mon, Latitude, Longitude, Maximum_Depth, Start_Date_Time)
+ctable1 <- tibble(Cruise, stationName, Event, Survey, mon, Latitude, Longitude, Maximum_Depth, Start_Date_Time)
 
-colnames(ctable) <- header
+colnames(ctable1) <- header1
 
-csasdown::csas_table(ctable,
-                     format = "latex",
-                     font_size = 10,
-                     align = rep("c", 9),
-                     repeat_header = TRUE,
-                     caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report."
-                     )
+# csasdown::csas_table(ctable1,
+#                      format = "latex",
+#                      font_size = 10,
+#                      align = rep("c", 9),
+#                      repeat_header = TRUE,
+#                      caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.")
+
+kbl(ctable1, 
+    booktab = TRUE,
+    linesep = "",
+    longtable = TRUE,
+    format = "latex",
+    escape = FALSE,
+    align = "ccccccccc",
+    caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.") %>%
+  # Make the header row bold text
+  kableExtra::row_spec(0, bold = TRUE) %>%
+  # Repeat the header on multiple pages and make the font size 10.
+  kableExtra::kable_styling(latex_options = "repeat_header", repeat_header_method = "replace", font_size = 10) %>%
+  # Alternate the rows with different colors to make it easier to read.
+  kableExtra::kable_styling(latex_options = "striped")
+
 ```
 \end{landscapepage}
 
 \clearpage
+
 
 ```{r table2, results="asis", include=TRUE, echo=FALSE}
 
@@ -659,6 +678,7 @@ colnames(ctable2) <- header2
 
 kbl(ctable2, 
     booktabs = TRUE,
+    linesep = "",
     longtable = TRUE,
     format = "latex",
     escape = FALSE,
@@ -726,6 +746,7 @@ colnames(ctable3) <- header3
 
 kbl(ctable3, 
     booktabs = TRUE,
+    linesep = "",
     longtable = TRUE,
     format = "latex",
     escape = FALSE,
@@ -733,10 +754,10 @@ kbl(ctable3,
     caption = "Summary of nominal depths of water sample collection and variables measured on the four AZMP fixed stations in the Gully MPA. Stations are organized from shallowest to deepest and include the approximate maximum depth based on station bathymetry extracted from GEBCO (2019). The ‘X’ and ‘XX’ indicate the nominal depth at which single (‘X’) and duplicate (‘XX’) samples are collected. ‘BTM’ indicates ‘near-bottom’. CHL = chlorophyll, NUTS = nutrients, SAL = salinity, O2 = dissolved oxygen, pCO2 =  partial pressure of CO2, TIC/TA = Total Inorganic Carbon and Total Alkalinity, POC = particulate organic carbon, HPLC = high performance liquid chromatography, ABS = phytoplankton absorption, and CYTO = flow cytometry for microbial plankton. \"$\\sim$\" represents approximately.") %>%
   kableExtra::collapse_rows(columns = 1:2, latex_hline = "major", valign = "middle") %>%
   # Make the header row bold text
-  kableExtra::row_spec(0, bold = TRUE)
+  kableExtra::row_spec(0, bold = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "repeat_header", repeat_header_method = "replace")
 
 ```
-
 \end{landscapepage}
 
 \clearpage
@@ -747,7 +768,7 @@ kbl(ctable3,
 ```{r table4, results="asis", include=TRUE, echo=FALSE}
 
 years <- c(1999:2018)
-years <- c(as.character(years), "Tow total:")
+years <- c(as.character(years), "No. of Tows:")
 hl6s <- c("4,6","6","5","6","4","4,5","4","5","4","","4","4","4","","4","4,5","4","4","4","4,5","22")
 sg28s <- c("","","","","","","","","","","4","","","","4","","4","","4","4","5")
 guld4s <- c("","","","","","","","","4","","4","","","","4","","4","","4","4","6")
@@ -770,20 +791,75 @@ header4 <- c("Year", "HL\\_06", "SG\\_28", "GULD\\_04", "SG\\_23", "GULD\\_03", 
 
 colnames(ctable4) <- header4
 
-csasdown::csas_table(ctable4,
-                     font_size = 11,
+# csasdown::csas_table(ctable4,
+#                      font_size = 11,
+#                      format = "latex",
+#                      align = rep("c", 13),
+#                      caption = "Ring net samples collected at the four AZMP fixed stations in the Gully MPA and at core AZMP stations HL\\_06 and LL\\_07 in spring and fall between 1999 and 2018. The numbers represent the month of sample collection, where April-June represent spring and September-December represent fall. The total number of ring net tows collected at each station in each season is given below.") %>%
+#   kableExtra::add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6), bold = TRUE, font_size = 12) %>%
+#   kableExtra::row_spec(20, hline_after = TRUE) %>%
+#   kableExtra::row_spec(21, bold = TRUE) %>%
+
+kbl(ctable4, 
+    booktabs = TRUE,
+    linesep = "",
+    longtable = TRUE,
+    format = "latex",
+    escape = FALSE,
+    align = "ccccccccccccc",
+    caption = "Ring net samples collected at the four AZMP fixed stations in the Gully MPA and at core AZMP stations HL\\_06 and LL\\_07 in spring and fall between 1999 and 2018. The numbers represent the month of sample collection, where April-June represent spring and September-December represent fall. The total number of ring net tows collected at each station in each season is given below.") %>%
+  # Make the header row bold text
+  kableExtra::row_spec(0, bold = TRUE) %>%
+  # Add a another header above the first.
+  kableExtra::add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6), bold = TRUE, font_size = 12) %>%
+  # Put a horizontal line afte the 20th row before the total row at the bottom of the table.
+  kableExtra::row_spec(20, hline_after = TRUE) %>%
+  # Bold the total row.
+  kableExtra::row_spec(21, bold = TRUE) %>%
+  # Alternate the rows with different colors to make it easier to read.
+  kableExtra::kable_styling(latex_options = "striped")
+
+```
+\end{landscapepage}
+
+\clearpage
+
+
+\begin{landscapepage}
+
+```{r table5, results="asis", include=TRUE, echo=FALSE}
+
+depths <- c("0 to 50", "50 to 100", "100 to 400", "400 to 750", "750 to near-bottom")
+guld3s <- c("","0.550**","0.806***","0.611***","")
+sg28s <- c("0.598*", "0.838**", "0.790**", "", "")
+guld4s <- c("","0.694**","0.835***","0.532*","")
+sg23s <- c("","","0.638*","","")
+guld3f <- c("","","0.380*","0.541**","")
+sg28f <- c("","","0.431*","0.540*","")
+guld4f <- c("","","","0.641**","")
+sg23f <- c("","","0.533*","","0.471*")
+
+ctable5 <- tibble(depths, guld3s, sg28s, guld4s, sg23s, guld3f, sg28f, guld4f, sg23f, row.names = NULL)
+
+header5 <- c("Depth interval (m)", rep(c("GULD\\_03", "SG\\_28", "GULD\\_04", "SG\\_23"), 2))
+
+colnames(ctable5) <- header5
+
+csasdown::csas_table(ctable5,
+                     font_size = 12,
                      format = "latex",
                      align = rep("c", 13),
-                     caption = "Ring net samples collected at the four AZMP fixed stations in the Gully MPA and at core AZMP stations HL\\_06 and LL\\_07 in spring and fall between 1999 and 2018. The numbers represent the month of sample collection, where April-June represent spring and September-December represent fall. The total number of ring net tows collected at each station in each season is given below.") %>%
-  kableExtra::add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6), bold = TRUE, font_size = 12) %>%
-  kableExtra::row_spec(20, hline_after = TRUE) %>%
-  kableExtra::row_spec(21, bold = TRUE)
+                     caption = "Pearson correlation coefficients (R2) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+  kableExtra::add_header_above(c(" " = 1, "Spring" = 4, "Fall" = 4), bold = TRUE, font_size = 12) %>%
+  kableExtra::row_spec(0, bold = TRUE) %>%
+  kableExtra::column_spec (c(1,5), border_right = T)
 
 ```
 
 \end{landscapepage}
 
 \clearpage
+
 
 <!--chapter:end:08_tables.Rmd-->
 
