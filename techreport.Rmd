@@ -906,5 +906,40 @@ kbl(ctable6,
 \clearpage
 
 
+```{r table7, results="asis", include=TRUE, echo=FALSE}
+
+zoopl <- c("LL\\_07/April", "Year", "Microcalanus", "O. similis", "Pseudocalanus", "Scolecithrocella", "GULD\\_03/April", "Year", "C. hyperboreus", "M. lucens", "HL\\_06/April", "Year", "Clausocalanus", "Pleuromamma", "Pseudocalanus")
+fmt <- c("","0.37\\text{*}","","","","","","","","0.75\\text{*}","","","0.34\\text{*}", "0.50\\text{*}\\text{*}", "")
+zmt <- c("","0.48\\text{*}\\text{*}","-0.27\\text{*}","","","-0.43\\text{*}\\text{*}","","0.72\\text{*}","-0.76\\text{*}","","", "", "0.48\\text{*}\\text{*}", "0.69\\text{*}\\text{*}", "-0.34\\text{*}")
+yy <- c("", "", "", "-0.51\\text{*}\\text{*}", "-0.47\\text{*}\\text{*}", "-0.32\\text{*}", "", "", "-0.75\\text{*}", "", "", "", "", "", "")
+
+ctable7 <- tibble(zoopl, fmt, zmt, yy, row.names = NULL)
+
+header7 <- c("", "5 m T", "0 to 200 m T", "Year")
+
+colnames(ctable7) <- header7
+
+bold_cell <- c(T, rep(F, 5), T, rep(F, 3), T, rep(F, 4))
+
+kbl(ctable7, 
+    booktabs = TRUE,
+    linesep = "\\addlinespace",
+    format = "latex",
+    escape = FALSE,
+    align = "lccc",
+    caption = "Pearson correlation coefficients (R2) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+  # Make the header row bold text
+  kableExtra::row_spec(0, bold = TRUE) %>%
+  # Make the text bold in three cells in column 1.
+  kableExtra::column_spec (1, bold = bold_cell) %>%
+  # Put horizontal lines after the 6th and 11th  rows to separate areas for easier reading.
+  kableExtra::row_spec(c(6,10), hline_after = TRUE) %>%
+  # Make the table's font size 12.
+  kableExtra::kable_styling(font_size = 12, latex_options = "striped")
+
+```
+\clearpage
+
+
 <!--chapter:end:08_tables.Rmd-->
 
