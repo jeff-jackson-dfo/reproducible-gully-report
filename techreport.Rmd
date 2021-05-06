@@ -803,7 +803,6 @@ colnames(ctable4) <- header4
 kbl(ctable4, 
     booktabs = TRUE,
     linesep = "",
-    longtable = TRUE,
     format = "latex",
     escape = FALSE,
     align = "ccccccccccccc",
@@ -811,13 +810,15 @@ kbl(ctable4,
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Add a another header above the first.
-  kableExtra::add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6), bold = TRUE, font_size = 12) %>%
+  kableExtra::add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6), bold = TRUE, font_size = 11) %>%
   # Put a horizontal line afte the 20th row before the total row at the bottom of the table.
   kableExtra::row_spec(20, hline_after = TRUE) %>%
   # Bold the total row.
   kableExtra::row_spec(21, bold = TRUE) %>%
   # Alternate the rows with different colors to make it easier to read.
-  kableExtra::kable_styling(latex_options = "striped")
+  kableExtra::kable_styling(latex_options = c("striped", "scale_down")) %>%
+  # Add lines to the right of columns 1 and 5.
+  kableExtra::column_spec (c(1,7), border_right = TRUE)
 
 ```
 \end{landscapepage}
@@ -830,14 +831,14 @@ kbl(ctable4,
 ```{r table5, results="asis", include=TRUE, echo=FALSE}
 
 depths <- c("0 to 50", "50 to 100", "100 to 400", "400 to 750", "750 to near-bottom")
-guld3s <- c("","0.550**","0.806***","0.611***","")
-sg28s <- c("0.598*", "0.838**", "0.790**", "", "")
-guld4s <- c("","0.694**","0.835***","0.532*","")
-sg23s <- c("","","0.638*","","")
-guld3f <- c("","","0.380*","0.541**","")
-sg28f <- c("","","0.431*","0.540*","")
-guld4f <- c("","","","0.641**","")
-sg23f <- c("","","0.533*","","0.471*")
+guld3s <- c("","0.550\\text{*}\\text{*}","0.806\\text{*}\\text{*}\\text{*}","0.611\\text{*}\\text{*}\\text{*}","")
+sg28s <- c("0.598\\text{*}", "0.838\\text{*}\\text{*}", "0.790\\text{*}\\text{*}", "", "")
+guld4s <- c("","0.694\\text{*}\\text{*}","0.835\\text{*}\\text{*}\\text{*}","0.532\\text{*}","")
+sg23s <- c("","","0.638\\text{*}","","")
+guld3f <- c("","","0.380\\text{*}","0.541\\text{*}\\text{*}","")
+sg28f <- c("","","0.431\\text{*}","0.540\\text{*}","")
+guld4f <- c("","","","0.641\\text{*}\\text{*}","")
+sg23f <- c("","","0.533\\text{*}","","0.471\\text{*}")
 
 ctable5 <- tibble(depths, guld3s, sg28s, guld4s, sg23s, guld3f, sg28f, guld4f, sg23f, row.names = NULL)
 
@@ -845,17 +846,61 @@ header5 <- c("Depth interval (m)", rep(c("GULD\\_03", "SG\\_28", "GULD\\_04", "S
 
 colnames(ctable5) <- header5
 
-csasdown::csas_table(ctable5,
-                     font_size = 12,
-                     format = "latex",
-                     align = rep("c", 13),
-                     caption = "Pearson correlation coefficients (R2) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
-  kableExtra::add_header_above(c(" " = 1, "Spring" = 4, "Fall" = 4), bold = TRUE, font_size = 12) %>%
+kbl(ctable5, 
+    booktabs = TRUE,
+    linesep = "",
+    format = "latex",
+    escape = FALSE,
+    align = "ccccccccc",
+    caption = "Pearson correlation coefficients (R2) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+  # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
-  kableExtra::column_spec (c(1,5), border_right = T)
+  # Add a another header above the first.
+  kableExtra::add_header_above(c(" " = 1, "Spring" = 4, "Fall" = 4), bold = TRUE, font_size = 12) %>%
+  # Add lines to the right of columns 1 and 5.
+  kableExtra::column_spec (c(1,5), border_right = TRUE)
 
 ```
+\end{landscapepage}
 
+\clearpage
+
+
+\begin{landscapepage}
+
+```{r table6, results="asis", include=TRUE, echo=FALSE}
+
+areas <- c(rep("SW LL", 5), rep("GMPA", 5), rep("SW HL", 5))
+metrics <- rep(c("Start", "Amplitude", "Duration", "Magnitude", "Jan to Apr SST"), 3)
+amp <- c("","","","","","0.388\\text{*}\\text{*}","","","","","","","","","")
+dur <- c("-0.560\\text{*}\\text{*}","","","","","-0.827\\text{*}\\text{*}","-0.492\\text{*}\\text{*}","","","","","","","","")
+mag <- c("-0.295\\text{*}\\text{*}","","0.382\\text{*}\\text{*}","","","","","","","","","0.251\\text{*}","0.614\\text{*}\\text{*}","","")
+sst <- c("","","","-0.330\\text{*}","","","","","","","0.339\\text{*}\\text{*}","","","-0.215\\text{*}","")
+trd <- c("","","","","","","","","","0.251\\text{*}","","","","","0.344\\text{*}\\text{*}")
+
+ctable6 <- tibble(areas, metrics, amp, dur, mag, sst, trd, row.names = NULL)
+
+header6 <- c("Area", "Metrics", "Amp.", "Dur.", "Mag.", "Jan to Apr SST", "Trend")
+
+colnames(ctable6) <- header6
+
+kbl(ctable6, 
+    booktabs = TRUE,
+    linesep = "",
+    format = "latex",
+    escape = FALSE,
+    align = "ccccccc",
+    caption = "Pearson correlation coefficients (R2) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+  # Make the header row bold text
+  kableExtra::row_spec(0, bold = TRUE) %>%
+  # Make the first column bold text
+  kableExtra::column_spec (1, bold = TRUE) %>%
+  # Put horizontal lines after the 6th and 11th  rows to separate areas for easier reading.
+  kableExtra::row_spec(c(5,10), hline_after = TRUE) %>%
+  # Make the table text size 12 font.
+  kableExtra::kable_styling(font_size = 12)
+
+```
 \end{landscapepage}
 
 \clearpage
