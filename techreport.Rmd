@@ -218,7 +218,7 @@ Data collection procedures for all CTD profiles analyzed in this report were con
 
 ### _Analysis_
 
-Mean vertical structure in temperature, salinity, and dissolved oxygen concentration from the CTD profiles was evaluated at each station for the spring and fall seasons only. The 89 selected profiles (Table \@ref(tab:table1)) were filtered further to include only those profiles collected in April (spring) and September-October (fall), resulting in 82 profiles for the seasonal analyses. Those profiles collected outside these months/seasons (7 profiles – November and December; see Table \@ref(tab:table1)) were not considered further in this report. Table 2 shows the number of CTD profiles contributing to the seasonally-averaged datasets computed for each station. 
+Mean vertical structure in temperature, salinity, and dissolved oxygen concentration from the CTD profiles was evaluated at each station for the spring and fall seasons only. The 89 selected profiles (Table \@ref(tab:table1)) were filtered further to include only those profiles collected in April (spring) and September-October (fall), resulting in 82 profiles for the seasonal analyses. Those profiles collected outside these months/seasons (7 profiles – November and December; see Table \@ref(tab:table1)) were not considered further in this report. Table \@ref(tab:table2) shows the number of CTD profiles contributing to the seasonally-averaged datasets computed for each station. 
 
 Temperature, salinity, and dissolved oxygen data collected in the top 10 m of each profile were excluded from the vertically-averaged profiles, due to the high mixing that occurs at the surface and potentially erroneous data values. Means were computed using the R statistical software suite (version 4.0.2) by averaging the values in 1 dbar pressure bins across profiles, and are presented with $\pm$ 95% confidence intervals. Vertical profiles were displayed using R package ‘ggplot2’ [@wickham_2016].
 
@@ -228,13 +228,13 @@ Using the ‘plotTS’ function of R package ‘oce’ [@kelley_2020], seasonal 
 
 Among-station variability in spring and fall temperature, salinity, and dissolved oxygen concentration in the Gully was evaluated by superimposing the vertically-averaged profiles of temperature, salinity, and dissolved oxygen calculated at each station and season, and qualitatively comparing their properties across similar depth intervals. Mean vertical structure in seasonal temperature, salinity, and dissolved oxygen in areas upstream (LL_07) and downstream (HL_06) of the MPA were also evaluated and compared to the water column properties of the four Gully stations.
 
-Temporal changes in spring and fall temperature, salinity, and dissolved oxygen concentration were evaluated across the time series available for each station (see Table 2). Mean temperature, salinity, and dissolved oxygen from each profile were averaged within the following depth intervals: 0 - 50 m, 50 - 100 m, 100 - 400 m, 400 - 750 m, and 750 m to near-bottom, and mean values were compared between years and stations across the time series. These intervals were chosen in order to highlight the temporal changes in the different water layers that were depicted in the vertically-averaged temperature, salinity and dissolved oxygen profiles. The lower bounds of the 750 to near-bottom interval varied between seasons within stations depending on the maximum depth attained by the CTD package. The 400 - 750 m interval extends to the seabed on GULD_03. Linear regression techniques were used to evaluate the patterns and significance of the relationships between year and average temperature, salinity, and dissolved oxygen calculated at each depth interval. Pearson correlation coefficients were shown for statistically-significant trends in temperature.
+Temporal changes in spring and fall temperature, salinity, and dissolved oxygen concentration were evaluated across the time series available for each station (see Table \@ref(tab:table2)). Mean temperature, salinity, and dissolved oxygen from each profile were averaged within the following depth intervals: 0 - 50 m, 50 - 100 m, 100 - 400 m, 400 - 750 m, and 750 m to near-bottom, and mean values were compared between years and stations across the time series. These intervals were chosen in order to highlight the temporal changes in the different water layers that were depicted in the vertically-averaged temperature, salinity and dissolved oxygen profiles. The lower bounds of the 750 to near-bottom interval varied between seasons within stations depending on the maximum depth attained by the CTD package. The 400 - 750 m interval extends to the seabed on GULD_03. Linear regression techniques were used to evaluate the patterns and significance of the relationships between year and average temperature, salinity, and dissolved oxygen calculated at each depth interval. Pearson correlation coefficients were shown for statistically-significant trends in temperature.
 
 ## **CHEMICAL** {#sec:chemical-data}
 
 ### _Data collection and compilation_
 
-The nominal depths of discrete water samples collected using Niskin bottles at each of the four AZMP fixed stations in the Gully are shown in Table 3. Standard AZMP measurements include nutrient analyses (nitrate, often reported as nitrate+nitrite, nitrite, phosphate, silicate, and ammonia), chlorophyll a concentration measured using Turner Fluorometry, salinity, and dissolved oxygen concentration. At the time of this report, salinity and dissolved oxygen samples are collected at 10 m, 250 m, and near-bottom at all stations for the purpose of calibrating the CTD sensor data. Nutrients and chlorophyll samples are collected in duplicate at all nominal depths sampled. 
+The nominal depths of discrete water samples collected using Niskin bottles at each of the four AZMP fixed stations in the Gully are shown in Table \@ref(tab:table3). Standard AZMP measurements include nutrient analyses (nitrate, often reported as nitrate+nitrite, nitrite, phosphate, silicate, and ammonia), chlorophyll a concentration measured using Turner Fluorometry, salinity, and dissolved oxygen concentration. At the time of this report, salinity and dissolved oxygen samples are collected at 10 m, 250 m, and near-bottom at all stations for the purpose of calibrating the CTD sensor data. Nutrients and chlorophyll samples are collected in duplicate at all nominal depths sampled. 
 
 Ancillary data collection includes samples for total inorganic carbon (TIC), total alkalinity (TA), and the partial pressure of carbon dioxide (pCO2) measured for the purpose of evaluating the carbonate system and ocean acidification. Phytoplankton samples on filters are collected for detailed pigment analysis via high performance liquid chromatography (HPLC) analysis and light absorption spectra (ABS), which are used in the interpretation and calibration of ocean colour measurements made by satellite remote-sensing. Particulate organic carbon (POC) samples are collected for the purpose of tracking changes in POC to chlorophyll ratios in an effort to see how much POC is associated with phytoplankton, which has a relatively stable POC to chlorophyll ratio, versus non-phytoplankton particles such as detritus and/or microzooplankon. Finally, samples are collected for estimating the abundance of microbial plankton (phytoplankton, bacterioplankton, virioplankton) using flow cytometry methods. Nominal depths of ancillary measurements may vary from year to year depending on mission objectives, although only surface samples are generally collected for POC, HPLC and ABS analysis. 
 
@@ -242,9 +242,9 @@ The concentrations of the three primary dissolved inorganic nutrients (nitrate, 
 
 ### _Analysis_
 
-Mean vertical structure in spring and fall nitrate, phosphate, and silicate concentration was evaluated at each station by calculating the average nutrient concentration ($\mu$M) across bottle samples collected at each of the standard nominal depths sampled (Table 3): near-surface (0 - 5 m), 10 m, 20 m, 30 m, 40 m, 50 m, 60 m, 80 m, 100 m, 250 m, 500 m (when applicable), 750 m (when applicable), 1500 m (when applicable), and near-bottom. Data were extracted at each nominal depth +/- 5 m (e.g., 5 - 15 m for the 10 m depth interval) to account for variability in the depth of the CTD package when bottles were closed. The spring and fall near-bottom layer for each station was defined as follows: >400 m for GULD_03, > 1900 m for GULD_04, > 940 m for SG_23, and >793 m for SG_28. The lower depth limit of samples collected in the near-bottom intervals varied between CTD casts made at each station. The average depth of each near-bottom interval was 456.36 m $\pm$ 40.44 m (mean $\pm$ SD) and 478.08 m $\pm$ 50.17 m for spring and fall data, respectively at GULD_03; 2155.51 m $\pm$ 79.51 m and 2123.51 m $\pm$ 80.32 m for spring and fall at GULD_04; 1130.71 m $\pm$ 126.78 m and 1214.92 m $\pm$ 144.89 m for spring and fall at SG_23; and 886.35 m $\pm$ 71.16 m and 860.09 m $\pm$ 41.51 m for spring and fall at SG_28.
+Mean vertical structure in spring and fall nitrate, phosphate, and silicate concentration was evaluated at each station by calculating the average nutrient concentration ($\mu$M) across bottle samples collected at each of the standard nominal depths sampled (Table \@ref(tab:table3)): near-surface (0 - 5 m), 10 m, 20 m, 30 m, 40 m, 50 m, 60 m, 80 m, 100 m, 250 m, 500 m (when applicable), 750 m (when applicable), 1500 m (when applicable), and near-bottom. Data were extracted at each nominal depth +/- 5 m (e.g., 5 - 15 m for the 10 m depth interval) to account for variability in the depth of the CTD package when bottles were closed. The spring and fall near-bottom layer for each station was defined as follows: >400 m for GULD_03, > 1900 m for GULD_04, > 940 m for SG_23, and >793 m for SG_28. The lower depth limit of samples collected in the near-bottom intervals varied between CTD casts made at each station. The average depth of each near-bottom interval was 456.36 m $\pm$ 40.44 m (mean $\pm$ SD) and 478.08 m $\pm$ 50.17 m for spring and fall data, respectively at GULD_03; 2155.51 m $\pm$ 79.51 m and 2123.51 m $\pm$ 80.32 m for spring and fall at GULD_04; 1130.71 m $\pm$ 126.78 m and 1214.92 m $\pm$ 144.89 m for spring and fall at SG_23; and 886.35 m $\pm$ 71.16 m and 860.09 m $\pm$ 41.51 m for spring and fall at SG_28.
 
-Integrated nutrient inventories were calculated over 3 different depth intervals (0 - 50 m, 50 - 250 m, 250 - 400 m using the trapezoidal method for numerical integration [see @casault_2020] for a similar application) and temporal changes at each station and between seasons were examined. The depth intervals used here were different from those used to evaluate temporal changes in the physical oceanographic parameters (temperature, salinity, and dissolved oxygen). As sensor data are available at 1 m depth intervals, profiles can be analyzed at a relatively high resolution. In contrast, nutrient concentrations are only measured at the depths at which bottle samples are collected. Thus, for the 100 - 400 m and 400 – 750 m intervals applied to the physical data, nutrient concentrations would be extrapolated from bottle samples collected at 250 m (100 – 400 m), and at 500 and 750 m (400 – 750 m) (see Table 3). Additional bottle samples would provide better resolution of the water column and allow for more congruent analyses between the hydrographical and chemical parameters in the future. Linear regression techniques were used to evaluate the direction and strength of the relationship between nutrient concentrations and year over the time series at each station and season.
+Integrated nutrient inventories were calculated over 3 different depth intervals (0 - 50 m, 50 - 250 m, 250 - 400 m using the trapezoidal method for numerical integration [see @casault_2020] for a similar application) and temporal changes at each station and between seasons were examined. The depth intervals used here were different from those used to evaluate temporal changes in the physical oceanographic parameters (temperature, salinity, and dissolved oxygen). As sensor data are available at 1 m depth intervals, profiles can be analyzed at a relatively high resolution. In contrast, nutrient concentrations are only measured at the depths at which bottle samples are collected. Thus, for the 100 - 400 m and 400 – 750 m intervals applied to the physical data, nutrient concentrations would be extrapolated from bottle samples collected at 250 m (100 – 400 m), and at 500 and 750 m (400 – 750 m) (see Table \@ref(tab:table3)). Additional bottle samples would provide better resolution of the water column and allow for more congruent analyses between the hydrographical and chemical parameters in the future. Linear regression techniques were used to evaluate the direction and strength of the relationship between nutrient concentrations and year over the time series at each station and season.
 
 Mean vertical structure in chlorophyll a concentration measured by Turner Fluorometry was evaluated at each station from samples collected at the near-surface (0 - 5 m), 10 m, 20 m, 30 m, 40 m, 50 m, 60 m, 80 m, 100 m nominal depths. Chlorophyll a concentrations integrated over the 0 - 100 m depth interval were calculated using trapezoidal numerical integration and patterns were evaluated across seasons and stations. 
 
@@ -252,11 +252,11 @@ Mean vertical structure in chlorophyll a concentration measured by Turner Fluoro
 
 ### _Data collection and compilation_
 
-Vertical ring net tows are routinely conducted at each of the four monitoring stations in the Gully using a $\sfrac{3}{4}$ m diameter ring net with a 202 $\mu$m mesh, and towed from near-bottom to surface at approximately 1 m s-1 to a maximum of 1000 m. Samples are preserved in buffered formalin and split into two equal portions before further analysis. One half is sieved on a 1 cm sieve and the large and small fractions are weighed separately to give size fractionate bulk wet weight biomass. The other half is used for taxonomic analysis, and processed according to the standard AZMP protocols outlined in @mitchell_2002. All zooplankton tows conducted within 2 km of each of the four stations were extracted from BioChem for the evaluation of zooplankton composition, diversity, abundance, and wet and dry weight biomass. This resulted in 121 tows collected from 1999 to 2018 for analysis (see Table 4).
+Vertical ring net tows are routinely conducted at each of the four monitoring stations in the Gully using a $\sfrac{3}{4}$ m diameter ring net with a 202 $\mu$m mesh, and towed from near-bottom to surface at approximately 1 m s-1 to a maximum of 1000 m. Samples are preserved in buffered formalin and split into two equal portions before further analysis. One half is sieved on a 1 cm sieve and the large and small fractions are weighed separately to give size fractionate bulk wet weight biomass. The other half is used for taxonomic analysis, and processed according to the standard AZMP protocols outlined in @mitchell_2002. All zooplankton tows conducted within 2 km of each of the four stations were extracted from BioChem for the evaluation of zooplankton composition, diversity, abundance, and wet and dry weight biomass. This resulted in 121 tows collected from 1999 to 2018 for analysis (see Table \@ref(tab:table4)).
 
 Zooplankton biomass and abundance data collected at the four Gully stations were compared with measurements at core AZMP stations near the shelf break both upstream (LL_07) and downstream (HL_06) of the Gully (see Figure 4) over approximately the same time period in order to ascertain whether the Gully supports a different community composition, and/or higher abundances of zooplankton compared to the nearby slope water areas. Zooplankton sampling at station GULD_03 began in 2005 (fall), while sampling at the stations across the Gully mouth began later (2007). A total of 45 tows were made across all four Gully stations. Zooplankton sampling at HL_06 and LL_07 started in 1999, with 76 tows made between 1999 and 2018. 
 
-Tows from all stations were delimited according to season, where spring is defined as April to June and fall is September to December. The slightly different seasonal delimitations used here compared to the physical and chemical data analyses (spring = April, fall = September/October) was necessary in order to capture the peaks in the phytoplankton bloom in each season, and the succession of zooplankton community composition that occurs as a result of these bloom dynamics. All tows collected in the spring from the Gully stations were from the month of April (Table 4), while tows from HL_06 and LL_07 were collected from April to June, and April to May, respectively. Tows collected from the Gully stations and LL_07 in the fall were from September to December, while tows from HL_06 were September to November.
+Tows from all stations were delimited according to season, where spring is defined as April to June and fall is September to December. The slightly different seasonal delimitations used here compared to the physical and chemical data analyses (spring = April, fall = September/October) was necessary in order to capture the peaks in the phytoplankton bloom in each season, and the succession of zooplankton community composition that occurs as a result of these bloom dynamics. All tows collected in the spring from the Gully stations were from the month of April (Table \@ref(tab:table4)), while tows from HL_06 and LL_07 were collected from April to June, and April to May, respectively. Tows collected from the Gully stations and LL_07 in the fall were from September to December, while tows from HL_06 were September to November.
 
 For each station, wet weight biomass concentrations were calculated for the large and small size fractions for every year and season sampled. Multi-year average zooplankton abundances were calculated for all samples collected at LL_07 and HL_06 in spring and fall between 1999 and 2018. For the Gully, abundances were averaged over samples collected at one station within the Gully (GULD_03) between 2005 and 2018, and over samples collected at the three monitoring stations across the Gully mouth (SG_23, GULD_04, SG_28) between 2007 and 2018.
 
@@ -302,9 +302,9 @@ The seasonal T-S diagrams (Figure 9) showed that waters were consistently situat
 
 Figures 10 through 12 depict temporal changes in seasonal temperature, salinity, and dissolved oxygen averaged across 5 vertical depth intervals (0 - 50 m, 50 - 100 m, 100 - 400 m, 400 - 750 m, and 750 - near-bottom) over the time series at each station. The 3-layer vertical structure in spring temperature identified in the vertically-averaged CTD profiles (Figure 5) was evident in Figure 10, with cooler near-surface layers (mean $\pm$ SD: 0 - 50 m: 4.02 $\pm$ 2.10⁰C; 50 - 100 m: 6.32 $\pm$ 3.18⁰C), warmer intermediate layers (100 - 400 m: 7.67 $\pm$ 1.46⁰C), and cooler deeper layers (400 - 70 m: 5.18 $\pm$ 0.63⁰C; 750 m - near-bottom: 4.63 $\pm$ 0.30⁰C) across all stations. At GULD_03, the depth of the cooler near-surface layer extended to 100 m, but was shallower (0 - 50 m) at the stations across the Gully mouth (SG_28, GULD_04, and SG_23). 
 
-Increasing, statistically-significant trends in temperatures measured at sub-surface (50 - 100 m) and intermediate depths (100 - 400 m, 400 - 750 m) were evident at some stations (Figure 10 and Table 5) in both spring and fall. Increasing trends were more prominent in spring than fall, and were strongest in the 100 - 400 m layer in spring (Table 5). Temperatures in near-surface (0 - 50 m) layers were highly variable across years at all stations, but a statistically-significant increasing trend in spring temperature emerged at station SG_28 (Table 5). The near-bottom layer at GULD_03, which ranged from >400 to approximately 589 m (depending on the ship’s position in this area which has steep bathymetry) also showed a slightly increasing and statistically significant trend in spring temperature over the 2000 to 2018 time period (Figure 9 and Table 5), likely due to the shallower depth of this station. 
+Increasing, statistically-significant trends in temperatures measured at sub-surface (50 - 100 m) and intermediate depths (100 - 400 m, 400 - 750 m) were evident at some stations (Figure 10 and Table \@ref(tab:table5)) in both spring and fall. Increasing trends were more prominent in spring than fall, and were strongest in the 100 - 400 m layer in spring (Table \@ref(tab:table5)). Temperatures in near-surface (0 - 50 m) layers were highly variable across years at all stations, but a statistically-significant increasing trend in spring temperature emerged at station SG_28 (Table \@ref(tab:table5)). The near-bottom layer at GULD_03, which ranged from >400 to approximately 589 m (depending on the ship’s position in this area which has steep bathymetry) also showed a slightly increasing and statistically significant trend in spring temperature over the 2000 to 2018 time period (Figure 9 and Table \@ref(tab:table5)), likely due to the shallower depth of this station. 
 
-In fall (September-October), near-surface waters in the 0 - 50 m range were considerably warmer than in spring at all stations (mean $\pm$ SD: 12.18 $\pm$ 2.08⁰C), and reached a maximum of 17.19⁰C on station SG_28 in 2013. The 50 - 100 m layer was, on average, 5.41 $\pm$ 3.20⁰C across all stations in the Gully. The warm and saline intermediate layer (100 - 400 m: 8.15 $\pm$ 1.64⁰C) observed in the spring was also a prominent feature at all stations in fall. Average temperatures in the deeper layers (400 - 750 m: 5.28 $\pm$ 0.43⁰C; 750 m to near-bottom: 4.28 $\pm$ 0.29⁰C) were similar to those of spring and showed less variability compared to the shallower layers above. In 2013, there was a positive spike in fall temperatures in the upper layers at the Gully mouth stations (SG_28, GULD_04, and SG_23), but not at GULD_03. While statistically significant, increasing trends in fall temperatures were observed at some depth intervals (Table 5), these may be due to the successively earlier date of the fall survey, which shifted from October in the early 2000’s to September (warmer) after 2012 (see Table \@ref(tab:table1)). Thus, any temporal trends in fall temperature may be confounded by sample date and should be interpreted with caution.
+In fall (September-October), near-surface waters in the 0 - 50 m range were considerably warmer than in spring at all stations (mean $\pm$ SD: 12.18 $\pm$ 2.08⁰C), and reached a maximum of 17.19⁰C on station SG_28 in 2013. The 50 - 100 m layer was, on average, 5.41 $\pm$ 3.20⁰C across all stations in the Gully. The warm and saline intermediate layer (100 - 400 m: 8.15 $\pm$ 1.64⁰C) observed in the spring was also a prominent feature at all stations in fall. Average temperatures in the deeper layers (400 - 750 m: 5.28 $\pm$ 0.43⁰C; 750 m to near-bottom: 4.28 $\pm$ 0.29⁰C) were similar to those of spring and showed less variability compared to the shallower layers above. In 2013, there was a positive spike in fall temperatures in the upper layers at the Gully mouth stations (SG_28, GULD_04, and SG_23), but not at GULD_03. While statistically significant, increasing trends in fall temperatures were observed at some depth intervals (Table \@ref(tab:table5)), these may be due to the successively earlier date of the fall survey, which shifted from October in the early 2000’s to September (warmer) after 2012 (see Table \@ref(tab:table1)). Thus, any temporal trends in fall temperature may be confounded by sample date and should be interpreted with caution.
 
 In contrast to temperature, patterns in salinity (Figure 11) and dissolved oxygen (Figure 12) were much more comparable between spring and fall, with fresher, more oxygen-rich near-surface layers (0  - 50 m and 50 - 100 m) and more saline, oxygen-depleted deeper layers at all stations and seasons. A dramatic, positive increase in salinity was observed between 0 and 100 m at the Gully mouth stations in the fall of 2013, consistent with increased temperatures (Figures 9 and 10). Dissolved oxygen was lowest in the intermediate (100 - 400 m) layer in that year, consistent with the properties of Warm Slope Water (WSW; Petrie and Yeats 2000). While temperature and salinity decreased from 2017 onward at GULD_03, dissolved oxygen concentration increased, suggesting a larger-than-average transport of cold, fresh, and oxygen-rich waters from the Gulf of St. Lawrence during those years (Petrie and Drinkwater 1993; Dever et al. 2016).
 
@@ -345,7 +345,7 @@ The average timing of the peaks in SSC concentrations were in late March in the 
 
 SSC values were highly variable during the spring bloom, due to inter-annual variations in both the timing, duration and intensity of the spring bloom peak as manifested by the bloom metrics (Figure 27). Thus, while average bloom initiation dates and durations were indistinguishable among regions (Day of Year (DoY) ranges: 76 - 81 and 35 - 40 days, respectively), actual start dates and durations were much more variable (Ranges DoY 36 - 119 and 10 - 119 days over all areas, respectively). The average bloom magnitude was statistically slightly higher for the GMPA (45.4 mg m-3 d) than for the SW HL area (30.1 mg m-3 d), but neither of these was different from that for the SW LL area (41.0 mg m-3 d) and actual values over all regions varied between 9.7 and 104.7 mg m-3 d.  Finally, while average bloom amplitudes were also indistinguishable among regions (Range 1.43 - 2.20 mg m-3), actual values ranged between 0.6 and 6.3 mg m-3.
 
-There were significant correlations between one or two pairs of bloom metrics at all sites, but they were inconsistent (Table 6). Thus, earlier blooms lasted longer in the SW LL area and the GMPA, but not in the SW HL area. Furthermore, blooms that lasted longer had higher magnitudes in the SW LL and SW HL areas, but not in the GMPA, and bloom magnitudes were higher when SSTs were lower during the pre-bloom winter and spring bloom (January to April) period in the SW LL and SW HL areas. Spring SSTs trended upward over the 1998 - 2018 period in the GMPA and in the SW HL area, and in the latter area this was associated with an increasing trend in bloom start date.
+There were significant correlations between one or two pairs of bloom metrics at all sites, but they were inconsistent (Table \@ref(tab:table6)). Thus, earlier blooms lasted longer in the SW LL area and the GMPA, but not in the SW HL area. Furthermore, blooms that lasted longer had higher magnitudes in the SW LL and SW HL areas, but not in the GMPA, and bloom magnitudes were higher when SSTs were lower during the pre-bloom winter and spring bloom (January to April) period in the SW LL and SW HL areas. Spring SSTs trended upward over the 1998 - 2018 period in the GMPA and in the SW HL area, and in the latter area this was associated with an increasing trend in bloom start date.
 
 Log-transformed phytoplankton chlorophyll a concentrations determined from water samples collected in the 0 - 10 m depth range at stations within the three satellite areas were well correlated with log transformed remotely-sensed SSC concentrations from the same months/years (Figure 28). Pearson correlation coefficients were higher for the GMPA and SW LL areas separately than for the entire dataset, while those for SW HL were lower. Additionally, in situ concentrations were generally lower than remotely-sensed SSC values at low chlorophyll concentrations, and higher at high chlorophyll concentrations. Such patterns are common for these types of comparisons, and are generally explained in terms of the differences in the spatial and temporal scales of the satellite measurements, and the phytoplankton species composition (Stuart et al. 1998, 2000; Sathyendranath et al. 2001; Bricaud et al. 2004). Thus, phytoplankton blooms are localized and short-lived, whereas remotely-sensed measurements are averaged over large areas and here, over approximately 30 day periods, leading to underestimation. In addition, at high chlorophyll concentrations phytoplankton communities are often dominated by large cells (e.g. diatoms), within which absorption of light relative to the concentration of chlorophyll is reduced due to intra-cellular self-shading (the “packaging effect”), again leading to underestimation. Finally, different phytoplankton species have different accessory pigments and inherently different light absorption characteristics, which can also influence the signal captured by remote sensing as well as the in situ measurements of chlorophyll concentration made using Turner Fluorometry. The lower R2 value for the SW HL area may thus indicate a higher diversity of phytoplankton species/types there, than in the GMPA and SW LL areas.
 
@@ -373,9 +373,9 @@ Among these taxa, individuals are relatively large for the two Calanus taxa, the
 
 ### _Relationship between temperature and zooplankton abundance_
 
-Physiological rates of copepods are related to temperature, and some taxa are associated with warmer (offshore, southern) or cooler (shelf/slope, northern) water masses. Furthermore, most of the ten most abundant copepod taxa are more abundant in the near-surface layers than at depth, except for C. fimarchicus in fall (Head unpubl. data). Thus, relationships between in situ near-surface (5 m and 0 - 200 m) temperatures and taxon abundance were examined, as well as abundance trends over time (Table 7).
+Physiological rates of copepods are related to temperature, and some taxa are associated with warmer (offshore, southern) or cooler (shelf/slope, northern) water masses. Furthermore, most of the ten most abundant copepod taxa are more abundant in the near-surface layers than at depth, except for C. fimarchicus in fall (Head unpubl. data). Thus, relationships between in situ near-surface (5 m and 0 - 200 m) temperatures and taxon abundance were examined, as well as abundance trends over time (Tables \@ref(tab:table7) and \@ref(tab:table8)).
 
-Among the significant relationships that emerged, correlations between the abundances of Clausocalanus and Pleuromamma and temperature were consistently positive in spring and fall, reflecting their association with warm/offshore water (Table 7). By contrast, the abundance of the supposedly warm-water taxon, M. lucens, was positively correlated with 5 m temperature at GULD_03 in spring, but negatively correlated with 0 - 200 m temperature at HL_06 in fall. Otherwise, significant relationships between taxon abundances and near-surface temperatures were negative, and more numerous in fall than in spring. However, the correlations in fall are ambiguous as near-surface temperatures decreased with increasing (later) sampling date between September and December, and due to the seasonal variation in abundance in relation to life cycle stage exhibited by most taxa. In fact the abundances of C. finmarchicus, O. similis and Pseudocalanus were positively correlated with sampling date at LL_07, while Clausocalanus abundance was negatively correlated with sampling date. All four of these relationships are consistent with the observations of the three negative, and one positive, correlations with near surface in situ temperature at LL_07. Thus, temperature and/or seasonal life-cycle effects could be driving the relationships.
+Among the significant relationships that emerged, correlations between the abundances of Clausocalanus and Pleuromamma and temperature were consistently positive in spring and fall, reflecting their association with warm/offshore water (Tables \@ref(tab:table7) and \@ref(tab:table8)). By contrast, the abundance of the supposedly warm-water taxon, M. lucens, was positively correlated with 5 m temperature at GULD_03 in spring, but negatively correlated with 0 - 200 m temperature at HL_06 in fall. Otherwise, significant relationships between taxon abundances and near-surface temperatures were negative, and more numerous in fall than in spring. However, the correlations in fall are ambiguous as near-surface temperatures decreased with increasing (later) sampling date between September and December, and due to the seasonal variation in abundance in relation to life cycle stage exhibited by most taxa. In fact the abundances of C. finmarchicus, O. similis and Pseudocalanus were positively correlated with sampling date at LL_07, while Clausocalanus abundance was negatively correlated with sampling date. All four of these relationships are consistent with the observations of the three negative, and one positive, correlations with near surface in situ temperature at LL_07. Thus, temperature and/or seasonal life-cycle effects could be driving the relationships.
 
 April abundances for C. hyperboreus at GULD_03 and for O. similis, Microcalanus and Scolecithrocella at LL_07 decreased over time, possibly due to an increase in sea surface temperatures over time, since the abundances for all four were negatively correlated with near-surface temperature in spring. In fall, as discussed above, differences in sampling dates from year to year mean that the apparent observed trends over time may, or may not, be real.
 
@@ -458,7 +458,7 @@ In 2015, an assessment of the available data contributing towards the 47 Gully m
 
 The Scotian Shelf lies at a confluence of two large ocean gyre currents: the subpolar Labrador Current and subtropical Gulf Stream [@loder_1998], and the influence of each on the region varies as a result of multi-decadal fluctuations in the Atlantic Multi-Decadal Oscillation [@drinkwater_1998; @knight_2005]. This results in high inter-annual and multi-decadal variability in water mass characteristics on the Scotian Shelf that may mask real trends resulting from climate change. While a conclusion of the last assessment of datasets contributing to the oceanographic monitoring of the Gully [@allard_2015] was that no long-term trends in conditions had been detected over the history of AZMP sampling, observations from the program made since then suggest that more recently-detected changes in physical, chemical, and biological conditions on the Scotian Shelf are persisting [@casault_2020]. Surface and deep silicate and phosphate inventories have shown a declining trend since 2014, with deep nitrate inventories also showing below average values over the last three years across the region. Lower abundances of large phytoplankton (diatoms), and declining zooplankton biomass and C. finmarchicus abundance across the Scotian Shelf have also been noted. Above-normal abundances of offshore copepods on the Scotian Shelf, particularly Oithona atlantica as observed at station Halifax-2, suggest a greater influence of offshore waters in more recent years [@casault_2020].
 
-Similar to other locations on the Scotian Shelf, water mass characteristics in the Gully MPA were highly variable between seasons and years. The high inter-annual variability observed in the upper 100 m of the Gully mouth stations in fall suggests that a much longer time series than that analyzed here is required in order to detect changes in fall conditions resulting from anthropogenic climate change. Furthermore, the occurrence of anomalous events, such as warm-core eddy impingement on the Scotian Shelf (see Figure 9 and Results section), may confound the detection of trends in datasets collected on only a biannual basis. Deployment of moored devices for the collection of year-round observations would greatly enhance the program’s ability to effectively monitor temporal changes in the Gully MPA. Nonetheless, despite our limited, seasonally-defined time series, our results showed statistically significant, increasing trends in spring temperatures at subsurface and intermediate depths at all stations (Figure 10 and Table 5). Upper-ocean temperatures have increased in the northwest Atlantic over the last century, consistent with the global trend of increasing sea surface temperatures as a result of anthropogenic climate change [@bush_2019]. Under future climate change, the east-to-west flowing shelf break current originating from the Labrador Sea is also projected to weaken, while the influence of Warm Slope Water in the region is projected to increase [@saba_2016]. Given that the time series from which these analyses were based are relatively short, our observed trends should be considered in the context of longer-term trends on the Scotian Shelf and Gulf of Maine to determine their overall significance. Nonetheless, our results highlight the need to conduct regular, dedicated reporting on the oceanographic conditions of the Gully MPA. While annual reporting on the conditions observed elsewhere on the Scotian Shelf (e.g. Louisbourg Line station LL_07) may generally inform on anomalous events or years that may impact the ecosystems of the MPA, we recommend that dedicated oceanographic reporting on the Gully be conducted every 5 years in order to effectively track temporal changes within the MPA, and ensure that any alterations of its physical, chemical, or biological state are being considered in current conservation management strategies aimed at protecting its unique ecosystems.
+Similar to other locations on the Scotian Shelf, water mass characteristics in the Gully MPA were highly variable between seasons and years. The high inter-annual variability observed in the upper 100 m of the Gully mouth stations in fall suggests that a much longer time series than that analyzed here is required in order to detect changes in fall conditions resulting from anthropogenic climate change. Furthermore, the occurrence of anomalous events, such as warm-core eddy impingement on the Scotian Shelf (see Figure 9 and Results section), may confound the detection of trends in datasets collected on only a biannual basis. Deployment of moored devices for the collection of year-round observations would greatly enhance the program’s ability to effectively monitor temporal changes in the Gully MPA. Nonetheless, despite our limited, seasonally-defined time series, our results showed statistically significant, increasing trends in spring temperatures at subsurface and intermediate depths at all stations (Figure 10 and Table \@ref(tab:table5)). Upper-ocean temperatures have increased in the northwest Atlantic over the last century, consistent with the global trend of increasing sea surface temperatures as a result of anthropogenic climate change [@bush_2019]. Under future climate change, the east-to-west flowing shelf break current originating from the Labrador Sea is also projected to weaken, while the influence of Warm Slope Water in the region is projected to increase [@saba_2016]. Given that the time series from which these analyses were based are relatively short, our observed trends should be considered in the context of longer-term trends on the Scotian Shelf and Gulf of Maine to determine their overall significance. Nonetheless, our results highlight the need to conduct regular, dedicated reporting on the oceanographic conditions of the Gully MPA. While annual reporting on the conditions observed elsewhere on the Scotian Shelf (e.g. Louisbourg Line station LL_07) may generally inform on anomalous events or years that may impact the ecosystems of the MPA, we recommend that dedicated oceanographic reporting on the Gully be conducted every 5 years in order to effectively track temporal changes within the MPA, and ensure that any alterations of its physical, chemical, or biological state are being considered in current conservation management strategies aimed at protecting its unique ecosystems.
 
 \clearpage
 
@@ -599,39 +599,49 @@ Latitude <- unlist(lapply(gullyCTD, function(k) k[['latitude']][1]))
 Maximum_Depth <- unlist(lapply(gullyCTD, function(k) k[['depthMax']]))
 Start_Date_Time <- startTime[ix]
 
+# Replace the cruise number 99054 with HUD1999054.
+cruiseNumber[1] = "HUD1999054"
+
+# Remove data for NED2005004
+rx1 <- which(cruiseNumber == "NED2005004")
+
+# Remove data for HUD2007045, Event 130.
+rx2 <- which((cruiseNumber == "HUD2007045") & (Event == "130"))
+
+# Remove data for TEL2010900
+rx3 <- which(cruiseNumber == "TEL2010900")
+
+# Combine list of rows to remove
+dx <- c(rx1,rx2,rx3)
+
+# Remove rows from arrays
+cruiseNumber <- cruiseNumber[-dx]
+stationName <- stationName[-dx]
+Event <- Event[-dx]
+Survey <- Survey[-dx]
+Longitude <- Longitude[-dx]
+Latitude <- Latitude[-dx]
+Maximum_Depth <- Maximum_Depth[-dx]
+Start_Date_Time <- Start_Date_Time[-dx]
+
+# Replace remaining "Non-AZMP" with "Greenan et al. (2014)"
+sx <- which(Survey == "Non-AZMP")
+Survey[sx] <- "Greenan et al. (2014)"
+
 # Get the name of the month  when the profile occurred.  Change the output to a
 # character array from "ordered" "factor".
-mon <- month(startTime, label = TRUE, abbr = FALSE)
+mon <- month(Start_Date_Time, label = TRUE, abbr = FALSE)
 mon <- as.character(mon)
 
 # Change the maximum depth from a number to a string without any decimals.
 Maximum_Depth <- as.character(round(Maximum_Depth,0))
 
-# Fix the station strings by replacing the "\\" with an empty string "". Since
-# backslash is the escape sequence character you have to escape each backslash
-# in the replace call.  This line is used if calling kable() directly.  It is 
-# commented out if using csas_table() instead.
-# Station <- str_replace(stationName, "\\\\", "")
-
-#for ordering by year and cruise number
-# note that this might not be the best if multiple charters for one year
-# e.g. could have been an issue if both the COR and EN had event number 001
-# but they're different so I got lucky.
-Cruise <- str_extract(string = cruiseNumber, pattern = '[0-9]*$')
-
 header1 <- c("Cruise", "Station", "Event", "Survey", "Month", "Longitude (DD)", 
             "Latitude (DD)", "Maximum Depth (m)", "Date/Start Time (UTC)")
 
-ctable1 <- tibble(Cruise, stationName, Event, Survey, mon, Latitude, Longitude, Maximum_Depth, Start_Date_Time)
+ctable1 <- tibble(cruiseNumber, stationName, Event, Survey, mon, Longitude, Latitude, Maximum_Depth, Start_Date_Time)
 
 colnames(ctable1) <- header1
-
-# csasdown::csas_table(ctable1,
-#                      format = "latex",
-#                      font_size = 10,
-#                      align = rep("c", 9),
-#                      repeat_header = TRUE,
-#                      caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.")
 
 kbl(ctable1, 
     booktab = TRUE,
@@ -640,13 +650,22 @@ kbl(ctable1,
     format = "latex",
     escape = FALSE,
     align = "ccccccccc",
-    caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.") %>%
+    caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring), September and October (45 profiles, representative of fall) are included in the analyses presented in this report.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Repeat the header on multiple pages and make the font size 10.
-  kableExtra::kable_styling(latex_options = "repeat_header", repeat_header_method = "replace", font_size = 10) %>%
+  kableExtra::kable_styling(latex_options = "repeat_header", repeat_header_method = "replace", font_size = 11, full_width = FALSE) %>%
   # Alternate the rows with different colors to make it easier to read.
-  kableExtra::kable_styling(latex_options = "striped")
+  kableExtra::kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kableExtra::column_spec(1, width = "6em") %>%
+  kableExtra::column_spec(2, width = "5em") %>%
+  kableExtra::column_spec(3, width = "3em") %>%
+  kableExtra::column_spec(4, width = "6em") %>%
+  kableExtra::column_spec(5, width = "5em") %>%
+  kableExtra::column_spec(6, width = "5em") %>%
+  kableExtra::column_spec(7, width = "5em") %>%
+  kableExtra::column_spec(8, width = "5em") %>%
+  kableExtra::column_spec(9, width = "9em")
 
 ```
 \end{landscapepage}
@@ -716,25 +735,27 @@ chl[ix1] <- "XX"
 nuts <- rep("XX", nx)
 sal <- rep("", nx)
 ix2 <- which((nominalDepth == "BTM") | (nominalDepth == "250") | (nominalDepth == "10"))
-sal[ix2] <- "XX"
+sal[ix2] <- "X"
 oxy <- sal
+oxy[c(1,23,25,50)] <- "XX"
+
 pco2 <- rep("", nx)
 ix3 <- which(nominalDepth == "BTM")
-pco2[ix3] <- "XX"
-# ix4 <- stations == "GULD\\_04"
-# ix5 <- which(stations == "GULD\\_04")
-ix4 <- stations == "GULD_04"
-ix5 <- which(stations == "GULD_04")
+pco2[ix3] <- "X"
+ix4 <- stations == "GULD\\_04"
+ix5 <- which(stations == "GULD\\_04")
 g4nd <- nominalDepth[ix4]
 ix6 <- which((g4nd == "1500") | (g4nd == "500") | (g4nd == "100") | (g4nd == "10") | (g4nd == "1"))
-pco2[ix5[ix6]] <- "XX"
+pco2[ix5[ix6]] <- "X"
 tic <- pco2
 poc <- rep("", nx)
 ix7 <- which(nominalDepth == "1")
 poc[ix7] <- "XX"
-hplc <- poc
-abs <- poc
-cyto <- poc
+hplc <- rep("", nx)
+hplc[ix7] <- "X"
+abs <- hplc
+cyto <- rep("XX", nx)
+cyto[c(1,2,12,13,15,25,26,28,38,40,42,47)] <- ""
 
 # Create the table header
 header3 <- c("Station", "Station Depth", "Nominal Depth", "CHL", "NUTS", "SAL", "O2", "pCO2", "TIC/TA", "POC", "HPLC", "ABS", "CYTO")
@@ -852,7 +873,7 @@ kbl(ctable5,
     format = "latex",
     escape = FALSE,
     align = "ccccccccc",
-    caption = "Pearson correlation coefficients (R2) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    caption = "Pearson correlation coefficients ($R^2$) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Add a another header above the first.
@@ -889,16 +910,16 @@ kbl(ctable6,
     linesep = "",
     format = "latex",
     escape = FALSE,
-    align = "ccccccc",
-    caption = "Pearson correlation coefficients (R2) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    align = "clccccc",
+    caption = "Pearson correlation coefficients ($R^2$) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Make the first column bold text
   kableExtra::column_spec (1, bold = TRUE) %>%
-  # Put horizontal lines after the 6th and 11th  rows to separate areas for easier reading.
-  kableExtra::row_spec(c(5,10), hline_after = TRUE) %>%
   # Make the table text size 12 font.
-  kableExtra::kable_styling(font_size = 12)
+  kableExtra::kable_styling(font_size = 12) %>%
+  # Collapse the values in column 1 so values are not repeated.
+  kableExtra::collapse_rows(columns = 1, latex_hline = "major", valign = "middle")
 
 ```
 \end{landscapepage}
@@ -910,7 +931,7 @@ kbl(ctable6,
 
 zoopl <- c("LL\\_07/April", "Year", "Microcalanus", "O. similis", "Pseudocalanus", "Scolecithrocella", "GULD\\_03/April", "Year", "C. hyperboreus", "M. lucens", "HL\\_06/April", "Year", "Clausocalanus", "Pleuromamma", "Pseudocalanus")
 fmt <- c("","0.37\\text{*}","","","","","","","","0.75\\text{*}","","","0.34\\text{*}", "0.50\\text{*}\\text{*}", "")
-zmt <- c("","0.48\\text{*}\\text{*}","-0.27\\text{*}","","","-0.43\\text{*}\\text{*}","","0.72\\text{*}","-0.76\\text{*}","","", "", "0.48\\text{*}\\text{*}", "0.69\\text{*}\\text{*}", "-0.34\\text{*}")
+zmt <- c("","0.48\\text{*}\\text{*}","-0.27\\text{*}","","","-0.43\\text{*}\\text{*}","","0.72\\text{*}","-0.76\\text{*}","","", "", "0.48\\text{*}\\text{*}", "0.69\\text{*}\\text{*}\\text{*}", "-0.34\\text{*}")
 yy <- c("", "", "", "-0.51\\text{*}\\text{*}", "-0.47\\text{*}\\text{*}", "-0.32\\text{*}", "", "", "-0.75\\text{*}", "", "", "", "", "", "")
 
 ctable7 <- tibble(zoopl, fmt, zmt, yy, row.names = NULL)
@@ -927,13 +948,48 @@ kbl(ctable7,
     format = "latex",
     escape = FALSE,
     align = "lccc",
-    caption = "Pearson correlation coefficients (R2) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    caption = "Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Make the text bold in three cells in column 1.
   kableExtra::column_spec (1, bold = bold_cell) %>%
   # Put horizontal lines after the 6th and 11th  rows to separate areas for easier reading.
   kableExtra::row_spec(c(6,10), hline_after = TRUE) %>%
+  # Make the table's font size 12.
+  kableExtra::kable_styling(font_size = 12, latex_options = "striped")
+
+```
+\clearpage
+
+
+```{r table8, results="asis", include=TRUE, echo=FALSE}
+
+zoopl <- c("LL\\_07/Fall", "Year", "C. finmarchicus", "Clausocalanus", "Microcalanus", "GULD\\_03/Fall", "Year", "Clausocalanus", "M. lucens", "HL\\_06/Fall", "Year", "C. finmarchicus", "M. clausi", "M. lucens", "O. atlantica", "O. similis", "Paracalanus", "Pleuromamma")
+fmt <- c("","","-0.43\\text{*}\\text{*}","0.38\\text{*}","-0.31\\text{*}","","","","","","","-0.21\\text{*}","","","","","","")
+zmt <- c("","","","0.62\\text{*}\\text{*}","","","","","","","","","","-0.34\\text{*}\\text{*}","-0.27\\text{*}","-0.47\\text{*}\\text{*}","-0.30\\text{*}","0.21\\text{*}")
+yy <- c("","","","","-0.28\\text{*}","","","0.45\\text{*}","0.51\\text{*}","","","","-0.25\\text{*}","","","","","")
+
+ctable8 <- tibble(zoopl, fmt, zmt, yy, row.names = NULL)
+
+header8 <- c("", "5 m T", "0 to 200 m T", "Year")
+
+colnames(ctable8) <- header8
+
+bold_cell <- c(T, rep(F, 4), T, rep(F, 3), T, rep(F, 8))
+
+kbl(ctable8, 
+    booktabs = TRUE,
+    linesep = "\\addlinespace",
+    format = "latex",
+    escape = FALSE,
+    align = "lccc",
+    caption = "Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in fall (Sept to Dec) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+  # Make the header row bold text
+  kableExtra::row_spec(0, bold = TRUE) %>%
+  # Make the text bold in three cells in column 1.
+  kableExtra::column_spec (1, bold = bold_cell) %>%
+  # Put horizontal lines after the 5th and 9th  rows to separate areas for easier reading.
+  kableExtra::row_spec(c(5,9), hline_after = TRUE) %>%
   # Make the table's font size 12.
   kableExtra::kable_styling(font_size = 12, latex_options = "striped")
 

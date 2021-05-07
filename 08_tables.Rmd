@@ -80,39 +80,49 @@ Latitude <- unlist(lapply(gullyCTD, function(k) k[['latitude']][1]))
 Maximum_Depth <- unlist(lapply(gullyCTD, function(k) k[['depthMax']]))
 Start_Date_Time <- startTime[ix]
 
+# Replace the cruise number 99054 with HUD1999054.
+cruiseNumber[1] = "HUD1999054"
+
+# Remove data for NED2005004
+rx1 <- which(cruiseNumber == "NED2005004")
+
+# Remove data for HUD2007045, Event 130.
+rx2 <- which((cruiseNumber == "HUD2007045") & (Event == "130"))
+
+# Remove data for TEL2010900
+rx3 <- which(cruiseNumber == "TEL2010900")
+
+# Combine list of rows to remove
+dx <- c(rx1,rx2,rx3)
+
+# Remove rows from arrays
+cruiseNumber <- cruiseNumber[-dx]
+stationName <- stationName[-dx]
+Event <- Event[-dx]
+Survey <- Survey[-dx]
+Longitude <- Longitude[-dx]
+Latitude <- Latitude[-dx]
+Maximum_Depth <- Maximum_Depth[-dx]
+Start_Date_Time <- Start_Date_Time[-dx]
+
+# Replace remaining "Non-AZMP" with "Greenan et al. (2014)"
+sx <- which(Survey == "Non-AZMP")
+Survey[sx] <- "Greenan et al. (2014)"
+
 # Get the name of the month  when the profile occurred.  Change the output to a
 # character array from "ordered" "factor".
-mon <- month(startTime, label = TRUE, abbr = FALSE)
+mon <- month(Start_Date_Time, label = TRUE, abbr = FALSE)
 mon <- as.character(mon)
 
 # Change the maximum depth from a number to a string without any decimals.
 Maximum_Depth <- as.character(round(Maximum_Depth,0))
 
-# Fix the station strings by replacing the "\\" with an empty string "". Since
-# backslash is the escape sequence character you have to escape each backslash
-# in the replace call.  This line is used if calling kable() directly.  It is 
-# commented out if using csas_table() instead.
-# Station <- str_replace(stationName, "\\\\", "")
-
-#for ordering by year and cruise number
-# note that this might not be the best if multiple charters for one year
-# e.g. could have been an issue if both the COR and EN had event number 001
-# but they're different so I got lucky.
-Cruise <- str_extract(string = cruiseNumber, pattern = '[0-9]*$')
-
 header1 <- c("Cruise", "Station", "Event", "Survey", "Month", "Longitude (DD)", 
             "Latitude (DD)", "Maximum Depth (m)", "Date/Start Time (UTC)")
 
-ctable1 <- tibble(Cruise, stationName, Event, Survey, mon, Latitude, Longitude, Maximum_Depth, Start_Date_Time)
+ctable1 <- tibble(cruiseNumber, stationName, Event, Survey, mon, Longitude, Latitude, Maximum_Depth, Start_Date_Time)
 
 colnames(ctable1) <- header1
-
-# csasdown::csas_table(ctable1,
-#                      format = "latex",
-#                      font_size = 10,
-#                      align = rep("c", 9),
-#                      repeat_header = TRUE,
-#                      caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.")
 
 kbl(ctable1, 
     booktab = TRUE,
@@ -121,13 +131,22 @@ kbl(ctable1,
     format = "latex",
     escape = FALSE,
     align = "ccccccccc",
-    caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.") %>%
+    caption = "Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\\_23, SG\\_28, GULD\\_03, and GULD\\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring), September and October (45 profiles, representative of fall) are included in the analyses presented in this report.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Repeat the header on multiple pages and make the font size 10.
-  kableExtra::kable_styling(latex_options = "repeat_header", repeat_header_method = "replace", font_size = 10) %>%
+  kableExtra::kable_styling(latex_options = "repeat_header", repeat_header_method = "replace", font_size = 11, full_width = FALSE) %>%
   # Alternate the rows with different colors to make it easier to read.
-  kableExtra::kable_styling(latex_options = "striped")
+  kableExtra::kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kableExtra::column_spec(1, width = "6em") %>%
+  kableExtra::column_spec(2, width = "5em") %>%
+  kableExtra::column_spec(3, width = "3em") %>%
+  kableExtra::column_spec(4, width = "6em") %>%
+  kableExtra::column_spec(5, width = "5em") %>%
+  kableExtra::column_spec(6, width = "5em") %>%
+  kableExtra::column_spec(7, width = "5em") %>%
+  kableExtra::column_spec(8, width = "5em") %>%
+  kableExtra::column_spec(9, width = "9em")
 
 ```
 \end{landscapepage}
@@ -197,25 +216,27 @@ chl[ix1] <- "XX"
 nuts <- rep("XX", nx)
 sal <- rep("", nx)
 ix2 <- which((nominalDepth == "BTM") | (nominalDepth == "250") | (nominalDepth == "10"))
-sal[ix2] <- "XX"
+sal[ix2] <- "X"
 oxy <- sal
+oxy[c(1,23,25,50)] <- "XX"
+
 pco2 <- rep("", nx)
 ix3 <- which(nominalDepth == "BTM")
-pco2[ix3] <- "XX"
-# ix4 <- stations == "GULD\\_04"
-# ix5 <- which(stations == "GULD\\_04")
-ix4 <- stations == "GULD_04"
-ix5 <- which(stations == "GULD_04")
+pco2[ix3] <- "X"
+ix4 <- stations == "GULD\\_04"
+ix5 <- which(stations == "GULD\\_04")
 g4nd <- nominalDepth[ix4]
 ix6 <- which((g4nd == "1500") | (g4nd == "500") | (g4nd == "100") | (g4nd == "10") | (g4nd == "1"))
-pco2[ix5[ix6]] <- "XX"
+pco2[ix5[ix6]] <- "X"
 tic <- pco2
 poc <- rep("", nx)
 ix7 <- which(nominalDepth == "1")
 poc[ix7] <- "XX"
-hplc <- poc
-abs <- poc
-cyto <- poc
+hplc <- rep("", nx)
+hplc[ix7] <- "X"
+abs <- hplc
+cyto <- rep("XX", nx)
+cyto[c(1,2,12,13,15,25,26,28,38,40,42,47)] <- ""
 
 # Create the table header
 header3 <- c("Station", "Station Depth", "Nominal Depth", "CHL", "NUTS", "SAL", "O2", "pCO2", "TIC/TA", "POC", "HPLC", "ABS", "CYTO")
@@ -333,7 +354,7 @@ kbl(ctable5,
     format = "latex",
     escape = FALSE,
     align = "ccccccccc",
-    caption = "Pearson correlation coefficients (R2) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    caption = "Pearson correlation coefficients ($R^2$) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Add a another header above the first.
@@ -370,16 +391,16 @@ kbl(ctable6,
     linesep = "",
     format = "latex",
     escape = FALSE,
-    align = "ccccccc",
-    caption = "Pearson correlation coefficients (R2) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    align = "clccccc",
+    caption = "Pearson correlation coefficients ($R^2$) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Make the first column bold text
   kableExtra::column_spec (1, bold = TRUE) %>%
-  # Put horizontal lines after the 6th and 11th  rows to separate areas for easier reading.
-  kableExtra::row_spec(c(5,10), hline_after = TRUE) %>%
   # Make the table text size 12 font.
-  kableExtra::kable_styling(font_size = 12)
+  kableExtra::kable_styling(font_size = 12) %>%
+  # Collapse the values in column 1 so values are not repeated.
+  kableExtra::collapse_rows(columns = 1, latex_hline = "major", valign = "middle")
 
 ```
 \end{landscapepage}
@@ -391,7 +412,7 @@ kbl(ctable6,
 
 zoopl <- c("LL\\_07/April", "Year", "Microcalanus", "O. similis", "Pseudocalanus", "Scolecithrocella", "GULD\\_03/April", "Year", "C. hyperboreus", "M. lucens", "HL\\_06/April", "Year", "Clausocalanus", "Pleuromamma", "Pseudocalanus")
 fmt <- c("","0.37\\text{*}","","","","","","","","0.75\\text{*}","","","0.34\\text{*}", "0.50\\text{*}\\text{*}", "")
-zmt <- c("","0.48\\text{*}\\text{*}","-0.27\\text{*}","","","-0.43\\text{*}\\text{*}","","0.72\\text{*}","-0.76\\text{*}","","", "", "0.48\\text{*}\\text{*}", "0.69\\text{*}\\text{*}", "-0.34\\text{*}")
+zmt <- c("","0.48\\text{*}\\text{*}","-0.27\\text{*}","","","-0.43\\text{*}\\text{*}","","0.72\\text{*}","-0.76\\text{*}","","", "", "0.48\\text{*}\\text{*}", "0.69\\text{*}\\text{*}\\text{*}", "-0.34\\text{*}")
 yy <- c("", "", "", "-0.51\\text{*}\\text{*}", "-0.47\\text{*}\\text{*}", "-0.32\\text{*}", "", "", "-0.75\\text{*}", "", "", "", "", "", "")
 
 ctable7 <- tibble(zoopl, fmt, zmt, yy, row.names = NULL)
@@ -408,13 +429,48 @@ kbl(ctable7,
     format = "latex",
     escape = FALSE,
     align = "lccc",
-    caption = "Pearson correlation coefficients (R2) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    caption = "Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Make the text bold in three cells in column 1.
   kableExtra::column_spec (1, bold = bold_cell) %>%
   # Put horizontal lines after the 6th and 11th  rows to separate areas for easier reading.
   kableExtra::row_spec(c(6,10), hline_after = TRUE) %>%
+  # Make the table's font size 12.
+  kableExtra::kable_styling(font_size = 12, latex_options = "striped")
+
+```
+\clearpage
+
+
+```{r table8, results="asis", include=TRUE, echo=FALSE}
+
+zoopl <- c("LL\\_07/Fall", "Year", "C. finmarchicus", "Clausocalanus", "Microcalanus", "GULD\\_03/Fall", "Year", "Clausocalanus", "M. lucens", "HL\\_06/Fall", "Year", "C. finmarchicus", "M. clausi", "M. lucens", "O. atlantica", "O. similis", "Paracalanus", "Pleuromamma")
+fmt <- c("","","-0.43\\text{*}\\text{*}","0.38\\text{*}","-0.31\\text{*}","","","","","","","-0.21\\text{*}","","","","","","")
+zmt <- c("","","","0.62\\text{*}\\text{*}","","","","","","","","","","-0.34\\text{*}\\text{*}","-0.27\\text{*}","-0.47\\text{*}\\text{*}","-0.30\\text{*}","0.21\\text{*}")
+yy <- c("","","","","-0.28\\text{*}","","","0.45\\text{*}","0.51\\text{*}","","","","-0.25\\text{*}","","","","","")
+
+ctable8 <- tibble(zoopl, fmt, zmt, yy, row.names = NULL)
+
+header8 <- c("", "5 m T", "0 to 200 m T", "Year")
+
+colnames(ctable8) <- header8
+
+bold_cell <- c(T, rep(F, 4), T, rep(F, 3), T, rep(F, 8))
+
+kbl(ctable8, 
+    booktabs = TRUE,
+    linesep = "\\addlinespace",
+    format = "latex",
+    escape = FALSE,
+    align = "lccc",
+    caption = "Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in fall (Sept to Dec) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+  # Make the header row bold text
+  kableExtra::row_spec(0, bold = TRUE) %>%
+  # Make the text bold in three cells in column 1.
+  kableExtra::column_spec (1, bold = bold_cell) %>%
+  # Put horizontal lines after the 5th and 9th  rows to separate areas for easier reading.
+  kableExtra::row_spec(c(5,9), hline_after = TRUE) %>%
   # Make the table's font size 12.
   kableExtra::kable_styling(font_size = 12, latex_options = "striped")
 

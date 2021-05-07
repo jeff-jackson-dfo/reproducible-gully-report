@@ -283,7 +283,7 @@ Data collection procedures for all CTD profiles analyzed in this report were con
 \hypertarget{analysis}{%
 \subsubsection{\texorpdfstring{\emph{Analysis}}{Analysis}}\label{analysis}}
 
-Mean vertical structure in temperature, salinity, and dissolved oxygen concentration from the CTD profiles was evaluated at each station for the spring and fall seasons only. The 89 selected profiles (Table~\ref{tab:table1}) were filtered further to include only those profiles collected in April (spring) and September-October (fall), resulting in 82 profiles for the seasonal analyses. Those profiles collected outside these months/seasons (7 profiles -- November and December; see Table~\ref{tab:table1}) were not considered further in this report. Table 2 shows the number of CTD profiles contributing to the seasonally-averaged datasets computed for each station.
+Mean vertical structure in temperature, salinity, and dissolved oxygen concentration from the CTD profiles was evaluated at each station for the spring and fall seasons only. The 89 selected profiles (Table~\ref{tab:table1}) were filtered further to include only those profiles collected in April (spring) and September-October (fall), resulting in 82 profiles for the seasonal analyses. Those profiles collected outside these months/seasons (7 profiles -- November and December; see Table~\ref{tab:table1}) were not considered further in this report. Table~\ref{tab:table2} shows the number of CTD profiles contributing to the seasonally-averaged datasets computed for each station.
 
 Temperature, salinity, and dissolved oxygen data collected in the top 10 m of each profile were excluded from the vertically-averaged profiles, due to the high mixing that occurs at the surface and potentially erroneous data values. Means were computed using the R statistical software suite (version 4.0.2) by averaging the values in 1 dbar pressure bins across profiles, and are presented with \(\pm\) 95\% confidence intervals. Vertical profiles were displayed using R package `ggplot2' (\protect\hyperlink{ref-wickham_2016}{Wickham 2016}).
 
@@ -293,7 +293,7 @@ Using the `plotTS' function of R package `oce' (\protect\hyperlink{ref-kelley_20
 
 Among-station variability in spring and fall temperature, salinity, and dissolved oxygen concentration in the Gully was evaluated by superimposing the vertically-averaged profiles of temperature, salinity, and dissolved oxygen calculated at each station and season, and qualitatively comparing their properties across similar depth intervals. Mean vertical structure in seasonal temperature, salinity, and dissolved oxygen in areas upstream (LL\_07) and downstream (HL\_06) of the MPA were also evaluated and compared to the water column properties of the four Gully stations.
 
-Temporal changes in spring and fall temperature, salinity, and dissolved oxygen concentration were evaluated across the time series available for each station (see Table 2). Mean temperature, salinity, and dissolved oxygen from each profile were averaged within the following depth intervals: 0 - 50 m, 50 - 100 m, 100 - 400 m, 400 - 750 m, and 750 m to near-bottom, and mean values were compared between years and stations across the time series. These intervals were chosen in order to highlight the temporal changes in the different water layers that were depicted in the vertically-averaged temperature, salinity and dissolved oxygen profiles. The lower bounds of the 750 to near-bottom interval varied between seasons within stations depending on the maximum depth attained by the CTD package. The 400 - 750 m interval extends to the seabed on GULD\_03. Linear regression techniques were used to evaluate the patterns and significance of the relationships between year and average temperature, salinity, and dissolved oxygen calculated at each depth interval. Pearson correlation coefficients were shown for statistically-significant trends in temperature.
+Temporal changes in spring and fall temperature, salinity, and dissolved oxygen concentration were evaluated across the time series available for each station (see Table~\ref{tab:table2}). Mean temperature, salinity, and dissolved oxygen from each profile were averaged within the following depth intervals: 0 - 50 m, 50 - 100 m, 100 - 400 m, 400 - 750 m, and 750 m to near-bottom, and mean values were compared between years and stations across the time series. These intervals were chosen in order to highlight the temporal changes in the different water layers that were depicted in the vertically-averaged temperature, salinity and dissolved oxygen profiles. The lower bounds of the 750 to near-bottom interval varied between seasons within stations depending on the maximum depth attained by the CTD package. The 400 - 750 m interval extends to the seabed on GULD\_03. Linear regression techniques were used to evaluate the patterns and significance of the relationships between year and average temperature, salinity, and dissolved oxygen calculated at each depth interval. Pearson correlation coefficients were shown for statistically-significant trends in temperature.
 
 \hypertarget{sec:chemical-data}{%
 \subsection{\texorpdfstring{\textbf{CHEMICAL}}{CHEMICAL}}\label{sec:chemical-data}}
@@ -301,7 +301,7 @@ Temporal changes in spring and fall temperature, salinity, and dissolved oxygen 
 \hypertarget{data-collection-and-compilation-1}{%
 \subsubsection{\texorpdfstring{\emph{Data collection and compilation}}{Data collection and compilation}}\label{data-collection-and-compilation-1}}
 
-The nominal depths of discrete water samples collected using Niskin bottles at each of the four AZMP fixed stations in the Gully are shown in Table 3. Standard AZMP measurements include nutrient analyses (nitrate, often reported as nitrate+nitrite, nitrite, phosphate, silicate, and ammonia), chlorophyll a concentration measured using Turner Fluorometry, salinity, and dissolved oxygen concentration. At the time of this report, salinity and dissolved oxygen samples are collected at 10 m, 250 m, and near-bottom at all stations for the purpose of calibrating the CTD sensor data. Nutrients and chlorophyll samples are collected in duplicate at all nominal depths sampled.
+The nominal depths of discrete water samples collected using Niskin bottles at each of the four AZMP fixed stations in the Gully are shown in Table~\ref{tab:table3}. Standard AZMP measurements include nutrient analyses (nitrate, often reported as nitrate+nitrite, nitrite, phosphate, silicate, and ammonia), chlorophyll a concentration measured using Turner Fluorometry, salinity, and dissolved oxygen concentration. At the time of this report, salinity and dissolved oxygen samples are collected at 10 m, 250 m, and near-bottom at all stations for the purpose of calibrating the CTD sensor data. Nutrients and chlorophyll samples are collected in duplicate at all nominal depths sampled.
 
 Ancillary data collection includes samples for total inorganic carbon (TIC), total alkalinity (TA), and the partial pressure of carbon dioxide (pCO2) measured for the purpose of evaluating the carbonate system and ocean acidification. Phytoplankton samples on filters are collected for detailed pigment analysis via high performance liquid chromatography (HPLC) analysis and light absorption spectra (ABS), which are used in the interpretation and calibration of ocean colour measurements made by satellite remote-sensing. Particulate organic carbon (POC) samples are collected for the purpose of tracking changes in POC to chlorophyll ratios in an effort to see how much POC is associated with phytoplankton, which has a relatively stable POC to chlorophyll ratio, versus non-phytoplankton particles such as detritus and/or microzooplankon. Finally, samples are collected for estimating the abundance of microbial plankton (phytoplankton, bacterioplankton, virioplankton) using flow cytometry methods. Nominal depths of ancillary measurements may vary from year to year depending on mission objectives, although only surface samples are generally collected for POC, HPLC and ABS analysis.
 
@@ -310,9 +310,9 @@ The concentrations of the three primary dissolved inorganic nutrients (nitrate, 
 \hypertarget{analysis-1}{%
 \subsubsection{\texorpdfstring{\emph{Analysis}}{Analysis}}\label{analysis-1}}
 
-Mean vertical structure in spring and fall nitrate, phosphate, and silicate concentration was evaluated at each station by calculating the average nutrient concentration (\(\mu\)M) across bottle samples collected at each of the standard nominal depths sampled (Table 3): near-surface (0 - 5 m), 10 m, 20 m, 30 m, 40 m, 50 m, 60 m, 80 m, 100 m, 250 m, 500 m (when applicable), 750 m (when applicable), 1500 m (when applicable), and near-bottom. Data were extracted at each nominal depth +/- 5 m (e.g., 5 - 15 m for the 10 m depth interval) to account for variability in the depth of the CTD package when bottles were closed. The spring and fall near-bottom layer for each station was defined as follows: \textgreater400 m for GULD\_03, \textgreater{} 1900 m for GULD\_04, \textgreater{} 940 m for SG\_23, and \textgreater793 m for SG\_28. The lower depth limit of samples collected in the near-bottom intervals varied between CTD casts made at each station. The average depth of each near-bottom interval was 456.36 m \(\pm\) 40.44 m (mean \(\pm\) SD) and 478.08 m \(\pm\) 50.17 m for spring and fall data, respectively at GULD\_03; 2155.51 m \(\pm\) 79.51 m and 2123.51 m \(\pm\) 80.32 m for spring and fall at GULD\_04; 1130.71 m \(\pm\) 126.78 m and 1214.92 m \(\pm\) 144.89 m for spring and fall at SG\_23; and 886.35 m \(\pm\) 71.16 m and 860.09 m \(\pm\) 41.51 m for spring and fall at SG\_28.
+Mean vertical structure in spring and fall nitrate, phosphate, and silicate concentration was evaluated at each station by calculating the average nutrient concentration (\(\mu\)M) across bottle samples collected at each of the standard nominal depths sampled (Table~\ref{tab:table3}): near-surface (0 - 5 m), 10 m, 20 m, 30 m, 40 m, 50 m, 60 m, 80 m, 100 m, 250 m, 500 m (when applicable), 750 m (when applicable), 1500 m (when applicable), and near-bottom. Data were extracted at each nominal depth +/- 5 m (e.g., 5 - 15 m for the 10 m depth interval) to account for variability in the depth of the CTD package when bottles were closed. The spring and fall near-bottom layer for each station was defined as follows: \textgreater400 m for GULD\_03, \textgreater{} 1900 m for GULD\_04, \textgreater{} 940 m for SG\_23, and \textgreater793 m for SG\_28. The lower depth limit of samples collected in the near-bottom intervals varied between CTD casts made at each station. The average depth of each near-bottom interval was 456.36 m \(\pm\) 40.44 m (mean \(\pm\) SD) and 478.08 m \(\pm\) 50.17 m for spring and fall data, respectively at GULD\_03; 2155.51 m \(\pm\) 79.51 m and 2123.51 m \(\pm\) 80.32 m for spring and fall at GULD\_04; 1130.71 m \(\pm\) 126.78 m and 1214.92 m \(\pm\) 144.89 m for spring and fall at SG\_23; and 886.35 m \(\pm\) 71.16 m and 860.09 m \(\pm\) 41.51 m for spring and fall at SG\_28.
 
-Integrated nutrient inventories were calculated over 3 different depth intervals (0 - 50 m, 50 - 250 m, 250 - 400 m using the trapezoidal method for numerical integration (see \protect\hyperlink{ref-casault_2020}{Casault et al. 2020}) for a similar application) and temporal changes at each station and between seasons were examined. The depth intervals used here were different from those used to evaluate temporal changes in the physical oceanographic parameters (temperature, salinity, and dissolved oxygen). As sensor data are available at 1 m depth intervals, profiles can be analyzed at a relatively high resolution. In contrast, nutrient concentrations are only measured at the depths at which bottle samples are collected. Thus, for the 100 - 400 m and 400 -- 750 m intervals applied to the physical data, nutrient concentrations would be extrapolated from bottle samples collected at 250 m (100 -- 400 m), and at 500 and 750 m (400 -- 750 m) (see Table 3). Additional bottle samples would provide better resolution of the water column and allow for more congruent analyses between the hydrographical and chemical parameters in the future. Linear regression techniques were used to evaluate the direction and strength of the relationship between nutrient concentrations and year over the time series at each station and season.
+Integrated nutrient inventories were calculated over 3 different depth intervals (0 - 50 m, 50 - 250 m, 250 - 400 m using the trapezoidal method for numerical integration (see \protect\hyperlink{ref-casault_2020}{Casault et al. 2020}) for a similar application) and temporal changes at each station and between seasons were examined. The depth intervals used here were different from those used to evaluate temporal changes in the physical oceanographic parameters (temperature, salinity, and dissolved oxygen). As sensor data are available at 1 m depth intervals, profiles can be analyzed at a relatively high resolution. In contrast, nutrient concentrations are only measured at the depths at which bottle samples are collected. Thus, for the 100 - 400 m and 400 -- 750 m intervals applied to the physical data, nutrient concentrations would be extrapolated from bottle samples collected at 250 m (100 -- 400 m), and at 500 and 750 m (400 -- 750 m) (see Table~\ref{tab:table3}). Additional bottle samples would provide better resolution of the water column and allow for more congruent analyses between the hydrographical and chemical parameters in the future. Linear regression techniques were used to evaluate the direction and strength of the relationship between nutrient concentrations and year over the time series at each station and season.
 
 Mean vertical structure in chlorophyll a concentration measured by Turner Fluorometry was evaluated at each station from samples collected at the near-surface (0 - 5 m), 10 m, 20 m, 30 m, 40 m, 50 m, 60 m, 80 m, 100 m nominal depths. Chlorophyll a concentrations integrated over the 0 - 100 m depth interval were calculated using trapezoidal numerical integration and patterns were evaluated across seasons and stations.
 
@@ -322,11 +322,11 @@ Mean vertical structure in chlorophyll a concentration measured by Turner Fluoro
 \hypertarget{data-collection-and-compilation-2}{%
 \subsubsection{\texorpdfstring{\emph{Data collection and compilation}}{Data collection and compilation}}\label{data-collection-and-compilation-2}}
 
-Vertical ring net tows are routinely conducted at each of the four monitoring stations in the Gully using a \(\sfrac{3}{4}\) m diameter ring net with a 202 \(\mu\)m mesh, and towed from near-bottom to surface at approximately 1 m s-1 to a maximum of 1000 m. Samples are preserved in buffered formalin and split into two equal portions before further analysis. One half is sieved on a 1 cm sieve and the large and small fractions are weighed separately to give size fractionate bulk wet weight biomass. The other half is used for taxonomic analysis, and processed according to the standard AZMP protocols outlined in \protect\hyperlink{ref-mitchell_2002}{Mitchell et al.} (\protect\hyperlink{ref-mitchell_2002}{2002}). All zooplankton tows conducted within 2 km of each of the four stations were extracted from BioChem for the evaluation of zooplankton composition, diversity, abundance, and wet and dry weight biomass. This resulted in 121 tows collected from 1999 to 2018 for analysis (see Table 4).
+Vertical ring net tows are routinely conducted at each of the four monitoring stations in the Gully using a \(\sfrac{3}{4}\) m diameter ring net with a 202 \(\mu\)m mesh, and towed from near-bottom to surface at approximately 1 m s-1 to a maximum of 1000 m. Samples are preserved in buffered formalin and split into two equal portions before further analysis. One half is sieved on a 1 cm sieve and the large and small fractions are weighed separately to give size fractionate bulk wet weight biomass. The other half is used for taxonomic analysis, and processed according to the standard AZMP protocols outlined in \protect\hyperlink{ref-mitchell_2002}{Mitchell et al.} (\protect\hyperlink{ref-mitchell_2002}{2002}). All zooplankton tows conducted within 2 km of each of the four stations were extracted from BioChem for the evaluation of zooplankton composition, diversity, abundance, and wet and dry weight biomass. This resulted in 121 tows collected from 1999 to 2018 for analysis (see Table~\ref{tab:table4}).
 
 Zooplankton biomass and abundance data collected at the four Gully stations were compared with measurements at core AZMP stations near the shelf break both upstream (LL\_07) and downstream (HL\_06) of the Gully (see Figure 4) over approximately the same time period in order to ascertain whether the Gully supports a different community composition, and/or higher abundances of zooplankton compared to the nearby slope water areas. Zooplankton sampling at station GULD\_03 began in 2005 (fall), while sampling at the stations across the Gully mouth began later (2007). A total of 45 tows were made across all four Gully stations. Zooplankton sampling at HL\_06 and LL\_07 started in 1999, with 76 tows made between 1999 and 2018.
 
-Tows from all stations were delimited according to season, where spring is defined as April to June and fall is September to December. The slightly different seasonal delimitations used here compared to the physical and chemical data analyses (spring = April, fall = September/October) was necessary in order to capture the peaks in the phytoplankton bloom in each season, and the succession of zooplankton community composition that occurs as a result of these bloom dynamics. All tows collected in the spring from the Gully stations were from the month of April (Table 4), while tows from HL\_06 and LL\_07 were collected from April to June, and April to May, respectively. Tows collected from the Gully stations and LL\_07 in the fall were from September to December, while tows from HL\_06 were September to November.
+Tows from all stations were delimited according to season, where spring is defined as April to June and fall is September to December. The slightly different seasonal delimitations used here compared to the physical and chemical data analyses (spring = April, fall = September/October) was necessary in order to capture the peaks in the phytoplankton bloom in each season, and the succession of zooplankton community composition that occurs as a result of these bloom dynamics. All tows collected in the spring from the Gully stations were from the month of April (Table~\ref{tab:table4}), while tows from HL\_06 and LL\_07 were collected from April to June, and April to May, respectively. Tows collected from the Gully stations and LL\_07 in the fall were from September to December, while tows from HL\_06 were September to November.
 
 For each station, wet weight biomass concentrations were calculated for the large and small size fractions for every year and season sampled. Multi-year average zooplankton abundances were calculated for all samples collected at LL\_07 and HL\_06 in spring and fall between 1999 and 2018. For the Gully, abundances were averaged over samples collected at one station within the Gully (GULD\_03) between 2005 and 2018, and over samples collected at the three monitoring stations across the Gully mouth (SG\_23, GULD\_04, SG\_28) between 2007 and 2018.
 
@@ -378,9 +378,9 @@ The seasonal T-S diagrams (Figure 9) showed that waters were consistently situat
 
 Figures 10 through 12 depict temporal changes in seasonal temperature, salinity, and dissolved oxygen averaged across 5 vertical depth intervals (0 - 50 m, 50 - 100 m, 100 - 400 m, 400 - 750 m, and 750 - near-bottom) over the time series at each station. The 3-layer vertical structure in spring temperature identified in the vertically-averaged CTD profiles (Figure 5) was evident in Figure 10, with cooler near-surface layers (mean \(\pm\) SD: 0 - 50 m: 4.02 \(\pm\) 2.10⁰C; 50 - 100 m: 6.32 \(\pm\) 3.18⁰C), warmer intermediate layers (100 - 400 m: 7.67 \(\pm\) 1.46⁰C), and cooler deeper layers (400 - 70 m: 5.18 \(\pm\) 0.63⁰C; 750 m - near-bottom: 4.63 \(\pm\) 0.30⁰C) across all stations. At GULD\_03, the depth of the cooler near-surface layer extended to 100 m, but was shallower (0 - 50 m) at the stations across the Gully mouth (SG\_28, GULD\_04, and SG\_23).
 
-Increasing, statistically-significant trends in temperatures measured at sub-surface (50 - 100 m) and intermediate depths (100 - 400 m, 400 - 750 m) were evident at some stations (Figure 10 and Table 5) in both spring and fall. Increasing trends were more prominent in spring than fall, and were strongest in the 100 - 400 m layer in spring (Table 5). Temperatures in near-surface (0 - 50 m) layers were highly variable across years at all stations, but a statistically-significant increasing trend in spring temperature emerged at station SG\_28 (Table 5). The near-bottom layer at GULD\_03, which ranged from \textgreater400 to approximately 589 m (depending on the ship's position in this area which has steep bathymetry) also showed a slightly increasing and statistically significant trend in spring temperature over the 2000 to 2018 time period (Figure 9 and Table 5), likely due to the shallower depth of this station.
+Increasing, statistically-significant trends in temperatures measured at sub-surface (50 - 100 m) and intermediate depths (100 - 400 m, 400 - 750 m) were evident at some stations (Figure 10 and Table~\ref{tab:table5}) in both spring and fall. Increasing trends were more prominent in spring than fall, and were strongest in the 100 - 400 m layer in spring (Table~\ref{tab:table5}). Temperatures in near-surface (0 - 50 m) layers were highly variable across years at all stations, but a statistically-significant increasing trend in spring temperature emerged at station SG\_28 (Table~\ref{tab:table5}). The near-bottom layer at GULD\_03, which ranged from \textgreater400 to approximately 589 m (depending on the ship's position in this area which has steep bathymetry) also showed a slightly increasing and statistically significant trend in spring temperature over the 2000 to 2018 time period (Figure 9 and Table~\ref{tab:table5}), likely due to the shallower depth of this station.
 
-In fall (September-October), near-surface waters in the 0 - 50 m range were considerably warmer than in spring at all stations (mean \(\pm\) SD: 12.18 \(\pm\) 2.08⁰C), and reached a maximum of 17.19⁰C on station SG\_28 in 2013. The 50 - 100 m layer was, on average, 5.41 \(\pm\) 3.20⁰C across all stations in the Gully. The warm and saline intermediate layer (100 - 400 m: 8.15 \(\pm\) 1.64⁰C) observed in the spring was also a prominent feature at all stations in fall. Average temperatures in the deeper layers (400 - 750 m: 5.28 \(\pm\) 0.43⁰C; 750 m to near-bottom: 4.28 \(\pm\) 0.29⁰C) were similar to those of spring and showed less variability compared to the shallower layers above. In 2013, there was a positive spike in fall temperatures in the upper layers at the Gully mouth stations (SG\_28, GULD\_04, and SG\_23), but not at GULD\_03. While statistically significant, increasing trends in fall temperatures were observed at some depth intervals (Table 5), these may be due to the successively earlier date of the fall survey, which shifted from October in the early 2000's to September (warmer) after 2012 (see Table~\ref{tab:table1}). Thus, any temporal trends in fall temperature may be confounded by sample date and should be interpreted with caution.
+In fall (September-October), near-surface waters in the 0 - 50 m range were considerably warmer than in spring at all stations (mean \(\pm\) SD: 12.18 \(\pm\) 2.08⁰C), and reached a maximum of 17.19⁰C on station SG\_28 in 2013. The 50 - 100 m layer was, on average, 5.41 \(\pm\) 3.20⁰C across all stations in the Gully. The warm and saline intermediate layer (100 - 400 m: 8.15 \(\pm\) 1.64⁰C) observed in the spring was also a prominent feature at all stations in fall. Average temperatures in the deeper layers (400 - 750 m: 5.28 \(\pm\) 0.43⁰C; 750 m to near-bottom: 4.28 \(\pm\) 0.29⁰C) were similar to those of spring and showed less variability compared to the shallower layers above. In 2013, there was a positive spike in fall temperatures in the upper layers at the Gully mouth stations (SG\_28, GULD\_04, and SG\_23), but not at GULD\_03. While statistically significant, increasing trends in fall temperatures were observed at some depth intervals (Table~\ref{tab:table5}), these may be due to the successively earlier date of the fall survey, which shifted from October in the early 2000's to September (warmer) after 2012 (see Table~\ref{tab:table1}). Thus, any temporal trends in fall temperature may be confounded by sample date and should be interpreted with caution.
 
 In contrast to temperature, patterns in salinity (Figure 11) and dissolved oxygen (Figure 12) were much more comparable between spring and fall, with fresher, more oxygen-rich near-surface layers (0 - 50 m and 50 - 100 m) and more saline, oxygen-depleted deeper layers at all stations and seasons. A dramatic, positive increase in salinity was observed between 0 and 100 m at the Gully mouth stations in the fall of 2013, consistent with increased temperatures (Figures 9 and 10). Dissolved oxygen was lowest in the intermediate (100 - 400 m) layer in that year, consistent with the properties of Warm Slope Water (WSW; Petrie and Yeats 2000). While temperature and salinity decreased from 2017 onward at GULD\_03, dissolved oxygen concentration increased, suggesting a larger-than-average transport of cold, fresh, and oxygen-rich waters from the Gulf of St.~Lawrence during those years (Petrie and Drinkwater 1993; Dever et al.~2016).
 
@@ -426,7 +426,7 @@ The average timing of the peaks in SSC concentrations were in late March in the 
 
 SSC values were highly variable during the spring bloom, due to inter-annual variations in both the timing, duration and intensity of the spring bloom peak as manifested by the bloom metrics (Figure 27). Thus, while average bloom initiation dates and durations were indistinguishable among regions (Day of Year (DoY) ranges: 76 - 81 and 35 - 40 days, respectively), actual start dates and durations were much more variable (Ranges DoY 36 - 119 and 10 - 119 days over all areas, respectively). The average bloom magnitude was statistically slightly higher for the GMPA (45.4 mg m-3 d) than for the SW HL area (30.1 mg m-3 d), but neither of these was different from that for the SW LL area (41.0 mg m-3 d) and actual values over all regions varied between 9.7 and 104.7 mg m-3 d.~Finally, while average bloom amplitudes were also indistinguishable among regions (Range 1.43 - 2.20 mg m-3), actual values ranged between 0.6 and 6.3 mg m-3.
 
-There were significant correlations between one or two pairs of bloom metrics at all sites, but they were inconsistent (Table 6). Thus, earlier blooms lasted longer in the SW LL area and the GMPA, but not in the SW HL area. Furthermore, blooms that lasted longer had higher magnitudes in the SW LL and SW HL areas, but not in the GMPA, and bloom magnitudes were higher when SSTs were lower during the pre-bloom winter and spring bloom (January to April) period in the SW LL and SW HL areas. Spring SSTs trended upward over the 1998 - 2018 period in the GMPA and in the SW HL area, and in the latter area this was associated with an increasing trend in bloom start date.
+There were significant correlations between one or two pairs of bloom metrics at all sites, but they were inconsistent (Table~\ref{tab:table6}). Thus, earlier blooms lasted longer in the SW LL area and the GMPA, but not in the SW HL area. Furthermore, blooms that lasted longer had higher magnitudes in the SW LL and SW HL areas, but not in the GMPA, and bloom magnitudes were higher when SSTs were lower during the pre-bloom winter and spring bloom (January to April) period in the SW LL and SW HL areas. Spring SSTs trended upward over the 1998 - 2018 period in the GMPA and in the SW HL area, and in the latter area this was associated with an increasing trend in bloom start date.
 
 Log-transformed phytoplankton chlorophyll a concentrations determined from water samples collected in the 0 - 10 m depth range at stations within the three satellite areas were well correlated with log transformed remotely-sensed SSC concentrations from the same months/years (Figure 28). Pearson correlation coefficients were higher for the GMPA and SW LL areas separately than for the entire dataset, while those for SW HL were lower. Additionally, in situ concentrations were generally lower than remotely-sensed SSC values at low chlorophyll concentrations, and higher at high chlorophyll concentrations. Such patterns are common for these types of comparisons, and are generally explained in terms of the differences in the spatial and temporal scales of the satellite measurements, and the phytoplankton species composition (Stuart et al.~1998, 2000; Sathyendranath et al.~2001; Bricaud et al.~2004). Thus, phytoplankton blooms are localized and short-lived, whereas remotely-sensed measurements are averaged over large areas and here, over approximately 30 day periods, leading to underestimation. In addition, at high chlorophyll concentrations phytoplankton communities are often dominated by large cells (e.g.~diatoms), within which absorption of light relative to the concentration of chlorophyll is reduced due to intra-cellular self-shading (the ``packaging effect''), again leading to underestimation. Finally, different phytoplankton species have different accessory pigments and inherently different light absorption characteristics, which can also influence the signal captured by remote sensing as well as the in situ measurements of chlorophyll concentration made using Turner Fluorometry. The lower R2 value for the SW HL area may thus indicate a higher diversity of phytoplankton species/types there, than in the GMPA and SW LL areas.
 
@@ -457,9 +457,9 @@ Among these taxa, individuals are relatively large for the two Calanus taxa, the
 \hypertarget{relationship-between-temperature-and-zooplankton-abundance}{%
 \subsubsection{\texorpdfstring{\emph{Relationship between temperature and zooplankton abundance}}{Relationship between temperature and zooplankton abundance}}\label{relationship-between-temperature-and-zooplankton-abundance}}
 
-Physiological rates of copepods are related to temperature, and some taxa are associated with warmer (offshore, southern) or cooler (shelf/slope, northern) water masses. Furthermore, most of the ten most abundant copepod taxa are more abundant in the near-surface layers than at depth, except for C. fimarchicus in fall (Head unpubl. data). Thus, relationships between in situ near-surface (5 m and 0 - 200 m) temperatures and taxon abundance were examined, as well as abundance trends over time (Table 7).
+Physiological rates of copepods are related to temperature, and some taxa are associated with warmer (offshore, southern) or cooler (shelf/slope, northern) water masses. Furthermore, most of the ten most abundant copepod taxa are more abundant in the near-surface layers than at depth, except for C. fimarchicus in fall (Head unpubl. data). Thus, relationships between in situ near-surface (5 m and 0 - 200 m) temperatures and taxon abundance were examined, as well as abundance trends over time (Tables~\ref{tab:table7} and~\ref{tab:table8}).
 
-Among the significant relationships that emerged, correlations between the abundances of Clausocalanus and Pleuromamma and temperature were consistently positive in spring and fall, reflecting their association with warm/offshore water (Table 7). By contrast, the abundance of the supposedly warm-water taxon, M. lucens, was positively correlated with 5 m temperature at GULD\_03 in spring, but negatively correlated with 0 - 200 m temperature at HL\_06 in fall. Otherwise, significant relationships between taxon abundances and near-surface temperatures were negative, and more numerous in fall than in spring. However, the correlations in fall are ambiguous as near-surface temperatures decreased with increasing (later) sampling date between September and December, and due to the seasonal variation in abundance in relation to life cycle stage exhibited by most taxa. In fact the abundances of C. finmarchicus, O. similis and Pseudocalanus were positively correlated with sampling date at LL\_07, while Clausocalanus abundance was negatively correlated with sampling date. All four of these relationships are consistent with the observations of the three negative, and one positive, correlations with near surface in situ temperature at LL\_07. Thus, temperature and/or seasonal life-cycle effects could be driving the relationships.
+Among the significant relationships that emerged, correlations between the abundances of Clausocalanus and Pleuromamma and temperature were consistently positive in spring and fall, reflecting their association with warm/offshore water (Tables~\ref{tab:table7} and~\ref{tab:table8}). By contrast, the abundance of the supposedly warm-water taxon, M. lucens, was positively correlated with 5 m temperature at GULD\_03 in spring, but negatively correlated with 0 - 200 m temperature at HL\_06 in fall. Otherwise, significant relationships between taxon abundances and near-surface temperatures were negative, and more numerous in fall than in spring. However, the correlations in fall are ambiguous as near-surface temperatures decreased with increasing (later) sampling date between September and December, and due to the seasonal variation in abundance in relation to life cycle stage exhibited by most taxa. In fact the abundances of C. finmarchicus, O. similis and Pseudocalanus were positively correlated with sampling date at LL\_07, while Clausocalanus abundance was negatively correlated with sampling date. All four of these relationships are consistent with the observations of the three negative, and one positive, correlations with near surface in situ temperature at LL\_07. Thus, temperature and/or seasonal life-cycle effects could be driving the relationships.
 
 April abundances for C. hyperboreus at GULD\_03 and for O. similis, Microcalanus and Scolecithrocella at LL\_07 decreased over time, possibly due to an increase in sea surface temperatures over time, since the abundances for all four were negatively correlated with near-surface temperature in spring. In fall, as discussed above, differences in sampling dates from year to year mean that the apparent observed trends over time may, or may not, be real.
 
@@ -559,7 +559,7 @@ In 2015, an assessment of the available data contributing towards the 47 Gully m
 
 The Scotian Shelf lies at a confluence of two large ocean gyre currents: the subpolar Labrador Current and subtropical Gulf Stream (\protect\hyperlink{ref-loder_1998}{Loder et al. 1998}), and the influence of each on the region varies as a result of multi-decadal fluctuations in the Atlantic Multi-Decadal Oscillation (\protect\hyperlink{ref-drinkwater_1998}{Drinkwater, K.F. and Mountain, D.B. and Herman, A. 1998}; \protect\hyperlink{ref-knight_2005}{Knight et al. 2005}). This results in high inter-annual and multi-decadal variability in water mass characteristics on the Scotian Shelf that may mask real trends resulting from climate change. While a conclusion of the last assessment of datasets contributing to the oceanographic monitoring of the Gully (\protect\hyperlink{ref-allard_2015}{Allard and Whitehead 2015}) was that no long-term trends in conditions had been detected over the history of AZMP sampling, observations from the program made since then suggest that more recently-detected changes in physical, chemical, and biological conditions on the Scotian Shelf are persisting (\protect\hyperlink{ref-casault_2020}{Casault et al. 2020}). Surface and deep silicate and phosphate inventories have shown a declining trend since 2014, with deep nitrate inventories also showing below average values over the last three years across the region. Lower abundances of large phytoplankton (diatoms), and declining zooplankton biomass and C. finmarchicus abundance across the Scotian Shelf have also been noted. Above-normal abundances of offshore copepods on the Scotian Shelf, particularly Oithona atlantica as observed at station Halifax-2, suggest a greater influence of offshore waters in more recent years (\protect\hyperlink{ref-casault_2020}{Casault et al. 2020}).
 
-Similar to other locations on the Scotian Shelf, water mass characteristics in the Gully MPA were highly variable between seasons and years. The high inter-annual variability observed in the upper 100 m of the Gully mouth stations in fall suggests that a much longer time series than that analyzed here is required in order to detect changes in fall conditions resulting from anthropogenic climate change. Furthermore, the occurrence of anomalous events, such as warm-core eddy impingement on the Scotian Shelf (see Figure 9 and Results section), may confound the detection of trends in datasets collected on only a biannual basis. Deployment of moored devices for the collection of year-round observations would greatly enhance the program's ability to effectively monitor temporal changes in the Gully MPA. Nonetheless, despite our limited, seasonally-defined time series, our results showed statistically significant, increasing trends in spring temperatures at subsurface and intermediate depths at all stations (Figure 10 and Table 5). Upper-ocean temperatures have increased in the northwest Atlantic over the last century, consistent with the global trend of increasing sea surface temperatures as a result of anthropogenic climate change (\protect\hyperlink{ref-bush_2019}{Bush and Lemmen 2019}). Under future climate change, the east-to-west flowing shelf break current originating from the Labrador Sea is also projected to weaken, while the influence of Warm Slope Water in the region is projected to increase (\protect\hyperlink{ref-saba_2016}{Saba et al. 2016}). Given that the time series from which these analyses were based are relatively short, our observed trends should be considered in the context of longer-term trends on the Scotian Shelf and Gulf of Maine to determine their overall significance. Nonetheless, our results highlight the need to conduct regular, dedicated reporting on the oceanographic conditions of the Gully MPA. While annual reporting on the conditions observed elsewhere on the Scotian Shelf (e.g.~Louisbourg Line station LL\_07) may generally inform on anomalous events or years that may impact the ecosystems of the MPA, we recommend that dedicated oceanographic reporting on the Gully be conducted every 5 years in order to effectively track temporal changes within the MPA, and ensure that any alterations of its physical, chemical, or biological state are being considered in current conservation management strategies aimed at protecting its unique ecosystems.
+Similar to other locations on the Scotian Shelf, water mass characteristics in the Gully MPA were highly variable between seasons and years. The high inter-annual variability observed in the upper 100 m of the Gully mouth stations in fall suggests that a much longer time series than that analyzed here is required in order to detect changes in fall conditions resulting from anthropogenic climate change. Furthermore, the occurrence of anomalous events, such as warm-core eddy impingement on the Scotian Shelf (see Figure 9 and Results section), may confound the detection of trends in datasets collected on only a biannual basis. Deployment of moored devices for the collection of year-round observations would greatly enhance the program's ability to effectively monitor temporal changes in the Gully MPA. Nonetheless, despite our limited, seasonally-defined time series, our results showed statistically significant, increasing trends in spring temperatures at subsurface and intermediate depths at all stations (Figure 10 and Table~\ref{tab:table5}). Upper-ocean temperatures have increased in the northwest Atlantic over the last century, consistent with the global trend of increasing sea surface temperatures as a result of anthropogenic climate change (\protect\hyperlink{ref-bush_2019}{Bush and Lemmen 2019}). Under future climate change, the east-to-west flowing shelf break current originating from the Labrador Sea is also projected to weaken, while the influence of Warm Slope Water in the region is projected to increase (\protect\hyperlink{ref-saba_2016}{Saba et al. 2016}). Given that the time series from which these analyses were based are relatively short, our observed trends should be considered in the context of longer-term trends on the Scotian Shelf and Gulf of Maine to determine their overall significance. Nonetheless, our results highlight the need to conduct regular, dedicated reporting on the oceanographic conditions of the Gully MPA. While annual reporting on the conditions observed elsewhere on the Scotian Shelf (e.g.~Louisbourg Line station LL\_07) may generally inform on anomalous events or years that may impact the ecosystems of the MPA, we recommend that dedicated oceanographic reporting on the Gully be conducted every 5 years in order to effectively track temporal changes within the MPA, and ensure that any alterations of its physical, chemical, or biological state are being considered in current conservation management strategies aimed at protecting its unique ecosystems.
 
 \clearpage
 
@@ -716,9 +716,9 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \begin{landscapepage}
 
 \renewcommand{\arraystretch}{2}   
-\begingroup\fontsize{10}{12}\selectfont
-\begin{longtable}[t]{ccccccccc}
-\caption{\label{tab:table1}Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\_23, SG\_28, GULD\_03, and GULD\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring) and September-October (45 profiles, representative of fall) are included in the analyses presented in this report.}\\
+\begingroup\fontsize{11}{13}\selectfont
+\begin{longtable}[t]{>{\centering\arraybackslash}p{6em}>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{3em}>{\centering\arraybackslash}p{6em}>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{5em}>{\centering\arraybackslash}p{9em}}
+\caption{\label{tab:table1}Summary of CTD profiles collected at the four AZMP fixed stations in the Gully (SG\_23, SG\_28, GULD\_03, and GULD\_04) between 1999 to 2018. Survey, month of sampling, station coordinates in decimal degrees (DD), maximum depth of the CTD package, and the date of collection/start time in UTC is shown. Only profiles collected in April (37 profiles; representative of spring), September and October (45 profiles, representative of fall) are included in the analyses presented in this report.}\\
 \toprule
 \textbf{Cruise} & \textbf{Station} & \textbf{Event} & \textbf{Survey} & \textbf{Month} & \textbf{Longitude (DD)} & \textbf{Latitude (DD)} & \textbf{Maximum Depth (m)} & \textbf{Date/Start Time (UTC)}\\
 \midrule
@@ -732,102 +732,96 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \endfoot
 \bottomrule
 \endlastfoot
-\cellcolor{gray!6}{99054} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{173} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8093} & \cellcolor{gray!6}{-58.9102} & \cellcolor{gray!6}{2055} & \cellcolor{gray!6}{1999-11-02 19:08:58}\\
-2000002 & GULD\_03 & 112 & Spring AZMP & December & 44.0163 & -59.0415 & 403 & 2000-04-16 09:34:26\\
-\cellcolor{gray!6}{2000002} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{117} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8083} & \cellcolor{gray!6}{-58.9087} & \cellcolor{gray!6}{2003} & \cellcolor{gray!6}{2000-04-16 14:23:45}\\
-2000050 & GULD\_04 & 190 & Fall AZMP & November & 43.8090 & -58.9182 & 1893 & 2000-10-10 08:55:00\\
-\cellcolor{gray!6}{2000050} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{194} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0212} & \cellcolor{gray!6}{-59.0427} & \cellcolor{gray!6}{553} & \cellcolor{gray!6}{2000-10-10 14:33:29}\\
-2001061 & GULD\_03 & 179 & Fall AZMP & April & 44.0173 & -59.0370 & 530 & 2001-11-01 03:18:35\\
-\cellcolor{gray!6}{2002064} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{167} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0177} & \cellcolor{gray!6}{-59.0417} & \cellcolor{gray!6}{419} & \cellcolor{gray!6}{2002-10-26 03:28:23}\\
-2003005 & GULD\_03 & 044 & Spring AZMP & April & 44.0172 & -59.0423 & 502 & 2003-04-15 19:54:50\\
-\cellcolor{gray!6}{2003067} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{084} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0183} & \cellcolor{gray!6}{-59.0397} & \cellcolor{gray!6}{480} & \cellcolor{gray!6}{2003-10-25 06:55:54}\\
-2004009 & GULD\_03 & 021 & Spring AZMP & October & 44.0200 & -59.0398 & 589 & 2004-04-28 04:18:29\\
-\cellcolor{gray!6}{2005004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{050} & \cellcolor{gray!6}{Groundfish} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0697} & \cellcolor{gray!6}{-59.0540} & \cellcolor{gray!6}{771} & \cellcolor{gray!6}{2005-04-06 11:25:03}\\
-2005055 & GULD\_03 & 069 & Fall AZMP & October & 44.0200 & -59.0382 & 526 & 2005-10-22 16:17:03\\
-\cellcolor{gray!6}{2006052} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{091} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0167} & \cellcolor{gray!6}{-59.0333} & \cellcolor{gray!6}{496} & \cellcolor{gray!6}{2006-10-14 16:27:59}\\
-2006052 & GULD\_04 & 097 & Fall AZMP & April & 43.8000 & -58.9167 & 2040 & 2006-10-14 23:57:32\\
-\cellcolor{gray!6}{2007001} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{071} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0167} & \cellcolor{gray!6}{-59.0333} & \cellcolor{gray!6}{416} & \cellcolor{gray!6}{2007-04-12 16:45:55}\\
-2007001 & GULD\_04 & 073 & Spring AZMP & April & 43.8000 & -58.9167 & 2149 & 2007-04-12 19:49:48\\
-\cellcolor{gray!6}{2007033} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{048} & \cellcolor{gray!6}{Non-AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8667} & \cellcolor{gray!6}{-58.7333} & \cellcolor{gray!6}{1065} & \cellcolor{gray!6}{2007-08-05 17:51:06}\\
-2007033 & SG\_28 & 058 & Non-AZMP & October & 43.7122 & -59.0117 & 778 & 2007-08-06 08:45:00\\
-\cellcolor{gray!6}{2007045} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{120} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7000} & \cellcolor{gray!6}{-59.0002} & \cellcolor{gray!6}{769} & \cellcolor{gray!6}{2007-10-13 14:25:43}\\
-2007045 & GULD\_03 & 124 & Fall AZMP & September & 44.0167 & -59.0333 & 484 & 2007-10-13 20:19:23\\
-\cellcolor{gray!6}{2007045} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{126} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8000} & \cellcolor{gray!6}{-58.9000} & \cellcolor{gray!6}{2072} & \cellcolor{gray!6}{2007-10-13 23:27:24}\\
-2007045 & SG\_23 & 128 & Fall AZMP & September & 43.8667 & -58.7333 & 944 & 2007-10-14 03:20:46\\
-\cellcolor{gray!6}{2007045} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{130} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8667} & \cellcolor{gray!6}{-58.7333} & \cellcolor{gray!6}{53} & \cellcolor{gray!6}{2007-10-14 05:42:41}\\
-2008004 & SG\_23 & 076 & Spring AZMP & September & 43.8655 & -58.7325 & 1096 & 2008-04-21 20:29:16\\
-\cellcolor{gray!6}{2008004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{078} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8043} & \cellcolor{gray!6}{-58.9168} & \cellcolor{gray!6}{2174} & \cellcolor{gray!6}{2008-04-21 23:39:50}\\
-2008004 & SG\_28 & 080 & Spring AZMP & September & 43.7008 & -59.0005 & 994 & 2008-04-22 03:18:43\\
-\cellcolor{gray!6}{2008037} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{220} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8695} & \cellcolor{gray!6}{-58.7357} & \cellcolor{gray!6}{927} & \cellcolor{gray!6}{2008-10-19 12:11:45}\\
-2008037 & GULD\_03 & 223 & Fall AZMP & September & 44.0197 & -59.0403 & 447 & 2008-10-19 18:05:41\\
-\cellcolor{gray!6}{2008037} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{226} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7875} & \cellcolor{gray!6}{-58.9108} & \cellcolor{gray!6}{2262} & \cellcolor{gray!6}{2008-10-19 22:42:48}\\
-2008037 & SG\_28 & 228 & Fall AZMP & April & 43.7083 & -59.0183 & 724 & 2008-10-20 01:52:35\\
-\cellcolor{gray!6}{2009005} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{149} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{March} & \cellcolor{gray!6}{43.8687} & \cellcolor{gray!6}{-58.7427} & \cellcolor{gray!6}{941} & \cellcolor{gray!6}{2009-04-27 13:53:40}\\
-2009005 & GULD\_04 & 152 & Spring AZMP & November & 43.7858 & -58.9090 & 2359 & 2009-04-27 17:02:11\\
-\cellcolor{gray!6}{2009005} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{154} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7045} & \cellcolor{gray!6}{-59.0182} & \cellcolor{gray!6}{906} & \cellcolor{gray!6}{2009-04-27 20:08:47}\\
-2009005 & GULD\_03 & 156 & Spring AZMP & December & 44.0222 & -59.0450 & 464 & 2009-04-27 23:13:18\\
-\cellcolor{gray!6}{2009048} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{200} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.7100} & \cellcolor{gray!6}{-59.0102} & \cellcolor{gray!6}{846} & \cellcolor{gray!6}{2009-10-16 07:05:57}\\
-2009048 & GULD\_03 & 202 & Fall AZMP & October & 44.0200 & -59.0380 & 467 & 2009-10-16 12:39:26\\
-\cellcolor{gray!6}{2010900} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{020} & \cellcolor{gray!6}{Non-AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8105} & \cellcolor{gray!6}{-58.9102} & \cellcolor{gray!6}{1203} & \cellcolor{gray!6}{2010-03-18 11:23:45}\\
-2010900 & GULD\_03 & 042 & Non-AZMP & October & 44.0218 & -59.0401 & 482 & 2010-03-21 10:03:07\\
-\cellcolor{gray!6}{2010900} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{048} & \cellcolor{gray!6}{Non-AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8686} & \cellcolor{gray!6}{-58.7387} & \cellcolor{gray!6}{900} & \cellcolor{gray!6}{2010-03-22 10:37:44}\\
-2010900 & SG\_28 & 049 & Non-AZMP & October & 43.7103 & -59.0128 & 699 & 2010-03-22 13:11:16\\
-\cellcolor{gray!6}{2011004} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{168} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8703} & \cellcolor{gray!6}{-58.7418} & \cellcolor{gray!6}{1023} & \cellcolor{gray!6}{2011-04-21 09:18:59}\\
-2011004 & GULD\_04 & 170 & Spring AZMP & April & 43.7895 & -58.9162 & 2135 & 2011-04-21 12:22:03\\
-\cellcolor{gray!6}{2011004} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{172} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.7095} & \cellcolor{gray!6}{-59.0187} & \cellcolor{gray!6}{695} & \cellcolor{gray!6}{2011-04-21 15:39:44}\\
-2011004 & GULD\_03 & 175 & Spring AZMP & October & 44.0182 & -59.0373 & 523 & 2011-04-21 20:28:13\\
-\cellcolor{gray!6}{2011043} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{168} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0197} & \cellcolor{gray!6}{-59.0417} & \cellcolor{gray!6}{483} & \cellcolor{gray!6}{2011-10-10 19:53:54}\\
-2011043 & SG\_23 & 172 & Fall AZMP & September & 43.8640 & -58.7480 & 914 & 2011-10-11 00:45:03\\
-\cellcolor{gray!6}{2011043} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{174} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8107} & \cellcolor{gray!6}{-58.9132} & \cellcolor{gray!6}{2163} & \cellcolor{gray!6}{2011-10-11 03:30:14}\\
-2011043 & SG\_28 & 177 & Fall AZMP & September & 43.7078 & -59.0067 & 896 & 2011-10-11 08:26:11\\
-\cellcolor{gray!6}{2012042} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{194} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0072} & \cellcolor{gray!6}{-59.0197} & \cellcolor{gray!6}{467} & \cellcolor{gray!6}{2012-10-13 02:53:21}\\
-2012042 & SG\_23 & 196 & Fall AZMP & September & 43.8643 & -58.7283 & 1235 & 2012-10-13 06:21:55\\
-\cellcolor{gray!6}{2012042} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{198} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.7890} & \cellcolor{gray!6}{-58.8987} & \cellcolor{gray!6}{2233} & \cellcolor{gray!6}{2012-10-13 10:22:25}\\
-2012042 & SG\_28 & 200 & Fall AZMP & April & 43.7100 & -59.0068 & 938 & 2012-10-13 14:35:08\\
-\cellcolor{gray!6}{2013004} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{050} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.8593} & \cellcolor{gray!6}{-58.7315} & \cellcolor{gray!6}{1155} & \cellcolor{gray!6}{2013-04-10 18:50:13}\\
-2013004 & GULD\_04 & 053 & Spring AZMP & April & 43.7955 & -58.9083 & 2131 & 2013-04-10 23:19:30\\
-\cellcolor{gray!6}{2013004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{055} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{March} & \cellcolor{gray!6}{44.0002} & \cellcolor{gray!6}{-59.0193} & \cellcolor{gray!6}{428} & \cellcolor{gray!6}{2013-04-11 03:05:20}\\
-2013004 & SG\_28 & 058 & Spring AZMP & April & 43.7085 & -58.9990 & 840 & 2013-04-11 07:28:52\\
-\cellcolor{gray!6}{2013037} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{059} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{December} & \cellcolor{gray!6}{43.7910} & \cellcolor{gray!6}{-58.8967} & \cellcolor{gray!6}{2086} & \cellcolor{gray!6}{2013-09-25 15:11:07}\\
-2013037 & SG\_28 & 063 & Fall AZMP & August & 43.7093 & -59.0057 & 794 & 2013-09-25 19:53:02\\
-\cellcolor{gray!6}{2013037} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{067} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0012} & \cellcolor{gray!6}{-59.0190} & \cellcolor{gray!6}{465} & \cellcolor{gray!6}{2013-09-26 00:23:46}\\
-2013037 & SG\_23 & 071 & Fall AZMP & October & 43.8605 & -58.7250 & 1291 & 2013-09-26 03:45:07\\
-\cellcolor{gray!6}{2014004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{029} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0002} & \cellcolor{gray!6}{-59.0172} & \cellcolor{gray!6}{495} & \cellcolor{gray!6}{2014-04-07 06:09:13}\\
-2014004 & SG\_28 & 031 & Spring AZMP & October & 43.7103 & -59.0008 & 864 & 2014-04-07 09:44:12\\
-\cellcolor{gray!6}{2014004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{033} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7908} & \cellcolor{gray!6}{-58.9022} & \cellcolor{gray!6}{2095} & \cellcolor{gray!6}{2014-04-07 12:44:36}\\
-2014004 & SG\_23 & 037 & Spring AZMP & April & 43.8602 & -58.7305 & 1179 & 2014-04-07 23:22:22\\
-\cellcolor{gray!6}{2014030} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{072} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8620} & \cellcolor{gray!6}{-58.7263} & \cellcolor{gray!6}{1221} & \cellcolor{gray!6}{2014-09-26 15:51:35}\\
-2014030 & GULD\_03 & 075 & Fall AZMP & October & 43.9988 & -59.0200 & 404 & 2014-09-26 20:51:35\\
-\cellcolor{gray!6}{2014030} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{077} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7925} & \cellcolor{gray!6}{-58.9015} & \cellcolor{gray!6}{2089} & \cellcolor{gray!6}{2014-09-27 00:24:47}\\
-2014030 & SG\_28 & 080 & Fall AZMP & September & 43.7100 & -58.9995 & 831 & 2014-09-27 05:08:42\\
-\cellcolor{gray!6}{2015004} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{079} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7127} & \cellcolor{gray!6}{-59.0043} & \cellcolor{gray!6}{821} & \cellcolor{gray!6}{2015-04-23 01:03:53}\\
-2015004 & GULD\_03 & 081 & Spring AZMP & September & 43.9998 & -59.0203 & 471 & 2015-04-23 04:15:41\\
-\cellcolor{gray!6}{2015004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{083} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.7903} & \cellcolor{gray!6}{-58.8987} & \cellcolor{gray!6}{2144} & \cellcolor{gray!6}{2015-04-23 07:20:09}\\
-2015004 & SG\_23 & 085 & Spring AZMP & September & 43.8503 & -58.7350 & 1204 & 2015-04-23 11:22:49\\
-\cellcolor{gray!6}{2015030} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{013} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.7097} & \cellcolor{gray!6}{-59.0005} & \cellcolor{gray!6}{865} & \cellcolor{gray!6}{2015-09-21 17:00:48}\\
-2015030 & GULD\_04 & 015 & Fall AZMP & September & 43.7852 & -58.8995 & 2225 & 2015-09-21 20:39:04\\
-\cellcolor{gray!6}{2015030} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{017} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{March} & \cellcolor{gray!6}{43.8515} & \cellcolor{gray!6}{-58.7203} & \cellcolor{gray!6}{1431} & \cellcolor{gray!6}{2015-09-22 00:56:35}\\
-2015030 & GULD\_03 & 019 & Fall AZMP & April & 43.9907 & -59.0183 & 462 & 2015-09-22 05:29:49\\
-\cellcolor{gray!6}{2016003} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{118} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{November} & \cellcolor{gray!6}{43.9990} & \cellcolor{gray!6}{-59.0202} & \cellcolor{gray!6}{408} & \cellcolor{gray!6}{2016-04-23 21:53:03}\\
-2016027 & GULD\_04 & 067 & Fall AZMP & August & 43.7888 & -58.9002 & 2055 & 2016-09-20 17:44:03\\
-\cellcolor{gray!6}{2016027} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{070} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.7112} & \cellcolor{gray!6}{-59.0010} & \cellcolor{gray!6}{823} & \cellcolor{gray!6}{2016-09-20 22:34:56}\\
-2016027 & GULD\_03 & 072 & Fall AZMP & April & 44.0055 & -59.0190 & 586 & 2016-09-21 01:47:11\\
-\cellcolor{gray!6}{2016027} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{075} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8600} & \cellcolor{gray!6}{-58.7297} & \cellcolor{gray!6}{1196} & \cellcolor{gray!6}{2016-09-21 07:06:25}\\
-2017001 & SG\_28 & 079 & Spring AZMP & April & 43.7007 & -59.0090 & 969 & 2017-04-24 21:05:16\\
-\cellcolor{gray!6}{2017001} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{084} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{44.0017} & \cellcolor{gray!6}{-59.0163} & \cellcolor{gray!6}{465} & \cellcolor{gray!6}{2017-04-25 08:09:31}\\
-2017001 & GULD\_04 & 086 & Spring AZMP & April & 43.7877 & -58.8973 & 2098 & 2017-04-25 11:34:05\\
-\cellcolor{gray!6}{2017001} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{089} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{43.8565} & \cellcolor{gray!6}{-58.7255} & \cellcolor{gray!6}{1334} & \cellcolor{gray!6}{2017-04-25 16:11:39}\\
-2017606 & SG\_28 & 043 & Fall AZMP & October & 43.7065 & -59.0077 & 846 & 2017-11-30 05:26:02\\
-\cellcolor{gray!6}{2017606} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{048} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.9903} & \cellcolor{gray!6}{-59.0238} & \cellcolor{gray!6}{394} & \cellcolor{gray!6}{2017-12-01 03:26:02}\\
-2017606 & GULD\_04 & 050 & Fall AZMP & September & 43.7837 & -58.8922 & 2166 & 2017-12-01 07:22:19\\
-\cellcolor{gray!6}{2017606} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{052} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{43.8608} & \cellcolor{gray!6}{-58.7283} & \cellcolor{gray!6}{1159} & \cellcolor{gray!6}{2017-12-01 12:05:26}\\
-2018004 & SG\_28 & 117 & Spring AZMP & September & 43.7108 & -59.0002 & 822 & 2018-04-17 04:45:39\\
-\cellcolor{gray!6}{2018004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{119} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{44.0008} & \cellcolor{gray!6}{-59.0200} & \cellcolor{gray!6}{417} & \cellcolor{gray!6}{2018-04-17 08:23:49}\\
-2018004 & GULD\_04 & 121 & Spring AZMP & September & 43.7898 & -58.9000 & 2134 & 2018-04-17 12:20:16\\
-\cellcolor{gray!6}{2018030} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{146} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.7097} & \cellcolor{gray!6}{-59.0000} & \cellcolor{gray!6}{839} & \cellcolor{gray!6}{2018-09-26 23:17:30}\\
-2018030 & GULD\_03 & 148 & Fall AZMP & April & 43.9998 & -59.0197 & 423 & 2018-09-27 02:50:28\\
-\cellcolor{gray!6}{2018030} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{150} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{43.7895} & \cellcolor{gray!6}{-58.8998} & \cellcolor{gray!6}{2093} & \cellcolor{gray!6}{2018-09-27 06:27:03}\\
-2018030 & SG\_23 & 156 & Fall AZMP & March & 43.8597 & -58.7290 & 1202 & 2018-09-27 18:20:51\\*
+\cellcolor{gray!6}{HUD1999054} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{173} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{November} & \cellcolor{gray!6}{-58.9102} & \cellcolor{gray!6}{43.8093} & \cellcolor{gray!6}{2055} & \cellcolor{gray!6}{1999-11-02 19:08:58}\\
+PAR2000002 & GULD\_03 & 112 & Spring AZMP & April & -59.0415 & 44.0163 & 403 & 2000-04-16 09:34:26\\
+\cellcolor{gray!6}{PAR2000002} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{117} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.9087} & \cellcolor{gray!6}{43.8083} & \cellcolor{gray!6}{2003} & \cellcolor{gray!6}{2000-04-16 14:23:45}\\
+HUD2000050 & GULD\_04 & 190 & Fall AZMP & October & -58.9182 & 43.8090 & 1893 & 2000-10-10 08:55:00\\
+\cellcolor{gray!6}{HUD2000050} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{194} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-59.0427} & \cellcolor{gray!6}{44.0212} & \cellcolor{gray!6}{553} & \cellcolor{gray!6}{2000-10-10 14:33:29}\\
+HUD2001061 & GULD\_03 & 179 & Fall AZMP & November & -59.0370 & 44.0173 & 530 & 2001-11-01 03:18:35\\
+\cellcolor{gray!6}{HUD2002064} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{167} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-59.0417} & \cellcolor{gray!6}{44.0177} & \cellcolor{gray!6}{419} & \cellcolor{gray!6}{2002-10-26 03:28:23}\\
+HUD2003005 & GULD\_03 & 044 & Spring AZMP & April & -59.0423 & 44.0172 & 502 & 2003-04-15 19:54:50\\
+\cellcolor{gray!6}{HUD2003067} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{084} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-59.0397} & \cellcolor{gray!6}{44.0183} & \cellcolor{gray!6}{480} & \cellcolor{gray!6}{2003-10-25 06:55:54}\\
+HUD2004009 & GULD\_03 & 021 & Spring AZMP & April & -59.0398 & 44.0200 & 589 & 2004-04-28 04:18:29\\
+\cellcolor{gray!6}{HUD2005055} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{069} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-59.0382} & \cellcolor{gray!6}{44.0200} & \cellcolor{gray!6}{526} & \cellcolor{gray!6}{2005-10-22 16:17:03}\\
+HUD2006052 & GULD\_03 & 091 & Fall AZMP & October & -59.0333 & 44.0167 & 496 & 2006-10-14 16:27:59\\
+\cellcolor{gray!6}{HUD2006052} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{097} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-58.9167} & \cellcolor{gray!6}{43.8000} & \cellcolor{gray!6}{2040} & \cellcolor{gray!6}{2006-10-14 23:57:32}\\
+HUD2007001 & GULD\_03 & 071 & Spring AZMP & April & -59.0333 & 44.0167 & 416 & 2007-04-12 16:45:55\\
+\cellcolor{gray!6}{HUD2007001} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{073} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.9167} & \cellcolor{gray!6}{43.8000} & \cellcolor{gray!6}{2149} & \cellcolor{gray!6}{2007-04-12 19:49:48}\\
+HUD2007033 & SG\_23 & 048 & Greenan et al. (2014) & August & -58.7333 & 43.8667 & 1065 & 2007-08-05 17:51:06\\
+\cellcolor{gray!6}{HUD2007033} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{058} & \cellcolor{gray!6}{Greenan et al. (2014)} & \cellcolor{gray!6}{August} & \cellcolor{gray!6}{-59.0117} & \cellcolor{gray!6}{43.7122} & \cellcolor{gray!6}{778} & \cellcolor{gray!6}{2007-08-06 08:45:00}\\
+HUD2007045 & SG\_28 & 120 & Fall AZMP & October & -59.0002 & 43.7000 & 769 & 2007-10-13 14:25:43\\
+\cellcolor{gray!6}{HUD2007045} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{124} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-59.0333} & \cellcolor{gray!6}{44.0167} & \cellcolor{gray!6}{484} & \cellcolor{gray!6}{2007-10-13 20:19:23}\\
+HUD2007045 & GULD\_04 & 126 & Fall AZMP & October & -58.9000 & 43.8000 & 2072 & 2007-10-13 23:27:24\\
+\cellcolor{gray!6}{HUD2007045} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{128} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-58.7333} & \cellcolor{gray!6}{43.8667} & \cellcolor{gray!6}{944} & \cellcolor{gray!6}{2007-10-14 03:20:46}\\
+HUD2008004 & SG\_23 & 076 & Spring AZMP & April & -58.7325 & 43.8655 & 1096 & 2008-04-21 20:29:16\\
+\cellcolor{gray!6}{HUD2008004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{078} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.9168} & \cellcolor{gray!6}{43.8043} & \cellcolor{gray!6}{2174} & \cellcolor{gray!6}{2008-04-21 23:39:50}\\
+HUD2008004 & SG\_28 & 080 & Spring AZMP & April & -59.0005 & 43.7008 & 994 & 2008-04-22 03:18:43\\
+\cellcolor{gray!6}{HUD2008037} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{220} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-58.7357} & \cellcolor{gray!6}{43.8695} & \cellcolor{gray!6}{927} & \cellcolor{gray!6}{2008-10-19 12:11:45}\\
+HUD2008037 & GULD\_03 & 223 & Fall AZMP & October & -59.0403 & 44.0197 & 447 & 2008-10-19 18:05:41\\
+\cellcolor{gray!6}{HUD2008037} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{226} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-58.9108} & \cellcolor{gray!6}{43.7875} & \cellcolor{gray!6}{2262} & \cellcolor{gray!6}{2008-10-19 22:42:48}\\
+HUD2008037 & SG\_28 & 228 & Fall AZMP & October & -59.0183 & 43.7083 & 724 & 2008-10-20 01:52:35\\
+\cellcolor{gray!6}{HUD2009005} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{149} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.7427} & \cellcolor{gray!6}{43.8687} & \cellcolor{gray!6}{941} & \cellcolor{gray!6}{2009-04-27 13:53:40}\\
+HUD2009005 & GULD\_04 & 152 & Spring AZMP & April & -58.9090 & 43.7858 & 2359 & 2009-04-27 17:02:11\\
+\cellcolor{gray!6}{HUD2009005} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{154} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-59.0182} & \cellcolor{gray!6}{43.7045} & \cellcolor{gray!6}{906} & \cellcolor{gray!6}{2009-04-27 20:08:47}\\
+HUD2009005 & GULD\_03 & 156 & Spring AZMP & April & -59.0450 & 44.0222 & 464 & 2009-04-27 23:13:18\\
+\cellcolor{gray!6}{HUD2009048} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{200} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-59.0102} & \cellcolor{gray!6}{43.7100} & \cellcolor{gray!6}{846} & \cellcolor{gray!6}{2009-10-16 07:05:57}\\
+HUD2009048 & GULD\_03 & 202 & Fall AZMP & October & -59.0380 & 44.0200 & 467 & 2009-10-16 12:39:26\\
+\cellcolor{gray!6}{HUD2011004} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{168} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.7418} & \cellcolor{gray!6}{43.8703} & \cellcolor{gray!6}{1023} & \cellcolor{gray!6}{2011-04-21 09:18:59}\\
+HUD2011004 & GULD\_04 & 170 & Spring AZMP & April & -58.9162 & 43.7895 & 2135 & 2011-04-21 12:22:03\\
+\cellcolor{gray!6}{HUD2011004} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{172} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-59.0187} & \cellcolor{gray!6}{43.7095} & \cellcolor{gray!6}{695} & \cellcolor{gray!6}{2011-04-21 15:39:44}\\
+HUD2011004 & GULD\_03 & 175 & Spring AZMP & April & -59.0373 & 44.0182 & 523 & 2011-04-21 20:28:13\\
+\cellcolor{gray!6}{HUD2011043} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{168} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-59.0417} & \cellcolor{gray!6}{44.0197} & \cellcolor{gray!6}{483} & \cellcolor{gray!6}{2011-10-10 19:53:54}\\
+HUD2011043 & SG\_23 & 172 & Fall AZMP & October & -58.7480 & 43.8640 & 914 & 2011-10-11 00:45:03\\
+\cellcolor{gray!6}{HUD2011043} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{174} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-58.9132} & \cellcolor{gray!6}{43.8107} & \cellcolor{gray!6}{2163} & \cellcolor{gray!6}{2011-10-11 03:30:14}\\
+HUD2011043 & SG\_28 & 177 & Fall AZMP & October & -59.0067 & 43.7078 & 896 & 2011-10-11 08:26:11\\
+\cellcolor{gray!6}{HUD2012042} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{194} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-59.0197} & \cellcolor{gray!6}{44.0072} & \cellcolor{gray!6}{467} & \cellcolor{gray!6}{2012-10-13 02:53:21}\\
+HUD2012042 & SG\_23 & 196 & Fall AZMP & October & -58.7283 & 43.8643 & 1235 & 2012-10-13 06:21:55\\
+\cellcolor{gray!6}{HUD2012042} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{198} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{October} & \cellcolor{gray!6}{-58.8987} & \cellcolor{gray!6}{43.7890} & \cellcolor{gray!6}{2233} & \cellcolor{gray!6}{2012-10-13 10:22:25}\\
+HUD2012042 & SG\_28 & 200 & Fall AZMP & October & -59.0068 & 43.7100 & 938 & 2012-10-13 14:35:08\\
+\cellcolor{gray!6}{HUD2013004} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{050} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.7315} & \cellcolor{gray!6}{43.8593} & \cellcolor{gray!6}{1155} & \cellcolor{gray!6}{2013-04-10 18:50:13}\\
+HUD2013004 & GULD\_04 & 053 & Spring AZMP & April & -58.9083 & 43.7955 & 2131 & 2013-04-10 23:19:30\\
+\cellcolor{gray!6}{HUD2013004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{055} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-59.0193} & \cellcolor{gray!6}{44.0002} & \cellcolor{gray!6}{428} & \cellcolor{gray!6}{2013-04-11 03:05:20}\\
+HUD2013004 & SG\_28 & 058 & Spring AZMP & April & -58.9990 & 43.7085 & 840 & 2013-04-11 07:28:52\\
+\cellcolor{gray!6}{HUD2013037} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{059} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-58.8967} & \cellcolor{gray!6}{43.7910} & \cellcolor{gray!6}{2086} & \cellcolor{gray!6}{2013-09-25 15:11:07}\\
+HUD2013037 & SG\_28 & 063 & Fall AZMP & September & -59.0057 & 43.7093 & 794 & 2013-09-25 19:53:02\\
+\cellcolor{gray!6}{HUD2013037} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{067} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-59.0190} & \cellcolor{gray!6}{44.0012} & \cellcolor{gray!6}{465} & \cellcolor{gray!6}{2013-09-26 00:23:46}\\
+HUD2013037 & SG\_23 & 071 & Fall AZMP & September & -58.7250 & 43.8605 & 1291 & 2013-09-26 03:45:07\\
+\cellcolor{gray!6}{HUD2014004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{029} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-59.0172} & \cellcolor{gray!6}{44.0002} & \cellcolor{gray!6}{495} & \cellcolor{gray!6}{2014-04-07 06:09:13}\\
+HUD2014004 & SG\_28 & 031 & Spring AZMP & April & -59.0008 & 43.7103 & 864 & 2014-04-07 09:44:12\\
+\cellcolor{gray!6}{HUD2014004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{033} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.9022} & \cellcolor{gray!6}{43.7908} & \cellcolor{gray!6}{2095} & \cellcolor{gray!6}{2014-04-07 12:44:36}\\
+HUD2014004 & SG\_23 & 037 & Spring AZMP & April & -58.7305 & 43.8602 & 1179 & 2014-04-07 23:22:22\\
+\cellcolor{gray!6}{HUD2014030} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{072} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-58.7263} & \cellcolor{gray!6}{43.8620} & \cellcolor{gray!6}{1221} & \cellcolor{gray!6}{2014-09-26 15:51:35}\\
+HUD2014030 & GULD\_03 & 075 & Fall AZMP & September & -59.0200 & 43.9988 & 404 & 2014-09-26 20:51:35\\
+\cellcolor{gray!6}{HUD2014030} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{077} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-58.9015} & \cellcolor{gray!6}{43.7925} & \cellcolor{gray!6}{2089} & \cellcolor{gray!6}{2014-09-27 00:24:47}\\
+HUD2014030 & SG\_28 & 080 & Fall AZMP & September & -58.9995 & 43.7100 & 831 & 2014-09-27 05:08:42\\
+\cellcolor{gray!6}{HUD2015004} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{079} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-59.0043} & \cellcolor{gray!6}{43.7127} & \cellcolor{gray!6}{821} & \cellcolor{gray!6}{2015-04-23 01:03:53}\\
+HUD2015004 & GULD\_03 & 081 & Spring AZMP & April & -59.0203 & 43.9998 & 471 & 2015-04-23 04:15:41\\
+\cellcolor{gray!6}{HUD2015004} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{083} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.8987} & \cellcolor{gray!6}{43.7903} & \cellcolor{gray!6}{2144} & \cellcolor{gray!6}{2015-04-23 07:20:09}\\
+HUD2015004 & SG\_23 & 085 & Spring AZMP & April & -58.7350 & 43.8503 & 1204 & 2015-04-23 11:22:49\\
+\cellcolor{gray!6}{HUD2015030} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{013} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-59.0005} & \cellcolor{gray!6}{43.7097} & \cellcolor{gray!6}{865} & \cellcolor{gray!6}{2015-09-21 17:00:48}\\
+HUD2015030 & GULD\_04 & 015 & Fall AZMP & September & -58.8995 & 43.7852 & 2225 & 2015-09-21 20:39:04\\
+\cellcolor{gray!6}{HUD2015030} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{017} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-58.7203} & \cellcolor{gray!6}{43.8515} & \cellcolor{gray!6}{1431} & \cellcolor{gray!6}{2015-09-22 00:56:35}\\
+HUD2015030 & GULD\_03 & 019 & Fall AZMP & September & -59.0183 & 43.9907 & 462 & 2015-09-22 05:29:49\\
+\cellcolor{gray!6}{HUD2016003} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{118} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-59.0202} & \cellcolor{gray!6}{43.9990} & \cellcolor{gray!6}{408} & \cellcolor{gray!6}{2016-04-23 21:53:03}\\
+HUD2016027 & GULD\_04 & 067 & Fall AZMP & September & -58.9002 & 43.7888 & 2055 & 2016-09-20 17:44:03\\
+\cellcolor{gray!6}{HUD2016027} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{070} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-59.0010} & \cellcolor{gray!6}{43.7112} & \cellcolor{gray!6}{823} & \cellcolor{gray!6}{2016-09-20 22:34:56}\\
+HUD2016027 & GULD\_03 & 072 & Fall AZMP & September & -59.0190 & 44.0055 & 586 & 2016-09-21 01:47:11\\
+\cellcolor{gray!6}{HUD2016027} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{075} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-58.7297} & \cellcolor{gray!6}{43.8600} & \cellcolor{gray!6}{1196} & \cellcolor{gray!6}{2016-09-21 07:06:25}\\
+COR2017001 & SG\_28 & 079 & Spring AZMP & April & -59.0090 & 43.7007 & 969 & 2017-04-24 21:05:16\\
+\cellcolor{gray!6}{COR2017001} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{084} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-59.0163} & \cellcolor{gray!6}{44.0017} & \cellcolor{gray!6}{465} & \cellcolor{gray!6}{2017-04-25 08:09:31}\\
+COR2017001 & GULD\_04 & 086 & Spring AZMP & April & -58.8973 & 43.7877 & 2098 & 2017-04-25 11:34:05\\
+\cellcolor{gray!6}{COR2017001} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{089} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-58.7255} & \cellcolor{gray!6}{43.8565} & \cellcolor{gray!6}{1334} & \cellcolor{gray!6}{2017-04-25 16:11:39}\\
+EN2017606 & SG\_28 & 043 & Fall AZMP & November & -59.0077 & 43.7065 & 846 & 2017-11-30 05:26:02\\
+\cellcolor{gray!6}{EN2017606} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{048} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{December} & \cellcolor{gray!6}{-59.0238} & \cellcolor{gray!6}{43.9903} & \cellcolor{gray!6}{394} & \cellcolor{gray!6}{2017-12-01 03:26:02}\\
+EN2017606 & GULD\_04 & 050 & Fall AZMP & December & -58.8922 & 43.7837 & 2166 & 2017-12-01 07:22:19\\
+\cellcolor{gray!6}{EN2017606} & \cellcolor{gray!6}{SG\_23} & \cellcolor{gray!6}{052} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{December} & \cellcolor{gray!6}{-58.7283} & \cellcolor{gray!6}{43.8608} & \cellcolor{gray!6}{1159} & \cellcolor{gray!6}{2017-12-01 12:05:26}\\
+HUD2018004 & SG\_28 & 117 & Spring AZMP & April & -59.0002 & 43.7108 & 822 & 2018-04-17 04:45:39\\
+\cellcolor{gray!6}{HUD2018004} & \cellcolor{gray!6}{GULD\_03} & \cellcolor{gray!6}{119} & \cellcolor{gray!6}{Spring AZMP} & \cellcolor{gray!6}{April} & \cellcolor{gray!6}{-59.0200} & \cellcolor{gray!6}{44.0008} & \cellcolor{gray!6}{417} & \cellcolor{gray!6}{2018-04-17 08:23:49}\\
+HUD2018004 & GULD\_04 & 121 & Spring AZMP & April & -58.9000 & 43.7898 & 2134 & 2018-04-17 12:20:16\\
+\cellcolor{gray!6}{HUD2018030} & \cellcolor{gray!6}{SG\_28} & \cellcolor{gray!6}{146} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-59.0000} & \cellcolor{gray!6}{43.7097} & \cellcolor{gray!6}{839} & \cellcolor{gray!6}{2018-09-26 23:17:30}\\
+HUD2018030 & GULD\_03 & 148 & Fall AZMP & September & -59.0197 & 43.9998 & 423 & 2018-09-27 02:50:28\\
+\cellcolor{gray!6}{HUD2018030} & \cellcolor{gray!6}{GULD\_04} & \cellcolor{gray!6}{150} & \cellcolor{gray!6}{Fall AZMP} & \cellcolor{gray!6}{September} & \cellcolor{gray!6}{-58.8998} & \cellcolor{gray!6}{43.7895} & \cellcolor{gray!6}{2093} & \cellcolor{gray!6}{2018-09-27 06:27:03}\\
+HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 2018-09-27 18:20:51\\*
 \end{longtable}
 \endgroup{}
 \end{landscapepage}
@@ -874,107 +868,107 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \endfoot
 \bottomrule
 \endlastfoot
- &  & BTM &  & XX & XX & XX & XX & XX &  &  &  & \\
+ &  & BTM &  & XX & X & XX & X & X &  &  &  & \\
 \nopagebreak
- &  & 250 &  & XX & XX & XX &  &  &  &  &  & \\
+ &  & 250 &  & XX & X & X &  &  &  &  &  & \\
 \nopagebreak
- &  & 100 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 100 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 80 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 80 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 60 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 60 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 50 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 50 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 40 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 40 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 30 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 30 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 20 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 20 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 10 & XX & XX & XX & XX &  &  &  &  &  & \\
+ &  & 10 & XX & XX & X & X &  &  &  &  &  & XX\\
 \nopagebreak
-\multirow{-11}{*}{\centering\arraybackslash GULD\_03} & \multirow{-11}{*}{\centering\arraybackslash $\sim$ 445 m} & 1 & XX & XX &  &  &  &  & XX & XX & XX & XX\\
+\multirow{-11}{*}{\centering\arraybackslash GULD\_03} & \multirow{-11}{*}{\centering\arraybackslash $\sim$ 445 m} & 1 & XX & XX &  &  &  &  & XX & X & X & XX\\
 \cmidrule{1-13}\pagebreak[0]
- &  & BTM &  & XX & XX & XX & XX & XX &  &  &  & \\
+ &  & BTM &  & XX & X & X & X & X &  &  &  & \\
 \nopagebreak
  &  & 750 &  & XX &  &  &  &  &  &  &  & \\
 \nopagebreak
- &  & 500 &  & XX &  &  &  &  &  &  &  & \\
+ &  & 500 &  & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 250 &  & XX & XX & XX &  &  &  &  &  & \\
+ &  & 250 &  & XX & X & X &  &  &  &  &  & \\
 \nopagebreak
- &  & 100 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 100 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 80 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 80 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 60 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 60 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 50 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 50 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 40 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 40 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 30 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 30 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 20 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 20 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 10 & XX & XX & XX & XX &  &  &  &  &  & \\
+ &  & 10 & XX & XX & X & XX &  &  &  &  &  & XX\\
 \nopagebreak
-\multirow{-13}{*}{\centering\arraybackslash SG\_28} & \multirow{-13}{*}{\centering\arraybackslash $\sim$ 804 m} & 1 & XX & XX &  &  &  &  & XX & XX & XX & XX\\
+\multirow{-13}{*}{\centering\arraybackslash SG\_28} & \multirow{-13}{*}{\centering\arraybackslash $\sim$ 804 m} & 1 & XX & XX &  &  &  &  & XX & X & X & XX\\
 \cmidrule{1-13}\pagebreak[0]
- &  & BTM &  & XX & XX & XX & XX & XX &  &  &  & \\
+ &  & BTM &  & XX & X & XX & X & X &  &  &  & \\
 \nopagebreak
  &  & 750 &  & XX &  &  &  &  &  &  &  & \\
 \nopagebreak
- &  & 500 &  & XX &  &  &  &  &  &  &  & \\
+ &  & 500 &  & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 250 &  & XX & XX & XX &  &  &  &  &  & \\
+ &  & 250 &  & XX & X & X &  &  &  &  &  & \\
 \nopagebreak
- &  & 100 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 100 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 80 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 80 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 60 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 60 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 50 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 50 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 40 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 40 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 30 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 30 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 20 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 20 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 10 & XX & XX & XX & XX &  &  &  &  &  & \\
+ &  & 10 & XX & XX & X & X &  &  &  &  &  & XX\\
 \nopagebreak
-\multirow{-13}{*}{\centering\arraybackslash SG\_23} & \multirow{-13}{*}{\centering\arraybackslash $\sim$ 1102 m} & 1 & XX & XX &  &  &  &  & XX & XX & XX & XX\\
+\multirow{-13}{*}{\centering\arraybackslash SG\_23} & \multirow{-13}{*}{\centering\arraybackslash $\sim$ 1102 m} & 1 & XX & XX &  &  &  &  & XX & X & X & XX\\
 \cmidrule{1-13}\pagebreak[0]
- &  & BTM &  & XX & XX & XX & XX & XX &  &  &  & \\
+ &  & BTM &  & XX & X & X & X & X &  &  &  & \\
 \nopagebreak
- &  & 1500 &  & XX &  &  &  &  &  &  &  & \\
+ &  & 1500 &  & XX &  &  & X & X &  &  &  & XX\\
 \nopagebreak
  &  & 750 &  & XX &  &  &  &  &  &  &  & \\
 \nopagebreak
- &  & 500 &  & XX &  &  &  &  &  &  &  & \\
+ &  & 500 &  & XX &  &  & X & X &  &  &  & XX\\
 \nopagebreak
- &  & 250 &  & XX & XX & XX &  &  &  &  &  & \\
+ &  & 250 &  & XX & X & X &  &  &  &  &  & \\
 \nopagebreak
- &  & 100 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 100 & XX & XX &  &  & X & X &  &  &  & XX\\
 \nopagebreak
- &  & 80 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 80 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 60 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 60 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 50 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 50 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
  &  & 40 & XX & XX &  &  &  &  &  &  &  & \\
 \nopagebreak
- &  & 30 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 30 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 20 & XX & XX &  &  &  &  &  &  &  & \\
+ &  & 20 & XX & XX &  &  &  &  &  &  &  & XX\\
 \nopagebreak
- &  & 10 & XX & XX & XX & XX &  &  &  &  &  & \\
+ &  & 10 & XX & XX & X & XX & X & X &  &  &  & XX\\
 \nopagebreak
-\multirow{-14}{*}{\centering\arraybackslash GULD\_04} & \multirow{-14}{*}{\centering\arraybackslash $\sim$ 1914 m} & 1 & XX & XX &  &  &  &  & XX & XX & XX & XX\\*
+\multirow{-14}{*}{\centering\arraybackslash GULD\_04} & \multirow{-14}{*}{\centering\arraybackslash $\sim$ 1914 m} & 1 & XX & XX &  &  & X & X & XX & X & X & XX\\*
 \end{longtable}
 \end{landscapepage}
 \clearpage
@@ -1020,7 +1014,7 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \begin{landscapepage}
 \begin{table}
 
-\caption{\label{tab:table5}Pearson correlation coefficients (R2) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
+\caption{\label{tab:table5}Pearson correlation coefficients ($R^2$) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
 \begin{tabular}[t]{>{}c|ccc>{}c|cccc}
 \toprule
@@ -1041,30 +1035,42 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \begin{landscapepage}
 \begin{table}
 
-\caption{\label{tab:table6}Pearson correlation coefficients (R2) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
+\caption{\label{tab:table6}Pearson correlation coefficients ($R^2$) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
 \fontsize{12}{14}\selectfont
-\begin{tabular}[t]{>{}ccccccc}
+\begin{tabular}[t]{>{}clccccc}
 \toprule
 \textbf{Area} & \textbf{Metrics} & \textbf{Amp.} & \textbf{Dur.} & \textbf{Mag.} & \textbf{Jan to Apr SST} & \textbf{Trend}\\
 \midrule
-\textbf{SW LL} & Start &  & -0.560\text{*}\text{*} & -0.295\text{*}\text{*} &  & \\
-\textbf{SW LL} & Amplitude &  &  &  &  & \\
-\textbf{SW LL} & Duration &  &  & 0.382\text{*}\text{*} &  & \\
-\textbf{SW LL} & Magnitude &  &  &  & -0.330\text{*} & \\
-\textbf{SW LL} & Jan to Apr SST &  &  &  &  & \\
-\midrule
-\textbf{GMPA} & Start & 0.388\text{*}\text{*} & -0.827\text{*}\text{*} &  &  & \\
-\textbf{GMPA} & Amplitude &  & -0.492\text{*}\text{*} &  &  & \\
-\textbf{GMPA} & Duration &  &  &  &  & \\
-\textbf{GMPA} & Magnitude &  &  &  &  & \\
-\textbf{GMPA} & Jan to Apr SST &  &  &  &  & 0.251\text{*}\\
-\midrule
-\textbf{SW HL} & Start &  &  &  & 0.339\text{*}\text{*} & \\
-\textbf{SW HL} & Amplitude &  &  & 0.251\text{*} &  & \\
-\textbf{SW HL} & Duration &  &  & 0.614\text{*}\text{*} &  & \\
-\textbf{SW HL} & Magnitude &  &  &  & -0.215\text{*} & \\
-\textbf{SW HL} & Jan to Apr SST &  &  &  &  & 0.344\text{*}\text{*}\\
+ & Start &  & -0.560\text{*}\text{*} & -0.295\text{*}\text{*} &  & \\
+
+ & Amplitude &  &  &  &  & \\
+
+ & Duration &  &  & 0.382\text{*}\text{*} &  & \\
+
+ & Magnitude &  &  &  & -0.330\text{*} & \\
+
+\multirow{-5}{*}{\centering\arraybackslash \textbf{SW LL}} & Jan to Apr SST &  &  &  &  & \\
+\cmidrule{1-7}
+ & Start & 0.388\text{*}\text{*} & -0.827\text{*}\text{*} &  &  & \\
+
+ & Amplitude &  & -0.492\text{*}\text{*} &  &  & \\
+
+ & Duration &  &  &  &  & \\
+
+ & Magnitude &  &  &  &  & \\
+
+\multirow{-5}{*}{\centering\arraybackslash \textbf{GMPA}} & Jan to Apr SST &  &  &  &  & 0.251\text{*}\\
+\cmidrule{1-7}
+ & Start &  &  &  & 0.339\text{*}\text{*} & \\
+
+ & Amplitude &  &  & 0.251\text{*} &  & \\
+
+ & Duration &  &  & 0.614\text{*}\text{*} &  & \\
+
+ & Magnitude &  &  &  & -0.215\text{*} & \\
+
+\multirow{-5}{*}{\centering\arraybackslash \textbf{SW HL}} & Jan to Apr SST &  &  &  &  & 0.344\text{*}\text{*}\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1072,7 +1078,7 @@ Zhai, L., Platt, T., Tang, C., Sathyendranath, S., and Hernandez-Walls, R. 2011.
 \clearpage
 \begin{table}
 
-\caption{\label{tab:table7}Pearson correlation coefficients (R2) between zooplankton abundances and near surface temperatures and trends in both over time at HL\_06, GULD\_03 and LL\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
+\caption{\label{tab:table7}Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\_06, GULD\_03 and LL\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
 \fontsize{12}{14}\selectfont
 \begin{tabular}[t]{>{}lccc}
@@ -1107,9 +1113,59 @@ Year &  &  & \\
 \addlinespace
 \cellcolor{gray!6}{Clausocalanus} & \cellcolor{gray!6}{0.34\text{*}} & \cellcolor{gray!6}{0.48\text{*}\text{*}} & \cellcolor{gray!6}{}\\
 \addlinespace
-Pleuromamma & 0.50\text{*}\text{*} & 0.69\text{*}\text{*} & \\
+Pleuromamma & 0.50\text{*}\text{*} & 0.69\text{*}\text{*}\text{*} & \\
 \addlinespace
 \cellcolor{gray!6}{Pseudocalanus} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{-0.34\text{*}} & \cellcolor{gray!6}{}\\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+\begin{table}
+
+\caption{\label{tab:table8}Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\_06, GULD\_03 and LL\_07 in fall (Sept to Dec) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
+\centering
+\fontsize{12}{14}\selectfont
+\begin{tabular}[t]{>{}lccc}
+\toprule
+\textbf{} & \textbf{5 m T} & \textbf{0 to 200 m T} & \textbf{Year}\\
+\midrule
+\cellcolor{gray!6}{\textbf{LL\_07/Fall}} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{}\\
+\addlinespace
+Year &  &  \vphantom{2} & \\
+\addlinespace
+\cellcolor{gray!6}{C. finmarchicus} & \cellcolor{gray!6}{-0.43\text{*}\text{*}} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{}\\
+\addlinespace
+Clausocalanus & 0.38\text{*} & 0.62\text{*}\text{*} & \\
+\addlinespace
+\cellcolor{gray!6}{Microcalanus} & \cellcolor{gray!6}{-0.31\text{*}} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{-0.28\text{*}}\\
+\midrule
+\addlinespace
+\textbf{GULD\_03/Fall} &  &  & \\
+\addlinespace
+\cellcolor{gray!6}{Year} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{ \vphantom{1}} & \cellcolor{gray!6}{}\\
+\addlinespace
+Clausocalanus &  &  & 0.45\text{*}\\
+\addlinespace
+\cellcolor{gray!6}{M. lucens} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{0.51\text{*}}\\
+\midrule
+\addlinespace
+\textbf{HL\_06/Fall} &  &  & \\
+\addlinespace
+\cellcolor{gray!6}{Year} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{}\\
+\addlinespace
+C. finmarchicus & -0.21\text{*} &  & \\
+\addlinespace
+\cellcolor{gray!6}{M. clausi} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{-0.25\text{*}}\\
+\addlinespace
+M. lucens &  & -0.34\text{*}\text{*} & \\
+\addlinespace
+\cellcolor{gray!6}{O. atlantica} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{-0.27\text{*}} & \cellcolor{gray!6}{}\\
+\addlinespace
+O. similis &  & -0.47\text{*}\text{*} & \\
+\addlinespace
+\cellcolor{gray!6}{Paracalanus} & \cellcolor{gray!6}{} & \cellcolor{gray!6}{-0.30\text{*}} & \cellcolor{gray!6}{}\\
+\addlinespace
+Pleuromamma &  & 0.21\text{*} & \\
 \bottomrule
 \end{tabular}
 \end{table}
