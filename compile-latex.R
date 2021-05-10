@@ -1,1 +1,0 @@
-shell(cmd=paste("xelatex --mode=batchmode", basename("techreport.tex")), mustWork=TRUE, intern=TRUE, translate=TRUE)

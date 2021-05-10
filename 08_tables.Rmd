@@ -1,18 +1,5 @@
 # TABLES {#sec:tables}
 
-```{r table-setup, include=FALSE, echo=FALSE}
-options(tinytex.verbose = TRUE)
-
-library(oce)
-library(stringr)
-library(kableExtra)
-library(lubridate)
-library(dplyr)
-library(tibble)
-
-```
-
-
 \begin{landscapepage}
 
 ```{r table1, results="asis", include=TRUE, echo=FALSE}
@@ -137,7 +124,7 @@ kbl(ctable1,
   # Repeat the header on multiple pages and make the font size 10.
   kableExtra::kable_styling(latex_options = "repeat_header", repeat_header_method = "replace", font_size = 11, full_width = FALSE) %>%
   # Alternate the rows with different colors to make it easier to read.
-  kableExtra::kable_styling(latex_options = c("striped", "scale_down")) %>%
+  kableExtra::kable_styling(latex_options = c("striped")) %>%
   kableExtra::column_spec(1, width = "6em") %>%
   kableExtra::column_spec(2, width = "5em") %>%
   kableExtra::column_spec(3, width = "3em") %>%
