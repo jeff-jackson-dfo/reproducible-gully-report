@@ -1,7 +1,5 @@
 # reproducible-gully-report
-Code for creating a reproducible technical report on the [Gully MPA](https://www.dfo-mpo.gc.ca/oceans/mpa-zpm/gully/index-eng.html).
-
-This repository uses scripts in the R language within RStudio to create a reproducible Fisheries and Oceans Canada Technical Report; in this instance of oceanographic data collected in the Gully MPA.
+This repository used scripts in the R language within RStudio to create a reproducible Fisheries and Oceans Canada technical report on the [Gully MPA](https://www.dfo-mpo.gc.ca/oceans/mpa-zpm/gully/index-eng.html).
 
 The [renv](https://rstudio.github.io/renv/index.html) package was used to start a clean R environment with nothing but the base R packages.  This package is used to 
 manage all of the R packages that get installed so that the environment used to create the Gully technical report is documented so that it can be reused in future years. 
