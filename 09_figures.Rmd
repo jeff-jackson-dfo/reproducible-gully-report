@@ -45,7 +45,7 @@ knitr::include_graphics('figure/Figure04.png')
 
 <!-- Start Landscape here  -->
 
-(ref:fig5-caption) Mean (black line) temperature ($\degree$C) $\pm$ 95% confidence interval (red dash) calculated across individual CTD profiles (grey lines) collected at each of the four AZMP fixed stations in the Gully during the spring (top panel: April) and fall (bottom panel: September and October). Mean conditions at each station were computed by averaging the values in each 1 m depth bin across casts collected within each season.
+(ref:fig5-caption) Mean (black line) temperature (\($\degree$C\)) $\pm$ 95% confidence interval (red dash) calculated across individual CTD profiles (grey lines) collected at each of the four AZMP fixed stations in the Gully during the spring (top panel: April) and fall (bottom panel: September and October). Mean conditions at each station were computed by averaging the values in each 1 m depth bin across casts collected within each season.
 
 \begin{landscapepage}
 
@@ -86,11 +86,11 @@ knitr::include_graphics('figure/Figure07.png')
 \clearpage
 
 
-(ref:fig8-caption) Comparison of the vertically-averaged temperature ($\degree$C), salinity, and dissolved oxygen (ml L\textsuperscript{-1}) profiles at each of the four AZMP fixed stations in the Gully during spring (April) and fall (September and October). Data were collected between 2000 to 2018 for GULD_03 and GULD_04, and 2007 to 2018 for SG_23 and SG_28 (with slight variations between seasons). Oxygen data presented for each station is from 2013 onward.
+(ref:fig8-caption) Comparison of the vertically-averaged temperature (\($\degree$C\)), salinity, and dissolved oxygen (ml L\textsuperscript{-1}) profiles at each of the four AZMP fixed stations in the Gully during spring (April) and fall (September and October). Data were collected between 2000 to 2018 for GULD_03 and GULD_04, and 2007 to 2018 for SG_23 and SG_28 (with slight variations between seasons). Oxygen data presented for each station is from 2013 onward.
 
 \begin{landscapepage}
 
-```{r figure8, fig.align = "center", fig.cap = "(ref:fig8-caption)", out.width = "8.5in"}
+```{r figure8, fig.align = "center", fig.cap = "(ref:fig8-caption)", out.width = "9.25in"}
 
 knitr::include_graphics('figure/Figure08.png')
 
@@ -104,7 +104,7 @@ knitr::include_graphics('figure/Figure08.png')
 
 \begin{landscapepage}
 
-```{r figure9, fig.align = "center", fig.cap = "(ref:fig9-caption)", out.width = "8.0in"}
+```{r figure9, fig.align = "center", fig.cap = "(ref:fig9-caption)", out.width = "9.0in"}
 
 knitr::include_graphics('figure/Figure09.png')
 
@@ -116,7 +116,7 @@ knitr::include_graphics('figure/Figure09.png')
 <!-- End Landscape here  -->
 
 
-(ref:fig10-caption) Changes in mean spring and fall temperature ($\degree$C) in five vertical depth intervals sampled at each of the four AZMP fixed stations in the Gully. Circles represent mean temperature at each depth interval and year. Absent circles indicate that sampling did not occur at that station in that year. Date range of data collection varies between stations and is summarized in Table \@ref(tab:table2). Note that the 400 to 750 m depth interval for GULD_03 spans from >400 to near-bottom (up to 586 m).
+(ref:fig10-caption) Changes in mean spring and fall temperature (\($\degree$C\)) in five vertical depth intervals sampled at each of the four AZMP fixed stations in the Gully. Circles represent mean temperature at each depth interval and year. Absent circles indicate that sampling did not occur at that station in that year. Date range of data collection varies between stations and is summarized in Table \@ref(tab:table2). Note that the 400 to 750 m depth interval for GULD_03 spans from >400 to near-bottom (up to 586 m).
 
 ```{r figure10, fig.align = "center", fig.cap = "(ref:fig10-caption)"}
 
@@ -150,11 +150,11 @@ knitr::include_graphics('figure/Figure12.png')
 
 <!-- Begin Landscape here  -->
 
-(ref:fig13-caption) Comparison average temperature ($\degree$C), salinity, and dissolved oxygen (ml L\textsuperscript{-1}) to 1000 m on the four AZMP fixed stations in the Gully, and stations upstream (LL_07) and downstream (HL_06) of the Gully. Data were collected in the spring (April) and fall (September and October) between 2000 to 2018 for GULD_03, GULD_04, HL_06, and LL_07, and 2007 to 2018 for SG_23 and SG_28 (with slight variations between seasons). Oxygen data presented for each station is from 2013 onward.
+(ref:fig13-caption) Comparison average temperature (\($\degree$C\)), salinity, and dissolved oxygen (ml L\textsuperscript{-1}) to 1000 m on the four AZMP fixed stations in the Gully, and stations upstream (LL_07) and downstream (HL_06) of the Gully. Data were collected in the spring (April) and fall (September and October) between 2000 to 2018 for GULD_03, GULD_04, HL_06, and LL_07, and 2007 to 2018 for SG_23 and SG_28 (with slight variations between seasons). Oxygen data presented for each station is from 2013 onward.
 
 \begin{landscapepage}
 
-```{r figure13, fig.align = "center", fig.cap = "(ref:fig13-caption)", out.width = "8.5in"}
+```{r figure13, fig.align = "center", fig.cap = "(ref:fig13-caption)", out.width = "9.5in"}
 
 knitr::include_graphics('figure/Figure13.png')
 
@@ -188,7 +188,7 @@ knitr::include_graphics('figure/Figure15.png')
 \clearpage
 
 
-(ref:fig16-caption) Relationships between in situ 5 m temperatures measured at HL_06, GULD_03 and LL_07 during AZMP and other sampling missions and remotely-sensed sea surface temperatures averaged for the corresponding months/years for the SW HL, GMPA and SW LL satellite areas. Filled circles, squares and triangles represent measurements in April, May and June, respectively, in spring, and in September, October and December, respectively, in fall. 
+(ref:fig16-caption) Relationships between _in situ_ 5 m temperatures measured at HL_06, GULD_03 and LL_07 during AZMP and other sampling missions and remotely-sensed sea surface temperatures averaged for the corresponding months/years for the SW HL, GMPA and SW LL satellite areas. Filled circles, squares and triangles represent measurements in April, May and June, respectively, in spring, and in September, October and December, respectively, in fall. 
 
 ```{r figure16, fig.align = "center", fig.cap = "(ref:fig16-caption)"}
 
@@ -276,7 +276,7 @@ knitr::include_graphics('figure/Figure22.png')
 \clearpage
 
 
-(ref:fig23-caption) Mean vertical structure in spring and fall chlorophyll a concentration ($\mu$g L\textsuperscript{-1}) from the surface to 100 m depth at the four AZMP fixed stations in the Gully. Circles represent mean chlorophyll a concentration calculated at each standard nominal depth (see Table \@ref(tab:table3)) of samples. Error bars are $\pm$ standard deviation.
+(ref:fig23-caption) Mean vertical structure in spring and fall chlorophyll _a_ concentration ($\mu$g L\textsuperscript{-1}) from the surface to 100 m depth at the four AZMP fixed stations in the Gully. Circles represent mean chlorophyll a concentration calculated at each standard nominal depth (see Table \@ref(tab:table3)) of samples. Error bars are $\pm$ standard deviation.
 
 \begin{landscapepage}
 
@@ -292,7 +292,7 @@ knitr::include_graphics('figure/Figure23.png')
 <!-- End Landscape here  -->
 
 
-(ref:fig24-caption) Vertically-integrated chlorophyll a concentration (mg m\textsuperscript{-3}) from the top 100 m sampled in the spring (April) and fall (September and October) at the four AZMP fixed stations in the Gully. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
+(ref:fig24-caption) Vertically-integrated chlorophyll _a_ concentration (mg m\textsuperscript{-3}) from the top 100 m sampled in the spring (April) and fall (September and October) at the four AZMP fixed stations in the Gully. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
 
 ```{r figure24, fig.align = "center", fig.cap = "(ref:fig24-caption)"}
 
@@ -336,7 +336,7 @@ knitr::include_graphics('figure/Figure27.png')
 \clearpage
 
 
-(ref:fig28-caption) Relationships between in situ measurements of chlorophyll concentrations in the 0 to 10 m depth range at stations throughout the satellite areas (SW LL, GMPA, SW HL) and remotely-sensed sea surface chlorophyll concentrations averaged for the appropriate months/years.
+(ref:fig28-caption) Relationships between _in situ_ measurements of chlorophyll concentrations in the 0 to 10 m depth range at stations throughout the satellite areas (SW LL, GMPA, SW HL) and remotely-sensed sea surface chlorophyll concentrations averaged for the appropriate months/years.
 
 ```{r figure28, fig.align = "center", fig.cap = "(ref:fig28-caption)"}
 
@@ -393,7 +393,7 @@ knitr::include_graphics('figure/Figure32.png')
 
 <!-- Begin Landscape here  -->
 
-(ref:fig33-caption) Relationships between the Population Development Index (Abundance CI-III/Abundance CI-VI, %) for Calanus finmarchicus populations versus sampling date minus spring bloom initiation date (top row), and April sea surface temperature (bottom row), for HL_06, SW HL and LL_07, SW LL. 
+(ref:fig33-caption) Relationships between the Population Development Index (Abundance CI-III/Abundance CI-VI, %) for _Calanus finmarchicus_ populations versus sampling date minus spring bloom initiation date (top row), and April sea surface temperature (bottom row), for HL_06, SW HL and LL_07, SW LL. 
 
 \begin{landscapepage}
 
@@ -409,7 +409,7 @@ knitr::include_graphics('figure/Figure33.png')
 <!-- End Landscape here  -->
 
 
-(ref:fig34-caption) Abundance of stage CV (filled circles) and stage CIV (open squares) C. finmarchicus versus sampling date at LL_07, GULD_03 and HL_06 in fall between 1999 and 2018. Note that the outlier circled in black from 2017 at LL_07 was excluded from the only significant correlation between abundance and sampling date.
+(ref:fig34-caption) Abundance of stage CV (filled circles) and stage CIV (open squares) _Calanus finmarchicus_ versus sampling date at LL_07, GULD_03 and HL_06 in fall between 1999 and 2018. Note that the outlier circled in black from 2017 at LL_07 was excluded from the only significant correlation between abundance and sampling date.
 
 ```{r figure34, fig.align = "center", fig.cap = "(ref:fig34-caption)", out.width = "4.75in"}
 

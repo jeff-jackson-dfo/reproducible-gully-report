@@ -240,7 +240,7 @@ kbl(ctable3,
     format = "latex",
     escape = FALSE,
     align = "cccccccccccc",
-    caption = "Summary of nominal depths of water sample collection and variables measured on the four AZMP fixed stations in the Gully MPA. Stations are organized from shallowest to deepest and include the approximate maximum depth based on station bathymetry extracted from GEBCO (2019). The ‘X’ and ‘XX’ indicate the nominal depth at which single (‘X’) and duplicate (‘XX’) samples are collected. ‘BTM’ indicates ‘near-bottom’. CHL = chlorophyll, NUTS = nutrients, SAL = salinity, O2 = dissolved oxygen, pCO2 =  partial pressure of CO2, TIC/TA = Total Inorganic Carbon and Total Alkalinity, POC = particulate organic carbon, HPLC = high performance liquid chromatography, ABS = phytoplankton absorption, and CYTO = flow cytometry for microbial plankton. \"$\\sim$\" represents approximately.") %>%
+    caption = "Summary of nominal depths of water sample collection and variables measured on the four AZMP fixed stations in the Gully MPA. Stations are organized from shallowest to deepest and include the approximate maximum depth based on station bathymetry extracted from GEBCO (2019). The ‘X’ and ‘XX’ indicate the nominal depth at which single (‘X’) and duplicate (‘XX’) samples are collected. ‘BTM’ indicates ‘near-bottom’. CHL = chlorophyll, NUTS = nutrients, SAL = salinity, $O_2$ = dissolved oxygen, $pCO_2$ =  partial pressure of $CO_2$, TIC/TA = Total Inorganic Carbon and Total Alkalinity, POC = particulate organic carbon, HPLC = high performance liquid chromatography, ABS = phytoplankton absorption, and CYTO = flow cytometry for microbial plankton. \"$\\sim$\" represents approximately.") %>%
   kableExtra::collapse_rows(columns = 1:2, latex_hline = "major", valign = "middle") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
@@ -340,7 +340,7 @@ kbl(ctable5,
     linesep = "",
     format = "latex",
     escape = FALSE,
-    align = "ccccccccc",
+    align = c("c", rep("l", 8)),
     caption = "Pearson correlation coefficients ($R^2$) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
@@ -378,7 +378,7 @@ kbl(ctable6,
     linesep = "",
     format = "latex",
     escape = FALSE,
-    align = "clccccc",
+    align = c("c", rep("l", 5)),
     caption = "Pearson correlation coefficients ($R^2$) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
@@ -415,7 +415,7 @@ kbl(ctable7,
     linesep = "\\addlinespace",
     format = "latex",
     escape = FALSE,
-    align = "lccc",
+    align = rep("l", 4),
     caption = "Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
@@ -450,7 +450,7 @@ kbl(ctable8,
     linesep = "\\addlinespace",
     format = "latex",
     escape = FALSE,
-    align = "lccc",
+    align = rep("l", 4),
     caption = "Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in fall (Sept to Dec) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
