@@ -45,7 +45,7 @@ knitr::include_graphics('figure/Figure04.png')
 
 <!-- Start Landscape here  -->
 
-(ref:fig5-caption) Mean (black line) temperature (\($\degree$C\)) $\pm$ 95% confidence interval (red dash) calculated across individual CTD profiles (grey lines) collected at each of the four AZMP fixed stations in the Gully during the spring (top panel: April) and fall (bottom panel: September and October). Mean conditions at each station were computed by averaging the values in each 1 m depth bin across casts collected within each season.
+(ref:fig5-caption) Mean (black line) temperature ($\degree$C) \thickspace $\pm$ \thinspace 95% confidence interval (red dash) calculated across individual CTD profiles (grey lines) collected at each of the four AZMP fixed stations in the Gully during the spring (top panel: April) and fall (bottom panel: September and October). Mean conditions at each station were computed by averaging the values in each 1 m depth bin across casts collected within each season.
 
 \begin{landscapepage}
 
@@ -409,7 +409,7 @@ knitr::include_graphics('figure/Figure33.png')
 <!-- End Landscape here  -->
 
 
-(ref:fig34-caption) Abundance of stage CV (filled circles) and stage CIV (open squares) _Calanus finmarchicus_ versus sampling date at LL_07, GULD_03 and HL_06 in fall between 1999 and 2018. Note that the outlier circled in black from 2017 at LL_07 was excluded from the only significant correlation between abundance and sampling date.
+(ref:fig34-caption) Abundance of stage CV (filled circles) and stage CIV (open squares) _C. finmarchicus_ versus sampling date at LL_07, GULD_03 and HL_06 in fall between 1999 and 2018. Note that the outlier circled in black from 2017 at LL_07 was excluded from the only significant correlation between abundance and sampling date.
 
 ```{r figure34, fig.align = "center", fig.cap = "(ref:fig34-caption)", out.width = "4.75in"}
 
