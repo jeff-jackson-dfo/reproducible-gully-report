@@ -1,6 +1,7 @@
-# TABLES {#sec:tables}
 
 \begin{landscapepage}
+\hypertarget{sec:tables}{%
+\section{TABLES}\label{sec:tables}}
 
 ```{r table1, results="asis", include=TRUE, echo=FALSE}
 
@@ -111,7 +112,7 @@ ctable1 <- tibble(cruiseNumber, stationName, Event, Survey, mon, Longitude, Lati
 
 colnames(ctable1) <- header1
 
-kbl(ctable1, 
+kbl(ctable1,
     booktab = TRUE,
     linesep = "",
     longtable = TRUE,
@@ -226,7 +227,7 @@ cyto <- rep("XX", nx)
 cyto[c(1,2,12,13,15,25,26,28,38,40,42,47)] <- ""
 
 # Create the table header
-header3 <- c("Station", "Station Depth", "Nominal Depth", "CHL", "NUTS", "SAL", "O2", "pCO2", "TIC/TA", "POC", "HPLC", "ABS", "CYTO")
+header3 <- c("Station", "Station Depth", "Nominal Depth", "CHL", "NUTS", "SAL", "O\\textsubscript{2}", "pCO\\textsubscript{2}", "TIC/TA", "POC", "HPLC", "ABS", "CYTO")
 
 # Create the table
 ctable3 <- tibble(stations, approxDepth, nominalDepth, chl, nuts, sal, oxy, pco2, tic, poc, hplc, abs, cyto)
@@ -240,7 +241,7 @@ kbl(ctable3,
     format = "latex",
     escape = FALSE,
     align = "cccccccccccc",
-    caption = "Summary of nominal depths of water sample collection and variables measured on the four AZMP fixed stations in the Gully MPA. Stations are organized from shallowest to deepest and include the approximate maximum depth based on station bathymetry extracted from GEBCO (2019). The ‘X’ and ‘XX’ indicate the nominal depth at which single (‘X’) and duplicate (‘XX’) samples are collected. ‘BTM’ indicates ‘near-bottom’. CHL = chlorophyll, NUTS = nutrients, SAL = salinity, $O_2$ = dissolved oxygen, $pCO_2$ =  partial pressure of $CO_2$, TIC/TA = Total Inorganic Carbon and Total Alkalinity, POC = particulate organic carbon, HPLC = high performance liquid chromatography, ABS = phytoplankton absorption, and CYTO = flow cytometry for microbial plankton. \"$\\sim$\" represents approximately.") %>%
+    caption = "Summary of nominal depths of water sample collection and variables measured on the four AZMP fixed stations in the Gully MPA. Stations are organized from shallowest to deepest and include the approximate maximum depth based on station bathymetry extracted from GEBCO (2019). The ‘X’ and ‘XX’ indicate the nominal depth at which single (‘X’) and duplicate (‘XX’) samples are collected. ‘BTM’ indicates ‘near-bottom’. CHL = chlorophyll, NUTS = nutrients, SAL = salinity, O\\textsubscript{2} = dissolved oxygen, pCO\\textsubscript{2} = partial pressure of CO\\textsubscript{2}, TIC/TA = Total Inorganic Carbon and Total Alkalinity, POC = particulate organic carbon, HPLC = high performance liquid chromatography, ABS = phytoplankton absorption, and CYTO = flow cytometry for microbial plankton. \"$\\sim$\" represents approximately.") %>%
   kableExtra::collapse_rows(columns = 1:2, latex_hline = "major", valign = "middle") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
@@ -341,7 +342,7 @@ kbl(ctable5,
     format = "latex",
     escape = FALSE,
     align = c("c", rep("l", 8)),
-    caption = "Pearson correlation coefficients ($R^2$) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    caption = "Pearson correlation coefficients (R\\textsuperscript{2}) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Add a another header above the first.
@@ -379,11 +380,17 @@ kbl(ctable6,
     format = "latex",
     escape = FALSE,
     align = c("c", rep("l", 5)),
-    caption = "Pearson correlation coefficients ($R^2$) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    caption = "Pearson correlation coefficients (R\\textsuperscript{2}) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
-  # Make the first column bold text
-  kableExtra::column_spec (1, bold = TRUE) %>%
+  # Make the first column bold text and specify the column widths
+  kableExtra::column_spec(1, bold = TRUE, width = "6em") %>%
+  kableExtra::column_spec(2, width = "8em") %>%
+  kableExtra::column_spec(3, width = "6em") %>%
+  kableExtra::column_spec(4, width = "6em") %>%
+  kableExtra::column_spec(5, width = "6em") %>%
+  kableExtra::column_spec(6, width = "8em") %>%
+  kableExtra::column_spec(7, width = "6em") %>%
   # Make the table text size 12 font.
   kableExtra::kable_styling(font_size = 12) %>%
   # Collapse the values in column 1 so values are not repeated.
@@ -397,7 +404,7 @@ kbl(ctable6,
 
 ```{r table7, results="asis", include=TRUE, echo=FALSE}
 
-zoopl <- c("LL\\_07/April", "Year", "Microcalanus", "O. similis", "Pseudocalanus", "Scolecithrocella", "GULD\\_03/April", "Year", "C. hyperboreus", "M. lucens", "HL\\_06/April", "Year", "Clausocalanus", "Pleuromamma", "Pseudocalanus")
+zoopl <- c("LL\\_07/April", "Year", "\\textit{Microcalanus}", "\\textit{O. similis}", "\\textit{Pseudocalanus}", "\\textit{Scolecithrocella}", "GULD\\_03/April", "Year", "\\textit{C. hyperboreus}", "\\textit{M. lucens}", "HL\\_06/April", "Year", "\\textit{Clausocalanus}", "\\textit{Pleuromamma}", "\\textit{Pseudocalanus}")
 fmt <- c("","0.37\\text{*}","","","","","","","","0.75\\text{*}","","","0.34\\text{*}", "0.50\\text{*}\\text{*}", "")
 zmt <- c("","0.48\\text{*}\\text{*}","-0.27\\text{*}","","","-0.43\\text{*}\\text{*}","","0.72\\text{*}","-0.76\\text{*}","","", "", "0.48\\text{*}\\text{*}", "0.69\\text{*}\\text{*}\\text{*}", "-0.34\\text{*}")
 yy <- c("", "", "", "-0.51\\text{*}\\text{*}", "-0.47\\text{*}\\text{*}", "-0.32\\text{*}", "", "", "-0.75\\text{*}", "", "", "", "", "", "")
@@ -416,11 +423,14 @@ kbl(ctable7,
     format = "latex",
     escape = FALSE,
     align = rep("l", 4),
-    caption = "Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    caption = "Pearson correlation coefficients (R\\textsuperscript{2}) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
-  # Make the text bold in three cells in column 1.
-  kableExtra::column_spec (1, bold = bold_cell) %>%
+  # Make the text bold in three cells in column 1 and specify the column widths.
+  kableExtra::column_spec(1, bold = bold_cell, width = "11em") %>%
+  kableExtra::column_spec(2, width = "6em") %>%
+  kableExtra::column_spec(3, width = "6em") %>%
+  kableExtra::column_spec(4, width = "6em") %>%
   # Put horizontal lines after the 6th and 11th  rows to separate areas for easier reading.
   kableExtra::row_spec(c(6,10), hline_after = TRUE) %>%
   # Make the table's font size 12.
@@ -432,7 +442,7 @@ kbl(ctable7,
 
 ```{r table8, results="asis", include=TRUE, echo=FALSE}
 
-zoopl <- c("LL\\_07/Fall", "Year", "C. finmarchicus", "Clausocalanus", "Microcalanus", "GULD\\_03/Fall", "Year", "Clausocalanus", "M. lucens", "HL\\_06/Fall", "Year", "C. finmarchicus", "M. clausi", "M. lucens", "O. atlantica", "O. similis", "Paracalanus", "Pleuromamma")
+zoopl <- c("LL\\_07/Fall", "Year", "\\textit{C. finmarchicus}", "\\textit{Clausocalanus}", "\\textit{Microcalanus}", "GULD\\_03/Fall", "Year", "\\textit{Clausocalanus}", "\\textit{M. lucens}", "HL\\_06/Fall", "Year", "\\textit{C. finmarchicus}", "\\textit{M. clausi}", "\\textit{M. lucens}", "\\textit{O. atlantica}", "\\textit{O. similis}", "\\textit{Paracalanus}", "\\textit{Pleuromamma}")
 fmt <- c("","","-0.43\\text{*}\\text{*}","0.38\\text{*}","-0.31\\text{*}","","","","","","","-0.21\\text{*}","","","","","","")
 zmt <- c("","","","0.62\\text{*}\\text{*}","","","","","","","","","","-0.34\\text{*}\\text{*}","-0.27\\text{*}","-0.47\\text{*}\\text{*}","-0.30\\text{*}","0.21\\text{*}")
 yy <- c("","","","","-0.28\\text{*}","","","0.45\\text{*}","0.51\\text{*}","","","","-0.25\\text{*}","","","","","")
@@ -451,11 +461,14 @@ kbl(ctable8,
     format = "latex",
     escape = FALSE,
     align = rep("l", 4),
-    caption = "Pearson correlation coefficients ($R^2$) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in fall (Sept to Dec) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
+    caption = "Pearson correlation coefficients (R\\textsuperscript{2}) between zooplankton abundances and near surface temperatures and trends in both over time at HL\\_06, GULD\\_03 and LL\\_07 in fall (Sept to Dec) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
-  # Make the text bold in three cells in column 1.
-  kableExtra::column_spec (1, bold = bold_cell) %>%
+  # Make the text bold in three cells in column 1 and specify the column widths.
+  kableExtra::column_spec(1, bold = bold_cell, width = "11em") %>%
+  kableExtra::column_spec(2, width = "6em") %>%
+  kableExtra::column_spec(3, width = "6em") %>%
+  kableExtra::column_spec(4, width = "6em") %>%
   # Put horizontal lines after the 5th and 9th  rows to separate areas for easier reading.
   kableExtra::row_spec(c(5,9), hline_after = TRUE) %>%
   # Make the table's font size 12.

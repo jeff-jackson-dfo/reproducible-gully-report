@@ -1,4 +1,7 @@
-# FIGURES {#sec:figures}
+<!-- # FIGURES {#sec:figures} -->
+
+\hypertarget{sec:figures}{%
+\section{FIGURES}\label{sec:figures}}
 
 (ref:fig1-caption) Location of the four AZMP fixed stations in the Gully MPA (blue circles). The boundaries of the three Gully Management Zones are also shown. Top-right map inset shows the position of the Gully MPA in relation to Atlantic Canada and DFO’s Maritime Region administrative boundary.
 
@@ -14,7 +17,7 @@ knitr::include_graphics('figure/Figure01.png')
 \clearpage
 
 
-(ref:fig2-caption) Location of the four AZMP fixed monitoring stations in the Gully MPA in relation to canyon topography as highlighted by 15-m resolution multibeam bathymetry. The nominal location of each station is represented by the blue circles, while all occupations where CTD data were collected and considered in this report are represented by fuchsia circles.
+(ref:fig2-caption) Location of the four AZMP fixed monitoring stations in the Gully MPA in relation to canyon topography as highlighted by 15 m resolution multibeam bathymetry. The nominal location of each station is represented by the blue circles, while all occupations where CTD data were collected and considered in this report are represented by fuchsia circles.
 
 ```{r figure2, fig.align = "center", fig.cap = "(ref:fig2-caption)"}
 
@@ -73,7 +76,7 @@ knitr::include_graphics('figure/Figure06.png')
 \clearpage
 
 
-(ref:fig7-caption) Mean (black line) oxygen (ml L\textsuperscript{-1}) $\pm$ 95% confidence interval (red dash) calculated across individual CTD profiles (grey lines) collected at each of the four AZMP fixed stations in the Gully during the spring (April; top panel) and fall (September-October; bottom panel). Mean conditions at each station were computed by averaging the values in each 1 depth bin across casts collected within each season. Oxygen data presented for each station is from 2013 onward.
+(ref:fig7-caption) Mean (black line) oxygen (ml L\textsuperscript{-1}) $\pm$ 95% confidence interval (red dash) calculated across individual CTD profiles (grey lines) collected at each of the four AZMP fixed stations in the Gully during the spring (April; top panel) and fall (September and October; bottom panel). Mean conditions at each station were computed by averaging the values in each 1 depth bin across casts collected within each season. Oxygen data presented for each station is from 2013 onward.
 
 \begin{landscapepage}
 
@@ -86,7 +89,7 @@ knitr::include_graphics('figure/Figure07.png')
 \clearpage
 
 
-(ref:fig8-caption) Comparison of the vertically-averaged temperature (\($\degree$C\)), salinity, and dissolved oxygen (ml L\textsuperscript{-1}) profiles at each of the four AZMP fixed stations in the Gully during spring (April) and fall (September and October). Data were collected between 2000 to 2018 for GULD_03 and GULD_04, and 2007 to 2018 for SG_23 and SG_28 (with slight variations between seasons). Oxygen data presented for each station is from 2013 onward.
+(ref:fig8-caption) Comparison of the vertically-averaged temperature ($\degree$C), salinity, and dissolved oxygen (ml L\textsuperscript{-1}) profiles at each of the four AZMP fixed stations in the Gully during spring (April) and fall (September and October). Data were collected between 2000 to 2018 for GULD_03 and GULD_04, and 2007 to 2018 for SG_23 and SG_28 (with slight variations between seasons). Oxygen data presented for each station is from 2013 onward.
 
 \begin{landscapepage}
 
@@ -116,7 +119,7 @@ knitr::include_graphics('figure/Figure09.png')
 <!-- End Landscape here  -->
 
 
-(ref:fig10-caption) Changes in mean spring and fall temperature (\($\degree$C\)) in five vertical depth intervals sampled at each of the four AZMP fixed stations in the Gully. Circles represent mean temperature at each depth interval and year. Absent circles indicate that sampling did not occur at that station in that year. Date range of data collection varies between stations and is summarized in Table \@ref(tab:table2). Note that the 400 to 750 m depth interval for GULD_03 spans from >400 to near-bottom (up to 586 m).
+(ref:fig10-caption) Changes in mean spring and fall temperature ($\degree$C) in five vertical depth intervals sampled at each of the four AZMP fixed stations in the Gully. Circles represent mean temperature at each depth interval and year. Absent circles indicate that sampling did not occur at that station in that year. Date range of data collection varies between stations and is summarized in Table \@ref(tab:table2). Note that the 400 to 750 m depth interval for GULD_03 spans from >400 to near-bottom (up to 586 m).
 
 ```{r figure10, fig.align = "center", fig.cap = "(ref:fig10-caption)"}
 
@@ -150,7 +153,7 @@ knitr::include_graphics('figure/Figure12.png')
 
 <!-- Begin Landscape here  -->
 
-(ref:fig13-caption) Comparison average temperature (\($\degree$C\)), salinity, and dissolved oxygen (ml L\textsuperscript{-1}) to 1000 m on the four AZMP fixed stations in the Gully, and stations upstream (LL_07) and downstream (HL_06) of the Gully. Data were collected in the spring (April) and fall (September and October) between 2000 to 2018 for GULD_03, GULD_04, HL_06, and LL_07, and 2007 to 2018 for SG_23 and SG_28 (with slight variations between seasons). Oxygen data presented for each station is from 2013 onward.
+(ref:fig13-caption) Comparison average temperature ($\degree$C), salinity, and dissolved oxygen (ml L\textsuperscript{-1}) to 1000 m on the four AZMP fixed stations in the Gully, and stations upstream (LL_07) and downstream (HL_06) of the Gully. Data were collected in the spring (April) and fall (September and October) between 2000 to 2018 for GULD_03, GULD_04, HL_06, and LL_07, and 2007 to 2018 for SG_23 and SG_28 (with slight variations between seasons). Oxygen data presented for each station is from 2013 onward.
 
 \begin{landscapepage}
 
@@ -201,7 +204,7 @@ knitr::include_graphics('figure/Figure16.png')
 
 <!-- Begin Landscape here  -->
 
-(ref:fig17-caption) Mean vertical structure in spring and fall nitrate, phosphate, and silicate concentration ($\mu$M) at the four AZMP fixed stations in the Gully. Mean values were calculated at each standard nominal depth (see Table \@ref(tab:table3)) and connected with trend lines. Near-bottom sample depth varied between years and seasons and was represented by the average depth of the near-bottom bottle collected across all years (see Methods section).
+(ref:fig17-caption) Mean vertical structure in spring and fall nitrate, phosphate, and silicate concentration ($\mu$M) at the four AZMP fixed stations in the Gully. Mean values were calculated at each standard nominal depth (see Table \@ref(tab:table3)) and connected with trend lines. Near-bottom sample depth varied between years and seasons and was represented by the average depth of the near-bottom bottle collected across all years (see subsection \@ref(sec:chemical-data) of the Data and Methodology section).
 
 \begin{landscapepage}
 
