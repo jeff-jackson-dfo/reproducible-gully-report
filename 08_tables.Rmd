@@ -1,9 +1,14 @@
+<!-- # TABLES {#sec:tables} -->
 
 \begin{landscapepage}
 \hypertarget{sec:tables}{%
 \section{TABLES}\label{sec:tables}}
 
 ```{r table1, results="asis", include=TRUE, echo=FALSE}
+
+# Remove horizontal lines in the header and footer of landscape pages.
+# cat("\\renewcommand{\\headrulewidth}{0pt}")
+# cat("\\renewcommand{\\footrulewidth}{0pt}")
 
 #array stretch increases row height
 cat("\\renewcommand{\\arraystretch}{2}   \n")

@@ -52,7 +52,7 @@ knitr::include_graphics('figure/Figure04.png')
 
 \begin{landscapepage}
 
-```{r figure5, fig.align = "center", fig.cap = "(ref:fig5-caption)", out.width = "7.5in"}
+```{r figure5, fig.align = "center", fig.cap = "(ref:fig5-caption)", out.width = "7.75in"}
 
 knitr::include_graphics('figure/Figure05.png')
 
@@ -66,7 +66,7 @@ knitr::include_graphics('figure/Figure05.png')
 
 \begin{landscapepage}
 
-```{r figure6, fig.align = "center", fig.cap = "(ref:fig6-caption)", out.width = "7.5in"}
+```{r figure6, fig.align = "center", fig.cap = "(ref:fig6-caption)", out.width = "7.75in"}
 
 knitr::include_graphics('figure/Figure06.png')
 
@@ -80,7 +80,7 @@ knitr::include_graphics('figure/Figure06.png')
 
 \begin{landscapepage}
 
-```{r figure7, fig.align = "center", fig.cap = "(ref:fig7-caption)", out.width = "7.5in"}
+```{r figure7, fig.align = "center", fig.cap = "(ref:fig7-caption)", out.width = "7.75in"}
 
 knitr::include_graphics('figure/Figure07.png')
 

@@ -525,12 +525,17 @@ otherwise they get added at the end of the document separated from the header. -
 
 <!--chapter:end:07_bibliography.Rmd-->
 
+<!-- # TABLES {#sec:tables} -->
 
 \begin{landscapepage}
 \hypertarget{sec:tables}{%
 \section{TABLES}\label{sec:tables}}
 
 ```{r table1, results="asis", include=TRUE, echo=FALSE}
+
+# Remove horizontal lines in the header and footer of landscape pages.
+# cat("\\renewcommand{\\headrulewidth}{0pt}")
+# cat("\\renewcommand{\\footrulewidth}{0pt}")
 
 #array stretch increases row height
 cat("\\renewcommand{\\arraystretch}{2}   \n")
@@ -1061,7 +1066,7 @@ knitr::include_graphics('figure/Figure04.png')
 
 \begin{landscapepage}
 
-```{r figure5, fig.align = "center", fig.cap = "(ref:fig5-caption)", out.width = "7.5in"}
+```{r figure5, fig.align = "center", fig.cap = "(ref:fig5-caption)", out.width = "7.75in"}
 
 knitr::include_graphics('figure/Figure05.png')
 
@@ -1075,7 +1080,7 @@ knitr::include_graphics('figure/Figure05.png')
 
 \begin{landscapepage}
 
-```{r figure6, fig.align = "center", fig.cap = "(ref:fig6-caption)", out.width = "7.5in"}
+```{r figure6, fig.align = "center", fig.cap = "(ref:fig6-caption)", out.width = "7.75in"}
 
 knitr::include_graphics('figure/Figure06.png')
 
@@ -1089,7 +1094,7 @@ knitr::include_graphics('figure/Figure06.png')
 
 \begin{landscapepage}
 
-```{r figure7, fig.align = "center", fig.cap = "(ref:fig7-caption)", out.width = "7.5in"}
+```{r figure7, fig.align = "center", fig.cap = "(ref:fig7-caption)", out.width = "7.75in"}
 
 knitr::include_graphics('figure/Figure07.png')
 
