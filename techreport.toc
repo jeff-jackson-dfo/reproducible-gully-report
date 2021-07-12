@@ -1,0 +1,48 @@
+\babel@toc {english}{}
+\contentsline {section}{ABSTRACT}{vi}{section*.2}%
+\contentsline {section}{R\'{E}SUM\'{E}}{vii}{section*.3}%
+\contentsline {section}{LIST OF TABLES}{viii}{section*.4}%
+\contentsline {section}{LIST OF FIGURES}{x}{section*.5}%
+\contentsline {section}{\numberline {1}INTRODUCTION}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}\textbf {THE GULLY MARINE PROTECTED AREA}}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}\textbf {ENVIRONMENTAL MONITORING OF THE GULLY}}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}\textbf {GULLY DATA SYNTHESIS PROJECT}}{3}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}\emph {Objectives}}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}\emph {Deliverables}}{4}{subsubsection.1.3.2}%
+\contentsline {section}{\numberline {2}DATA AND METHODOLOGY}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}\textbf {PHYSICAL}}{6}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}\emph {Data collection and compilation}}{6}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}\emph {Analysis}}{7}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}\textbf {CHEMICAL}}{8}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}\emph {Data collection and compilation}}{8}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}\emph {Analysis}}{9}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}\textbf {BIOLOGICAL}}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}\emph {Data collection and compilation}}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}\emph {Analysis}}{10}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}\textbf {REMOTE SENSING DATA FOR EVALUATION OF SURFACE TEMPERATURE, PHYTOPLANKTON CONCENTRATION \& SPRING BLOOM METRICS}}{11}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}\emph {Data collection and compilation}}{11}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}\emph {Analysis}}{11}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}\textbf {REPRODUCIBLE REPORTING \& CODE REPOSITORY}}{11}{subsection.2.5}%
+\contentsline {section}{\numberline {3}RESULTS}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}\textbf {HYDROGRAPHIC DATA ANALYSES}}{13}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}\emph {Seasonal depth-dependent patterns in temperature, salinity, and dissolved oxygen in the Gully and surrounds}}{13}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}\emph {Satellite observations of sea surface temperature and comparison with in situ measurements}}{15}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}\textbf {CHEMICAL ANALYSES}}{15}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}\emph {Seasonal depth-dependent patterns in nutrient concentrations in the Gully}}{15}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}\emph {Seasonal depth-dependent patterns in chlorophyll a concentrations in the Gully}}{16}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}\textbf {BIOLOGICAL ANALYSES}}{16}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}\emph {Phytoplankton seasonal cycles and annual trends from satellite and in situ observations}}{16}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}\emph {Distribution and time series of seasonal zooplankton biomass}}{18}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}\emph {Seasonal distribution and average abundance of the ten most abundant copepod taxa}}{18}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}\emph {Relationship between temperature and zooplankton abundance}}{19}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}\emph {Calanus finmarchicus life cycle and distribution in the Gully region and nearby slope waters}}{20}{subsubsection.3.3.5}%
+\contentsline {section}{\numberline {4}DISCUSSION}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}\textbf {EVALUATION OF TEMPERATURE, SALINITY, OXYGEN, NUTRIENTS, AND CHLOROPHYLL WITHIN THE GULLY MPA}}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}\textbf {PATTERNS IN REMOTE-SENSED SEA SURFACE CHLOROPHYLL, TEMPERATURE, AND ZOOPLANKTON BIOMASS, ABUNDANCE, AND COMPOSITION IN THE GULLY AND AREAS UPSTREAM AND DOWNSTREAM}}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}\textbf {MODIFICATION OF THE AZMP'S EXISTING SAMPLING SCHEME OF THE GULLY MPA}}{26}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}\textbf {EVALUATING TEMPORAL CHANGES IN PHYSICAL, CHEMICAL, AND BIOLOGICAL OCEANOGRAPHIC CONDITIONS OF THE GULLY MPA}}{27}{subsection.4.4}%
+\contentsline {section}{\numberline {5}SUMMARY}{30}{section.5}%
+\contentsline {section}{\numberline {6}ACKNOWLEDGEMENTS}{31}{section.6}%
+\contentsline {section}{\numberline {7}REFERENCES}{32}{section.7}%
+\contentsline {section}{\numberline {8}TABLES}{36}{section.8}%
+\contentsline {section}{\numberline {9}FIGURES}{54}{section.9}%

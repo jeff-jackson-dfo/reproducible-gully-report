@@ -43,7 +43,7 @@ lot: true
 lof: true
 # Any extra LaTeX code for the header:
 header-includes:
- - \usepackage{float} \usepackage{xfrac} \usepackage{gensymb} \usepackage{multirow} \usepackage{colortbl} \usepackage{xcolor} \usepackage{bookmark} \usepackage{mathptmx}
+ - \usepackage{float} \usepackage{xfrac} \usepackage{gensymb} \usepackage{multirow} \usepackage{colortbl} \usepackage{xcolor} \usepackage{bookmark} \usepackage{mathptmx} 
 
 ---
 
@@ -106,16 +106,20 @@ if(french){
 }
 
 # add other packages here:
+library(csasdown)
 library(dplyr)
 library(ggplot2)
-library(readr)
-library(rosettafish)
-library(tibble)
-library(csasdown)
-library(oce)
-library(stringr)
 library(kableExtra)
 library(lubridate)
+library(oce)
+library(readr)
+library(readxl)
+library(rosettafish)
+library(scales)
+library(stringi)
+library(stringr)
+library(tibble)
+library(tidyr)
 
 ```
 
