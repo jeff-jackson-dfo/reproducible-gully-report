@@ -1005,7 +1005,7 @@ became
 
 **Solution:** Did a search in the LaTeX document to find and replace all occurrences of "et al." with "\textit{et al.}". All 51 occurrences were changed.
 
-<br/>
+## Generate new PDF document
 
 Since the intermediate LaTeX file was edited it has to be converted to PDF outside of RStudio.
 
