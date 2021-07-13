@@ -1007,18 +1007,25 @@ became
 
 ## Generate new PDF document
 
-Since the intermediate LaTeX file was edited it has to be converted to PDF outside of RStudio.
+Since the intermediate LaTeX file was edited it has to be converted to PDF format outside of RStudio.
 
 This is done within an operating system console window (using Windows 10 Anaconda command prompt in this instance) like so:
 
 (base) PS C:\\dev\\new-gully-report> **xelatex techreport.tex**
 
-At first glance the resulting PDF had the correct section numbers for the Tables and Figures. Also the "et al." phrases were all italicized. Upon further inspection I noticed that the Table of Contents (TOC) was totally empty. I looked back in the console window and noticed some warnings at the end of compilation, which were: 
+One will notice at first glance that:
 
-LaTeX Warning: There were undefined references.
+- the resulting PDF document has the correct section numbers for the Tables and Figures, 
+- the "et al." phrases are all italicized, but
+- the Table of Contents (TOC) is totally empty, and
+- some in-document links to the tables and figures may be invalid as indicated by question marks.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Checking the console window one will notice two warnings at the end of compilation, which are: 
 
-I re-ran the command again and the TOC was present and the section numbering was correct and only one of the two warnings remained.  I executed the command a third time and no changes to the PDF file were noticed but there were no more warnings.
+1. LaTeX Warning: There were undefined references.
 
-## Congratulation! You have created the final report. :-)
+2. LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Re-running the command will generate the TOC and fix the in-document links to tables and figures but still one of the two warnings remained.  Executing the command a third time gets rid of the last warning.
+
+## Congratulation! The final report has been generated. :-)
