@@ -1,7 +1,8 @@
 ---
 title: "Reproducible Gully Report"
-author: "Jeff Jackson &copy; Fisheries and Oceans Canada 2021"
 ---
+
+#### &copy; Jeff Jackson (Fisheries and Oceans Canada 2021)
 
 ## Introduction 
 
