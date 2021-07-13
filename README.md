@@ -1019,7 +1019,6 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-I re-ran the command again and the TOC was present and the section numbering was correct and most of the warnings about references disappeared.
+I re-ran the command again and the TOC was present and the section numbering was correct and only one of the two warnings remained.  I executed the command a third time and no changes to the PDF file were noticed but there were no more warnings.
 
-
-<br/>
+## Congratulation! You have created the final report. :-)
