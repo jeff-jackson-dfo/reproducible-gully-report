@@ -1,6 +1,4 @@
----
-title: "Reproducible Gully Report"
----
+# "Reproducible Gully Report"
 
 #### &copy; Jeff Jackson (Fisheries and Oceans Canada 2021)
 
@@ -1029,4 +1027,4 @@ Checking the console window one will notice two warnings at the end of compilati
 
 Re-running the command will generate the TOC and fix the in-document links to tables and figures but still one of the two warnings remained.  Executing the command a third time gets rid of the last warning.
 
-## Congratulation! The final report has been generated. :-)
+## Congratulations! The final report has been generated. :smiley:
