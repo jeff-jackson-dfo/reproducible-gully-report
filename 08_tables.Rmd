@@ -118,7 +118,7 @@ ctable1 <- tibble(cruiseNumber, stationName, Event, Survey, mon, Longitude, Lati
 colnames(ctable1) <- header1
 
 kbl(ctable1,
-    booktab = TRUE,
+    booktabs = TRUE,
     linesep = "",
     longtable = TRUE,
     format = "latex",
@@ -131,7 +131,7 @@ kbl(ctable1,
   kableExtra::kable_styling(latex_options = "repeat_header", repeat_header_method = "replace", font_size = 11, full_width = FALSE) %>%
   # Alternate the rows with different colors to make it easier to read.
   kableExtra::kable_styling(latex_options = c("striped")) %>%
-  kableExtra::column_spec(1, width = "6em") %>%
+  kableExtra::column_spec(1, width = "7em") %>%
   kableExtra::column_spec(2, width = "5em") %>%
   kableExtra::column_spec(3, width = "3em") %>%
   kableExtra::column_spec(4, width = "6em") %>%
@@ -139,7 +139,7 @@ kbl(ctable1,
   kableExtra::column_spec(6, width = "5em") %>%
   kableExtra::column_spec(7, width = "5em") %>%
   kableExtra::column_spec(8, width = "5em") %>%
-  kableExtra::column_spec(9, width = "9em")
+  kableExtra::column_spec(9, width = "8em")
 
 ```
 \end{landscapepage}
@@ -160,14 +160,6 @@ header2 <- c("Season", "Station", "Number of CTD Profiles", "Min", "Max")
 ctable2 <- tibble(seasons, stations, nprof, minYears, maxYears)
 
 colnames(ctable2) <- header2
-
-# csasdown::csas_table(ctable2,
-#                      font_size = 12,
-#                      format = "latex",
-#                      align = c("l","l","c","c","c"),
-#                      caption = "Number of CTD profiles collected in spring and fall at each of the four AZMP fixed stations in the Gully MPA. The range in year of collection is also shown for each station and season.") %>% 
-#   kableExtra::add_header_above(c(" ", " ", " ", "Year" = 2), bold = TRUE)
-#   # kableExtra::collapse_rows(columns = 1)
 
 kbl(ctable2, 
     booktabs = TRUE,
@@ -285,15 +277,6 @@ ctable4 <- full_join(spring_tbl,fall_tbl)
 header4 <- c("Year", "HL\\_06", "SG\\_28", "GULD\\_04", "SG\\_23", "GULD\\_03", "LL\\_07", "HL\\_06", "SG\\_28", "GULD\\_04", "SG\\_23", "GULD\\_03", "LL\\_07")
 
 colnames(ctable4) <- header4
-
-# csasdown::csas_table(ctable4,
-#                      font_size = 11,
-#                      format = "latex",
-#                      align = rep("c", 13),
-#                      caption = "Ring net samples collected at the four AZMP fixed stations in the Gully MPA and at core AZMP stations HL\\_06 and LL\\_07 in spring and fall between 1999 and 2018. The numbers represent the month of sample collection, where April-June represent spring and September-December represent fall. The total number of ring net tows collected at each station in each season is given below.") %>%
-#   kableExtra::add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6), bold = TRUE, font_size = 12) %>%
-#   kableExtra::row_spec(20, hline_after = TRUE) %>%
-#   kableExtra::row_spec(21, bold = TRUE) %>%
 
 kbl(ctable4, 
     booktabs = TRUE,
