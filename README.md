@@ -1007,7 +1007,7 @@ became
 
 Since the intermediate LaTeX file was edited it has to be converted to PDF format outside of RStudio.
 
-This is done within an operating system console window (using Windows 10 Anaconda command prompt in this instance) by executing the following command:
+This is done within an operating system console window (using Windows 10 Anaconda command prompt in this instance but you can use the Terminal window within RStudio just as easily) by executing the following command:
 
 (base) PS C:\\dev\\new-gully-report> **xelatex techreport.tex**
 
