@@ -14,8 +14,8 @@
 cat("\\renewcommand{\\arraystretch}{2}   \n")
 
 # Load the CTD data acquired at the four monitoring stations.
-load("data/monitoringSitesAllCtd.RData")
-load("data/monitoringSitesAllCtdPrograms.RData")
+load("data/1_PhysicalData/monitoringSitesAllCtd.RData")
+load("data/1_PhysicalData/monitoringSitesAllCtdPrograms.RData")
 
 # Load the CTD data acquired at the four monitoring stations (only used to 
 # produce the CTD table to identify casts for analysis.

@@ -106,6 +106,7 @@ if(french){
 }
 
 # add other packages here:
+library(plyr)
 library(dplyr)
 library(ggplot2)
 library(readr)

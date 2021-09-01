@@ -52,7 +52,9 @@ knitr::include_graphics('figure/Figure04.png')
 
 \begin{landscapepage}
 
-```{r figure5, fig.align = "center", fig.cap = "(ref:fig5-caption)", out.width = "7.75in"}
+```{r figure5, fig.align = "center", fig.cap = "(ref:fig5-caption)", out.width = "7.0in"}
+
+source("figure-code/Figure_05_06_07_generatePlotProfilesByParameterReportGG.R", local =  knitr::knit_global())
 
 knitr::include_graphics('figure/Figure05.png')
 
@@ -66,7 +68,7 @@ knitr::include_graphics('figure/Figure05.png')
 
 \begin{landscapepage}
 
-```{r figure6, fig.align = "center", fig.cap = "(ref:fig6-caption)", out.width = "7.75in"}
+```{r figure6, fig.align = "center", fig.cap = "(ref:fig6-caption)", out.width = "7.0in"}
 
 knitr::include_graphics('figure/Figure06.png')
 
@@ -80,7 +82,7 @@ knitr::include_graphics('figure/Figure06.png')
 
 \begin{landscapepage}
 
-```{r figure7, fig.align = "center", fig.cap = "(ref:fig7-caption)", out.width = "7.75in"}
+```{r figure7, fig.align = "center", fig.cap = "(ref:fig7-caption)", out.width = "7.0in"}
 
 knitr::include_graphics('figure/Figure07.png')
 
@@ -95,6 +97,8 @@ knitr::include_graphics('figure/Figure07.png')
 
 ```{r figure8, fig.align = "center", fig.cap = "(ref:fig8-caption)", out.width = "9.25in"}
 
+source("figure-code/Figure_08_Seasonal_CTD_Profile_Plots_Gully_Stations.R", local =  knitr::knit_global())
+
 knitr::include_graphics('figure/Figure08.png')
 
 ```
@@ -107,7 +111,9 @@ knitr::include_graphics('figure/Figure08.png')
 
 \begin{landscapepage}
 
-```{r figure9, fig.align = "center", fig.cap = "(ref:fig9-caption)", out.width = "9.0in"}
+```{r figure9, fig.align = "center", fig.cap = "(ref:fig9-caption)", out.width = "7.5in"}
+
+source("figure-code/Figure_09_Generate_TS_Plots.R", local =  knitr::knit_global())
 
 knitr::include_graphics('figure/Figure09.png')
 
@@ -122,6 +128,8 @@ knitr::include_graphics('figure/Figure09.png')
 (ref:fig10-caption) Changes in mean spring and fall temperature ($\degree$C) in five vertical depth intervals sampled at each of the four AZMP fixed stations in the Gully. Circles represent mean temperature at each depth interval and year. Absent circles indicate that sampling did not occur at that station in that year. Date range of data collection varies between stations and is summarized in Table \@ref(tab:table2). Note that the 400 to 750 m depth interval for GULD_03 spans from >400 to near-bottom (up to 586 m).
 
 ```{r figure10, fig.align = "center", fig.cap = "(ref:fig10-caption)"}
+
+source("figure-code/Figure_10_11_12_Temporal_Change_Mean_Temp_Sal_Oxygen.R", local =  knitr::knit_global())
 
 knitr::include_graphics('figure/Figure10.png')
 
@@ -158,6 +166,8 @@ knitr::include_graphics('figure/Figure12.png')
 \begin{landscapepage}
 
 ```{r figure13, fig.align = "center", fig.cap = "(ref:fig13-caption)", out.width = "9.5in"}
+
+source("figure-code/Figure_13_Seasonal_CTD_Profile_Plots_Gully_HL6_LL7_Spatially_Filtered_Data.R", local =  knitr::knit_global())
 
 knitr::include_graphics('figure/Figure13.png')
 
@@ -210,6 +220,8 @@ knitr::include_graphics('figure/Figure16.png')
 
 ```{r figure17, fig.align = "center", fig.cap = "(ref:fig17-caption)", out.width = "7.5in"}
 
+source("figure-code/Figure_17_Vertical_Structure_Nutrients.R", local = knitr::knit_global())
+
 knitr::include_graphics('figure/Figure17.png')
 
 ```
@@ -223,6 +235,8 @@ knitr::include_graphics('figure/Figure17.png')
 (ref:fig18-caption) Vertically-integrated nitrate, phosphate, and silicate concentration (mmol m\textsuperscript{-3}) sampled in the spring (April) and fall (September and October) at AZMP fixed station GULD_03. Circles represent the vertically-integrated nutrient inventories for each depth interval and year. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
 
 ```{r figure18, fig.align = "center", fig.cap = "(ref:fig18-caption)"}
+
+source("figure-code/Figure_18_19_20_21_Nutrient_Trends_Trapezoidal_Integration.R", local = knitr::knit_global())
 
 knitr::include_graphics('figure/Figure18.png')
 
@@ -271,6 +285,8 @@ knitr::include_graphics('figure/Figure21.png')
 
 ```{r figure22, fig.align = "center", fig.cap = "(ref:fig22-caption)", out.width = "6.5in"}
 
+source("figure-code/Figure_22_Gully_HL6_LL7_Integr_Nutrient_Trends.R", local = knitr::knit_global())
+
 knitr::include_graphics('figure/Figure22.png')
 
 ```
@@ -285,6 +301,8 @@ knitr::include_graphics('figure/Figure22.png')
 
 ```{r figure23, fig.align = "center", fig.cap = "(ref:fig23-caption)", out.width = "7.5in"}
 
+source("figure-code/Figure_23_Vertical_Structure_Chlorophyll.R", local = knitr::knit_global())
+
 knitr::include_graphics('figure/Figure23.png')
 
 ```
@@ -298,6 +316,8 @@ knitr::include_graphics('figure/Figure23.png')
 (ref:fig24-caption) Vertically-integrated chlorophyll _a_ concentration (mg m\textsuperscript{-3}) from the top 100 m sampled in the spring (April) and fall (September and October) at the four AZMP fixed stations in the Gully. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
 
 ```{r figure24, fig.align = "center", fig.cap = "(ref:fig24-caption)"}
+
+source("figure-code/Figure_24_Chlorophyll_Trends_Trapezoidal_Integration.R", local = knitr::knit_global())
 
 knitr::include_graphics('figure/Figure24.png')
 
@@ -375,6 +395,8 @@ knitr::include_graphics('figure/Figure30.png')
 (ref:fig31-caption) Average spring abundances of the ten most abundant copepod taxa at stations at the shelf-break upstream (LL_07) and downstream (HL_06) of the Gully, and at one station within the Gully (GULD_03) and averaged over three stations across the Gully mouth (SG_28, GULD_04, and SG_23). The numbers (N) in the legend represent the sums of the ten most abundant taxa at each location with units of 1000s m\textsuperscript{-2}.
 
 ```{r figure31, fig.align = "center", fig.cap = "(ref:fig31-caption)", out.width = "5.5in"}
+
+source("figure-code/Figure_31_32_Copepod_Abundance_Plots.R", local = knitr::knit_global())
 
 knitr::include_graphics('figure/Figure31.png')
 
