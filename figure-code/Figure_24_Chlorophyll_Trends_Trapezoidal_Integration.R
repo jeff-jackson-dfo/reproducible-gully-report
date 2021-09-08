@@ -2,7 +2,7 @@
 ##### FIGURE 24: Temporal Changes in Chlorophyll via Trapezoidal Numerical Integration #####
 ############################################################################################
 
-# Last updated: 31-AUG-2021
+# Last updated: 08-SEP-2021
 # Author: Lindsay Beazley
 # Modified by: Jeff Jackson
 
@@ -342,7 +342,7 @@ CHLInt_0_100$DepthInt0_100 <- '0-100 m'
 
 CHLInt_0_100_scaled <- CHLInt_0_100
 
-# CHLInt_0_100_scaled[,5] <- CHLInt_0_100[,5] / 100
+CHLInt_0_100_scaled[,5] <- CHLInt_0_100[,5] / 100
 
 CHLInt_0_100_complete <- CHLInt_0_100_scaled[complete.cases(CHLInt_0_100_scaled), ]  #remove NAs
 
