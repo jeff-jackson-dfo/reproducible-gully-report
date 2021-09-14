@@ -357,7 +357,7 @@ Given that this report represents the first compilation and preliminary analysis
 
 R package `csasdown' (\protect\hyperlink{ref-anderson_2020}{Anderson et al. 2020}) was used as the primary mechanism to generate this report. This package was developed by members of DFO's Pacific Region to facilitate the creation of CSAS documents in PDF or Word format using the previously-developed `rmarkdown' and `bookdown' packages, and has recently been applied to generate a CSAS document presenting a synthesis of available fishery and biological data and basic model fits for 109 groundfish species in the Pacific (\protect\hyperlink{ref-anderson_2019}{Anderson et al. 2019}).
 
-RStudio, an integrated development environment (IDE) for R, was used to assemble, manipulate, and execute the R code, and produce the analytical products presented in this report. The R code used to create the PDF version of this report is archived in \href{https://github.com/jeff-jackson-dfo/reproducible-gully-report}{GitHub: https://github.com/jeff-jackson-dfo/reproducible-gully-report}.
+RStudio, an integrated development environment (IDE) for R, was used to assemble, manipulate, and execute the R code, and produce the analytical products presented in this report. The R code used to create the PDF version of this report is archived in \href{https://github.com/AtlanticR/reproducible-gully-report}{GitHub: https://github.com/AtlanticR/reproducible-gully-report}.
 
 The analyses presented here are a compilation of both R and excel outputs. All of the tables and more than half of the figures are dynamically generated. While this publication encapsulates the first step towards reproducible reporting on the oceanographic conditions of the Gully MPA, future iterations should strive towards fully automating the analyses presented herein.
 
@@ -1000,7 +1000,7 @@ HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 
 \end{landscapepage}
 \clearpage
 \begin{landscapepage}
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table4}Ring net samples collected at the four AZMP fixed stations in the Gully MPA and at core AZMP stations HL\_06 and LL\_07 in spring and fall between 1999 and 2018. The numbers represent the month of sample collection, where April-June represent spring and September-December represent fall. The total number of ring net tows collected at each station in each season is given below.}
 \centering
@@ -1039,11 +1039,11 @@ HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 
 \end{landscapepage}
 \clearpage
 \begin{landscapepage}
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table5}Pearson correlation coefficients (R\textsuperscript{2}) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
-\begin{tabular}[t]{>{}c|lll>{}l|llll}
+\begin{tabular}[t!]{>{}c|lll>{}l|llll}
 \toprule
 \multicolumn{1}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{ }\egroup{}} & \multicolumn{4}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{Spring}\egroup{}} & \multicolumn{4}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{Fall}\egroup{}} \\
 \cmidrule(l{3pt}r{3pt}){2-5} \cmidrule(l{3pt}r{3pt}){6-9}
@@ -1060,7 +1060,7 @@ HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 
 \end{landscapepage}
 \clearpage
 \begin{landscapepage}
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table6}Pearson correlation coefficients (R\textsuperscript{2}) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
@@ -1103,7 +1103,7 @@ HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 
 \end{table}
 \end{landscapepage}
 \clearpage
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table7}Pearson correlation coefficients (R\textsuperscript{2}) between zooplankton abundances and near surface temperatures and trends in both over time at HL\_06, GULD\_03 and LL\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
@@ -1147,7 +1147,7 @@ Year &  &  & \\
 \end{tabular}
 \end{table}
 \clearpage
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table8}Pearson correlation coefficients (R\textsuperscript{2}) between zooplankton abundances and near surface temperatures and trends in both over time at HL\_06, GULD\_03 and LL\_07 in fall (Sept to Dec) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
@@ -1197,23 +1197,18 @@ Year &  &  \vphantom{2} & \\
 \end{tabular}
 \end{table}
 \clearpage
-
+\begin{landscapepage}
 \hypertarget{sec:figures}{%
 \subsection{FIGURES}\label{sec:figures}}
-
-
-
-\vspace*{\fill}
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=6in]{figure/Figure01}}{Figure \ref{fig:figure1}} 
+{\centering \pdftooltip{\includegraphics[width=6.5in]{figure/Figure01}}{Figure \ref{fig:figure1}} 
 
 }
 
-\caption{Location of the four AZMP fixed stations in the Gully MPA (blue circles). The boundaries of the three Gully Management Zones are also shown. Top-right map inset shows the position of the Gully MPA in relation to Atlantic Canada and DFO's Maritime Region administrative boundary.}\label{fig:figure1}
+\caption{Location of the four AZMP fixed stations in the Gully MPA (blue circles). The boundaries of the three Gully Management Zones are also shown. Top-right map inset shows the position of the Gully MPA in relation to Atlantic Canada and DFO’s Maritime Region administrative boundary.}\label{fig:figure1}
 \end{figure}
-\vspace*{\fill}
-
+\end{landscapepage}
 \clearpage
 
 
@@ -1228,14 +1223,16 @@ Year &  &  \vphantom{2} & \\
 \clearpage
 
 
+\begin{landscapepage}
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=6in]{figure/Figure03}}{Figure \ref{fig:figure3}} 
+{\centering \pdftooltip{\includegraphics[width=7.0in]{figure/Figure03}}{Figure \ref{fig:figure3}} 
 
 }
 
 \caption{The Gully MPA in relation to comparative upstream (LL\_07) and downstream (HL\_06) stations from the AZMP's core Louisbourg and Halifax lines, respectively.}\label{fig:figure3}
 \end{figure}
+\end{landscapepage}
 \clearpage
 
 
@@ -1305,7 +1302,7 @@ Year &  &  \vphantom{2} & \\
 \begin{landscapepage}
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=7.5in]{figure/Figure09}}{Figure \ref{fig:figure9}} 
+{\centering \pdftooltip{\includegraphics[width=9in]{figure/Figure09}}{Figure \ref{fig:figure9}} 
 
 }
 

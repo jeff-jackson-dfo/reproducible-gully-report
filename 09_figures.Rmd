@@ -1,45 +1,45 @@
 <!-- # FIGURES {#sec:figures} -->
 
+\begin{landscapepage}
 \hypertarget{sec:figures}{%
 \section{FIGURES}\label{sec:figures}}
 
-(ref:fig1-caption) Location of the four AZMP fixed stations in the Gully MPA (blue circles). The boundaries of the three Gully Management Zones are also shown. Top-right map inset shows the position of the Gully MPA in relation to Atlantic Canada and DFO’s Maritime Region administrative boundary.
-
-\vspace*{\fill}
-
-```{r figure1, fig.align = "center", fig.cap = "(ref:fig1-caption)"}
+```{r figure1, fig.cap = "Location of the four AZMP fixed stations in the Gully MPA (blue circles). The boundaries of the three Gully Management Zones are also shown. Top-right map inset shows the position of the Gully MPA in relation to Atlantic Canada and DFO’s Maritime Region administrative boundary.", out.width = "6.5in"}
 
 knitr::include_graphics('figure/Figure01.png')
 
 ```
-\vspace*{\fill}
+\end{landscapepage}
 
 \clearpage
 
 
 (ref:fig2-caption) Location of the four AZMP fixed monitoring stations in the Gully MPA in relation to canyon topography as highlighted by 15 m resolution multibeam bathymetry. The nominal location of each station is represented by the blue circles, while all occupations where CTD data were collected and considered in this report are represented by fuchsia circles.
 
-```{r figure2, fig.align = "center", fig.cap = "(ref:fig2-caption)"}
+```{r figure2, fig.cap = "(ref:fig2-caption)"}
 
 knitr::include_graphics('figure/Figure02.png')
 
 ```
 \clearpage
 
-
 (ref:fig3-caption) The Gully MPA in relation to comparative upstream (LL_07) and downstream (HL_06) stations from the AZMP’s core Louisbourg and Halifax lines, respectively.
 
-```{r figure3, fig.align = "center", fig.cap = "(ref:fig3-caption)"}
+\begin{landscapepage}
+
+```{r figure3, fig.cap = "(ref:fig3-caption)", out.width = "7.0in"}
 
 knitr::include_graphics('figure/Figure03.png')
 
 ```
+\end{landscapepage}
+
 \clearpage
 
 
 (ref:fig4-caption) Areas of the slope waters upstream (Slope Water LL) and downstream (Slope Water HL) of the Gully MPA for which bi-weekly satellite measurements of Sea Surface Temperature (SST) and Sea Surface Chlorophyll (SSC) were calculated between 1998 and 2018.
 
-```{r figure4, fig.align = "center", fig.cap = "(ref:fig4-caption)"}
+```{r figure4, fig.cap = "(ref:fig4-caption)"}
 
 knitr::include_graphics('figure/Figure04.png')
 
@@ -52,7 +52,7 @@ knitr::include_graphics('figure/Figure04.png')
 
 \begin{landscapepage}
 
-```{r figure5, fig.align = "center", fig.cap = "(ref:fig5-caption)", out.width = "7.0in"}
+```{r figure5, fig.cap = "(ref:fig5-caption)", out.width = "7.0in"}
 
 source("figure-code/Figure_05_06_07_generatePlotProfilesByParameterReportGG.R", local =  knitr::knit_global())
 
@@ -68,7 +68,7 @@ knitr::include_graphics('figure/Figure05.png')
 
 \begin{landscapepage}
 
-```{r figure6, fig.align = "center", fig.cap = "(ref:fig6-caption)", out.width = "7.0in"}
+```{r figure6, fig.cap = "(ref:fig6-caption)", out.width = "7.0in"}
 
 knitr::include_graphics('figure/Figure06.png')
 
@@ -82,7 +82,7 @@ knitr::include_graphics('figure/Figure06.png')
 
 \begin{landscapepage}
 
-```{r figure7, fig.align = "center", fig.cap = "(ref:fig7-caption)", out.width = "7.0in"}
+```{r figure7, fig.cap = "(ref:fig7-caption)", out.width = "7.0in"}
 
 knitr::include_graphics('figure/Figure07.png')
 
@@ -95,7 +95,7 @@ knitr::include_graphics('figure/Figure07.png')
 
 \begin{landscapepage}
 
-```{r figure8, fig.align = "center", fig.cap = "(ref:fig8-caption)", out.width = "9.25in"}
+```{r figure8, fig.cap = "(ref:fig8-caption)", out.width = "9.25in"}
 
 source("figure-code/Figure_08_Seasonal_CTD_Profile_Plots_Gully_Stations.R", local =  knitr::knit_global())
 
@@ -111,7 +111,7 @@ knitr::include_graphics('figure/Figure08.png')
 
 \begin{landscapepage}
 
-```{r figure9, fig.align = "center", fig.cap = "(ref:fig9-caption)", out.width = "7.5in"}
+```{r figure9, fig.cap = "(ref:fig9-caption)", out.width = "9in"}
 
 source("figure-code/Figure_09_Generate_TS_Plots.R", local =  knitr::knit_global())
 
@@ -127,7 +127,7 @@ knitr::include_graphics('figure/Figure09.png')
 
 (ref:fig10-caption) Changes in mean spring and fall temperature ($\degree$C) in five vertical depth intervals sampled at each of the four AZMP fixed stations in the Gully. Circles represent mean temperature at each depth interval and year. Absent circles indicate that sampling did not occur at that station in that year. Date range of data collection varies between stations and is summarized in Table \@ref(tab:table2). Note that the 400 to 750 m depth interval for GULD_03 spans from >400 to near-bottom (up to 586 m).
 
-```{r figure10, fig.align = "center", fig.cap = "(ref:fig10-caption)"}
+```{r figure10, fig.cap = "(ref:fig10-caption)"}
 
 source("figure-code/Figure_10_11_12_Temporal_Change_Mean_Temp_Sal_Oxygen.R", local =  knitr::knit_global())
 
@@ -140,7 +140,7 @@ knitr::include_graphics('figure/Figure10.png')
 
 (ref:fig11-caption) Changes in mean spring and fall salinity in five vertical depth intervals sampled at each of the four AZMP fixed stations in the Gully. Circles represent mean salinity at each depth interval and year. Absent circles indicate that sampling did not occur at that station in that year. Date range of data collection varies between stations and is summarized in Table \@ref(tab:table2). Note that the 400 to 750 m depth interval for GULD_03 spans from >400 to near-bottom (up to 586 m).
 
-```{r figure11, fig.align = "center", fig.cap = "(ref:fig11-caption)"}
+```{r figure11, fig.cap = "(ref:fig11-caption)"}
 
 knitr::include_graphics('figure/Figure11.png')
 
@@ -151,7 +151,7 @@ knitr::include_graphics('figure/Figure11.png')
 
 (ref:fig12-caption) Changes in mean spring and fall dissolved oxygen concentration (ml L\textsuperscript{-1}) in five vertical depth intervals sampled at each of the four AZMP fixed stations in the Gully from 2013 to 2018. Only calibrated data from 2013 onward are included. Circles represent mean oxygen at each depth interval and year. Absent circles indicate that sampling did not occur at that station in that year. Note that the 400 to 750 m depth interval for GULD_03 spans from >400 to near-bottom (up to 586 m). Oxygen data were not available for the surface layer (0 to 50 m) at GULD_03 in 2013.
 
-```{r figure12, fig.align = "center", fig.cap = "(ref:fig12-caption)"}
+```{r figure12, fig.cap = "(ref:fig12-caption)"}
 
 knitr::include_graphics('figure/Figure12.png')
 
@@ -165,7 +165,7 @@ knitr::include_graphics('figure/Figure12.png')
 
 \begin{landscapepage}
 
-```{r figure13, fig.align = "center", fig.cap = "(ref:fig13-caption)", out.width = "9.5in"}
+```{r figure13, fig.cap = "(ref:fig13-caption)", out.width = "9.5in"}
 
 source("figure-code/Figure_13_Seasonal_CTD_Profile_Plots_Gully_HL6_LL7_Spatially_Filtered_Data.R", local =  knitr::knit_global())
 
@@ -181,7 +181,7 @@ knitr::include_graphics('figure/Figure13.png')
 
 (ref:fig14-caption) Remotely-sensed bi-monthly average sea surface temperatures (1998 to 2018, mean $\pm$ S.D.) in the slope water satellite areas off the eastern (SW  LL) and central (SW HL) Scotian Shelf and in the Gully MPA (GMPA).
 
-```{r figure14, fig.align = "center", fig.cap = "(ref:fig14-caption)"}
+```{r figure14, fig.cap = "(ref:fig14-caption)"}
 
 knitr::include_graphics('figure/Figure14.png')
 
@@ -192,7 +192,7 @@ knitr::include_graphics('figure/Figure14.png')
 
 (ref:fig15-caption) Time series for remotely-sensed annual, spring and fall average sea surface temperatures in slope water satellite areas off the eastern (SW LL) and central (SW HL) Scotian Shelf and in the Gully MPA (GMPA).  Lines and equations are shown for significant trends.
 
-```{r figure15, fig.align = "center", fig.cap = "(ref:fig15-caption)", out.width = "5.0in"}
+```{r figure15, fig.cap = "(ref:fig15-caption)", out.width = "5.0in"}
 
 knitr::include_graphics('figure/Figure15.png')
 
@@ -203,7 +203,7 @@ knitr::include_graphics('figure/Figure15.png')
 
 (ref:fig16-caption) Relationships between _in situ_ 5 m temperatures measured at HL_06, GULD_03 and LL_07 during AZMP and other sampling missions and remotely-sensed sea surface temperatures averaged for the corresponding months/years for the SW HL, GMPA and SW LL satellite areas. Filled circles, squares and triangles represent measurements in April, May and June, respectively, in spring, and in September, October and December, respectively, in fall. 
 
-```{r figure16, fig.align = "center", fig.cap = "(ref:fig16-caption)"}
+```{r figure16, fig.cap = "(ref:fig16-caption)"}
 
 knitr::include_graphics('figure/Figure16.png')
 
@@ -218,7 +218,7 @@ knitr::include_graphics('figure/Figure16.png')
 
 \begin{landscapepage}
 
-```{r figure17, fig.align = "center", fig.cap = "(ref:fig17-caption)", out.width = "7.5in"}
+```{r figure17, fig.cap = "(ref:fig17-caption)", out.width = "7.5in"}
 
 source("figure-code/Figure_17_Vertical_Structure_Nutrients.R", local = knitr::knit_global())
 
@@ -234,7 +234,7 @@ knitr::include_graphics('figure/Figure17.png')
 
 (ref:fig18-caption) Vertically-integrated nitrate, phosphate, and silicate concentration (mmol m\textsuperscript{-3}) sampled in the spring (April) and fall (September and October) at AZMP fixed station GULD_03. Circles represent the vertically-integrated nutrient inventories for each depth interval and year. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
 
-```{r figure18, fig.align = "center", fig.cap = "(ref:fig18-caption)"}
+```{r figure18, fig.cap = "(ref:fig18-caption)"}
 
 source("figure-code/Figure_18_19_20_21_Nutrient_Trends_Trapezoidal_Integration.R", local = knitr::knit_global())
 
@@ -247,7 +247,7 @@ knitr::include_graphics('figure/Figure18.png')
 
 (ref:fig19-caption) Vertically-integrated nitrate, phosphate, and silicate concentration (mmol m\textsuperscript{-3}) sampled in the spring (April) and fall (September and October) at AZMP fixed station SG_28. Circles represent the vertically-integrated nutrient inventories for each depth interval and year. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
 
-```{r figure19, fig.align = "center", fig.cap = "(ref:fig19-caption)"}
+```{r figure19, fig.cap = "(ref:fig19-caption)"}
 
 knitr::include_graphics('figure/Figure19.png')
 
@@ -258,7 +258,7 @@ knitr::include_graphics('figure/Figure19.png')
 
 (ref:fig20-caption) Vertically-integrated nitrate, phosphate, and silicate concentration (mmol m\textsuperscript{-3}) sampled in the spring (April) and fall (September and October) at AZMP fixed station GULD_04. Circles represent the vertically-integrated nutrient inventories for each depth interval and year. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
 
-```{r figure20, fig.align = "center", fig.cap = "(ref:fig20-caption)"}
+```{r figure20, fig.cap = "(ref:fig20-caption)"}
 
 knitr::include_graphics('figure/Figure20.png')
 
@@ -269,7 +269,7 @@ knitr::include_graphics('figure/Figure20.png')
 
 (ref:fig21-caption) Vertically-integrated nitrate, phosphate, and silicate concentration (mmol m\textsuperscript{-3}) sampled in the spring (April) and fall (September and October) at AZMP fixed station SG_23. Circles represent the vertically-integrated nutrient inventories for each depth interval and year. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
 
-```{r figure21, fig.align = "center", fig.cap = "(ref:fig21-caption)"}
+```{r figure21, fig.cap = "(ref:fig21-caption)"}
 
 knitr::include_graphics('figure/Figure21.png')
 
@@ -283,7 +283,7 @@ knitr::include_graphics('figure/Figure21.png')
 
 \begin{landscapepage}
 
-```{r figure22, fig.align = "center", fig.cap = "(ref:fig22-caption)", out.width = "6.5in"}
+```{r figure22, fig.cap = "(ref:fig22-caption)", out.width = "6.5in"}
 
 source("figure-code/Figure_22_Gully_HL6_LL7_Integr_Nutrient_Trends.R", local = knitr::knit_global())
 
@@ -299,7 +299,7 @@ knitr::include_graphics('figure/Figure22.png')
 
 \begin{landscapepage}
 
-```{r figure23, fig.align = "center", fig.cap = "(ref:fig23-caption)", out.width = "7.5in"}
+```{r figure23, fig.cap = "(ref:fig23-caption)", out.width = "7.5in"}
 
 source("figure-code/Figure_23_Vertical_Structure_Chlorophyll.R", local = knitr::knit_global())
 
@@ -315,7 +315,7 @@ knitr::include_graphics('figure/Figure23.png')
 
 (ref:fig24-caption) Vertically-integrated chlorophyll _a_ concentration (mg m\textsuperscript{-3}) from the top 100 m sampled in the spring (April) and fall (September and October) at the four AZMP fixed stations in the Gully. Absent circles indicate that sampling did not occur within that particular depth interval and/or year.
 
-```{r figure24, fig.align = "center", fig.cap = "(ref:fig24-caption)"}
+```{r figure24, fig.cap = "(ref:fig24-caption)"}
 
 source("figure-code/Figure_24_Chlorophyll_Trends_Trapezoidal_Integration.R", local = knitr::knit_global())
 
@@ -328,7 +328,7 @@ knitr::include_graphics('figure/Figure24.png')
 
 (ref:fig25-caption) Remotely-sensed bi-monthly average sea surface chlorophyll concentrations (1998 to 2018, $\pm$ S.D.) in the slope water satellite areas off the eastern (SW LL) and central (SW HL) Scotian Shelf and in the Gully MPA (GMPA).
 
-```{r figure25, fig.align = "center", fig.cap = "(ref:fig25-caption)"}
+```{r figure25, fig.cap = "(ref:fig25-caption)"}
 
 knitr::include_graphics('figure/Figure25.png')
 
@@ -339,7 +339,7 @@ knitr::include_graphics('figure/Figure25.png')
 
 (ref:fig26-caption) Time series for remotely-sensed annual average sea surface chlorophyll concentrations between 1998 and 2018 in the slope water satellite areas off the eastern (SW LL) and central (SW HL) Scotian Shelf and in the Gully MPA (GMPA).
 
-```{r figure26, fig.align = "center", fig.cap = "(ref:fig26-caption)"}
+```{r figure26, fig.cap = "(ref:fig26-caption)"}
 
 knitr::include_graphics('figure/Figure26.png')
 
@@ -350,7 +350,7 @@ knitr::include_graphics('figure/Figure26.png')
 
 (ref:fig27-caption) Average values (1998 to 2018, $\pm$ S.D.) of the spring bloom metrics derived from the time shifted Gaussian functions fitted to the spring peaks of sea surface chlorophyll concentration in the slope water areas off the central (SW HL) and eastern (SW LL) Scotian Shelf and the Gully MPA (GMPA). Filled circles, squares, triangles and diamonds represent values for bloom start dates, durations, magnitudes and amplitudes, respectively.
 
-```{r figure27, fig.align = "center", fig.cap = "(ref:fig27-caption)"}
+```{r figure27, fig.cap = "(ref:fig27-caption)"}
 
 knitr::include_graphics('figure/Figure27.png')
 
@@ -361,7 +361,7 @@ knitr::include_graphics('figure/Figure27.png')
 
 (ref:fig28-caption) Relationships between _in situ_ measurements of chlorophyll concentrations in the 0 to 10 m depth range at stations throughout the satellite areas (SW LL, GMPA, SW HL) and remotely-sensed sea surface chlorophyll concentrations averaged for the appropriate months/years.
 
-```{r figure28, fig.align = "center", fig.cap = "(ref:fig28-caption)"}
+```{r figure28, fig.cap = "(ref:fig28-caption)"}
 
 knitr::include_graphics('figure/Figure28.png')
 
@@ -372,7 +372,7 @@ knitr::include_graphics('figure/Figure28.png')
 
 (ref:fig29-caption) Time series for bulk wet weight biomass of large (>1 cm, filled circles) and small (<1 cm, open squares) zooplankton in spring at stations upstream (LL_07) and downstream (HL_06) of the Gully, within the Gully (GULD_03) and across the Gully mouth (SG_28, GULD_04, SG_23).
 
-```{r figure29, fig.align = "center", fig.cap = "(ref:fig29-caption)"}
+```{r figure29, fig.cap = "(ref:fig29-caption)"}
 
 knitr::include_graphics('figure/Figure29.png')
 
@@ -383,7 +383,7 @@ knitr::include_graphics('figure/Figure29.png')
 
 (ref:fig30-caption) Time series for bulk wet weight biomass of large (>1 cm, filled circles) and small (<1 cm, open squares) zooplankton in fall at stations upstream (LL_07) and downstream (HL_06) of the Gully, within the Gully (GULD_03) and across the Gully mouth (SG_28, GULD_04, SG_23).
 
-```{r figure30, fig.align = "center", fig.cap = "(ref:fig30-caption)"}
+```{r figure30, fig.cap = "(ref:fig30-caption)"}
 
 knitr::include_graphics('figure/Figure30.png')
 
@@ -394,7 +394,7 @@ knitr::include_graphics('figure/Figure30.png')
 
 (ref:fig31-caption) Average spring abundances of the ten most abundant copepod taxa at stations at the shelf-break upstream (LL_07) and downstream (HL_06) of the Gully, and at one station within the Gully (GULD_03) and averaged over three stations across the Gully mouth (SG_28, GULD_04, and SG_23). The numbers (N) in the legend represent the sums of the ten most abundant taxa at each location with units of 1000s m\textsuperscript{-2}.
 
-```{r figure31, fig.align = "center", fig.cap = "(ref:fig31-caption)", out.width = "5.5in"}
+```{r figure31, fig.cap = "(ref:fig31-caption)", out.width = "5.5in"}
 
 source("figure-code/Figure_31_32_Copepod_Abundance_Plots.R", local = knitr::knit_global())
 
@@ -407,7 +407,7 @@ knitr::include_graphics('figure/Figure31.png')
 
 (ref:fig32-caption) Average fall abundances of the ten most abundant copepod taxa at stations at the shelf-break upstream (LL_07) and downstream (HL_06) of the Gully, and at one station within the Gully (GULD_03) and averaged over three stations across the Gully mouth (SG_28, GULD_04, and SG_23). The numbers (N) in the legend represent the sums of the ten most abundant taxa at each location with units of 1000s m\textsuperscript{-2}.
 
-```{r figure32, fig.align = "center", fig.cap = "(ref:fig32-caption)", out.width = "5.5in"}
+```{r figure32, fig.cap = "(ref:fig32-caption)", out.width = "5.5in"}
 
 knitr::include_graphics('figure/Figure32.png')
 
@@ -422,7 +422,7 @@ knitr::include_graphics('figure/Figure32.png')
 
 \begin{landscapepage}
 
-```{r figure33, fig.align = "center", fig.cap = "(ref:fig33-caption)", out.width = "7.5in"}
+```{r figure33, fig.cap = "(ref:fig33-caption)", out.width = "7.5in"}
 
 knitr::include_graphics('figure/Figure33.png')
 
@@ -436,7 +436,7 @@ knitr::include_graphics('figure/Figure33.png')
 
 (ref:fig34-caption) Abundance of stage CV (filled circles) and stage CIV (open squares) _C. finmarchicus_ versus sampling date at LL_07, GULD_03 and HL_06 in fall between 1999 and 2018. Note that the outlier circled in black from 2017 at LL_07 was excluded from the only significant correlation between abundance and sampling date.
 
-```{r figure34, fig.align = "center", fig.cap = "(ref:fig34-caption)", out.width = "4.75in"}
+```{r figure34, fig.cap = "(ref:fig34-caption)", out.width = "4.75in"}
 
 knitr::include_graphics('figure/Figure34.png')
 

@@ -289,14 +289,16 @@ kbl(ctable4,
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Add a another header above the first.
   kableExtra::add_header_above(c(" " = 1, "Spring" = 6, "Fall" = 6), bold = TRUE, font_size = 11) %>%
-  # Put a horizontal line afte the 20th row before the total row at the bottom of the table.
+  # Put a horizontal line after the 20th row before the total row at the bottom of the table.
   kableExtra::row_spec(20, hline_after = TRUE) %>%
   # Bold the total row.
   kableExtra::row_spec(21, bold = TRUE) %>%
   # Alternate the rows with different colors to make it easier to read.
   kableExtra::kable_styling(latex_options = c("striped", "scale_down")) %>%
   # Add lines to the right of columns 1 and 5.
-  kableExtra::column_spec (c(1,7), border_right = TRUE)
+  kableExtra::column_spec (c(1,7), border_right = TRUE) %>%
+  # Hold the table position at the top of the page.
+  kableExtra::kable_styling(latex_options = "hold_position")
 
 ```
 \end{landscapepage}
@@ -330,13 +332,16 @@ kbl(ctable5,
     format = "latex",
     escape = FALSE,
     align = c("c", rep("l", 8)),
+    valign = "t!",
     caption = "Pearson correlation coefficients (R\\textsuperscript{2}) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.") %>%
   # Make the header row bold text
   kableExtra::row_spec(0, bold = TRUE) %>%
   # Add a another header above the first.
   kableExtra::add_header_above(c(" " = 1, "Spring" = 4, "Fall" = 4), bold = TRUE, font_size = 12) %>%
   # Add lines to the right of columns 1 and 5.
-  kableExtra::column_spec (c(1,5), border_right = TRUE)
+  kableExtra::column_spec (c(1,5), border_right = TRUE) %>%
+  # Hold the table position at the top of the page.
+  kableExtra::kable_styling(latex_options = "hold_position")
 
 ```
 \end{landscapepage}
@@ -382,7 +387,9 @@ kbl(ctable6,
   # Make the table text size 12 font.
   kableExtra::kable_styling(font_size = 12) %>%
   # Collapse the values in column 1 so values are not repeated.
-  kableExtra::collapse_rows(columns = 1, latex_hline = "major", valign = "middle")
+  kableExtra::collapse_rows(columns = 1, latex_hline = "major", valign = "middle") %>%
+  # Hold the table position at the top of the page.
+  kableExtra::kable_styling(latex_options = "hold_position")  
 
 ```
 \end{landscapepage}
@@ -422,7 +429,9 @@ kbl(ctable7,
   # Put horizontal lines after the 6th and 11th  rows to separate areas for easier reading.
   kableExtra::row_spec(c(6,10), hline_after = TRUE) %>%
   # Make the table's font size 12.
-  kableExtra::kable_styling(font_size = 12, latex_options = "striped")
+  kableExtra::kable_styling(font_size = 12, latex_options = "striped") %>%
+  # Hold the table position at the top of the page.
+  kableExtra::kable_styling(latex_options = "hold_position")
 
 ```
 \clearpage
@@ -460,7 +469,9 @@ kbl(ctable8,
   # Put horizontal lines after the 5th and 9th  rows to separate areas for easier reading.
   kableExtra::row_spec(c(5,9), hline_after = TRUE) %>%
   # Make the table's font size 12.
-  kableExtra::kable_styling(font_size = 12, latex_options = "striped")
+  kableExtra::kable_styling(font_size = 12, latex_options = "striped") %>%
+  # Hold the table position at the top of the page.
+  kableExtra::kable_styling(latex_options = "hold_position")
 
 ```
 \clearpage

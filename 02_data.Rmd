@@ -80,7 +80,7 @@ Given that this report represents the first compilation and preliminary analysis
 
 R package ‘csasdown’ [@anderson_2020] was used as the primary mechanism to generate this report. This package was developed by members of DFO’s Pacific Region to facilitate the creation of CSAS documents in PDF or Word format using the previously-developed  ‘rmarkdown’ and ‘bookdown’ packages, and has recently been applied to generate a CSAS document presenting a synthesis of available fishery and biological data and basic model fits for 109 groundfish species in the Pacific [@anderson_2019].
 
-RStudio, an integrated development environment (IDE) for R, was used to assemble, manipulate, and execute the R code, and produce the analytical products presented in this report. The R code used to create the PDF version of this report is archived in [GitHub: https://github.com/jeff-jackson-dfo/reproducible-gully-report](https://github.com/jeff-jackson-dfo/reproducible-gully-report).
+RStudio, an integrated development environment (IDE) for R, was used to assemble, manipulate, and execute the R code, and produce the analytical products presented in this report. The R code used to create the PDF version of this report is archived in [GitHub: https://github.com/AtlanticR/reproducible-gully-report](https://github.com/AtlanticR/reproducible-gully-report).
 
 The analyses presented here are a compilation of both R and excel outputs. All of the tables and more than half of the figures are dynamically generated. While this publication encapsulates the first step towards reproducible reporting on the oceanographic conditions of the Gully MPA, future iterations should strive towards fully automating the analyses presented herein.
 
