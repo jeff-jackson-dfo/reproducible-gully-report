@@ -1,5 +1,3 @@
-</br>
-
 ## Background
 
 In 2019, a joint project called the “Synthesis of Gully MPA
@@ -69,19 +67,19 @@ create the technical report.
 done by selecting the menu item **File -\> New Project** which open the
 New Project wizard (Figure 1).
 
-<img src="figures/Figure-01-Select-New-Project-From-Menu.png" width="1440" style="display: block; margin: auto;" />
+<img src="readme-figures/Figure-01-Select-New-Project-From-Menu.png" width="1440" style="display: block; margin: auto;" />
 
 </br>
 
 **Step 2.** Click the New Directory option.
 
-<img src="figures/Figure-02-Select-New-Directory.png" width="535" style="display: block; margin: auto;" />
+<img src="readme-figures/Figure-02-Select-New-Directory.png" width="535" style="display: block; margin: auto;" />
 
 </br>
 
 **Step 3.** Click the New Project option.
 
-<img src="figures/Figure-03-Select-New-Project.png" width="535" style="display: block; margin: auto;" />
+<img src="readme-figures/Figure-03-Select-New-Project.png" width="535" style="display: block; margin: auto;" />
 
 </br>
 
@@ -90,7 +88,7 @@ repository” and “Use renv with this project” before pressing the
 **Create Project** button. Note the “Open in a new session” option only
 needs to be checked if the user was already in an active R project.
 
-<img src="figures/Figure-04-CreateNewProjectWithRenvAndGit.png" width="536" style="display: block; margin: auto;" />
+<img src="readme-figures/Figure-04-CreateNewProjectWithRenvAndGit.png" width="536" style="display: block; margin: auto;" />
 
 These options were selected to:
 
@@ -101,11 +99,11 @@ These options were selected to:
 A new R environment will open. The following figures show how the
 environment looks within RStudio and in the file browser.
 
-<img src="figures/Figure-05-EmptyProjectEnvironment.png" width="1536" style="display: block; margin: auto;" />
+<img src="readme-figures/Figure-05-EmptyProjectEnvironment.png" width="1536" style="display: block; margin: auto;" />
 
 </br>
 
-<img src="figures/Figure-06-CleanProjectSetup.png" width="1184" style="display: block; margin: auto;" />
+<img src="readme-figures/Figure-06-CleanProjectSetup.png" width="1184" style="display: block; margin: auto;" />
 
 </br>
 
@@ -519,7 +517,7 @@ Execute the `draft` function, setting “techreport” as the ‘type’:
 You will now see that a number of R markdown files and subfolders were
 unpacked into both the R environment and project directory.
 
-<img src="figures/Figure-07-csasfiles.png" width="276" style="display: block; margin: auto;" />
+<img src="readme-figures/Figure-07-csasfiles.png" width="276" style="display: block; margin: auto;" />
 
 Among these files includes several .Rmd files: *01_introduction.Rmd*,
 *02_methods.Rmd*, *03_results.Rmd*, *04_discussion.Rmd*,
@@ -792,7 +790,7 @@ code for future iterations of this report, or other reports designed to
 evaluate changes in oceanographic conditions can re-write the text in
 each .Rmd file.
 
-<img src="figures/Figure-08-GullyDirectory.png" width="372" style="display: block; margin: auto;" />
+<img src="readme-figures/Figure-08-GullyDirectory.png" width="372" style="display: block; margin: auto;" />
 
 **Step 2.** Double-click on the R project titled
 **GullyReproducibleReport.RProj**, or open the project from within
