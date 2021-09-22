@@ -1,5 +1,3 @@
-</br>
-
 ## Background
 
 In 2019, a joint project called the “Synthesis of Gully MPA
