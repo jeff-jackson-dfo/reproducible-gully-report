@@ -1179,9 +1179,8 @@ packages.
 Use `renv::status()` to check the that the project is in sync with the
 lockfile, and if not, execute `renv::snapshot()`.
 
-Press the **Knit** button to compile the various .Rmd chapters into a
-single report. The output in the R Markdown pane will resemble the
-following:
+From the Index.Rmd file, press the **Knit** button to compile the various .Rmd chapters into a
+single report. This step may take several minutes to complete. The output in the R Markdown pane will resemble the following:
 
 ``` r
 processing file: techreport.Rmd
