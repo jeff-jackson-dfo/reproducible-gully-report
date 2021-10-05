@@ -39,6 +39,10 @@ products and formatting.
 
 </br>
 
+This README is divided in two parts: 1) Demonstration of how to Create a Template DFO Technical Report using csasdown; 2) Replication of the Gully Oceanographic Monitoring DFO Technical Report. If you have never render a csasdown document, we recommend you follow all steps laid out in part 1 before moving on to part 2.
+
+</br>
+
 ## Demonstration of how to Create a Template DFO Technical Report using csasdown
 
 The **csasdown** [GitHub
@@ -830,7 +834,8 @@ Type 'q()' to quit R.
 To re-sync the environment, execute the following:
 
 ``` r
-> renv::restore()
+> renv::restore() 
+This step may take several minutes to complete (10 - 20 mins).
 The following package(s) will be updated:
 
 # CRAN ===============================
