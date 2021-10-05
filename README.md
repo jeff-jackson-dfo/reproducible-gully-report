@@ -37,8 +37,6 @@ on the oceanographic conditions of the Gully MPA could utilize these
 instructions and code to produce a report with consistent analytical
 products and formatting.
 
-</br>
-
 This README is divided in two parts: 1) Demonstration of how to Create a Template DFO Technical Report using csasdown; 2) Replication of the Gully Oceanographic Monitoring DFO Technical Report. If you have never render a csasdown document, we recommend you follow all steps laid out in part 1 before moving on to part 2.
 
 </br>
