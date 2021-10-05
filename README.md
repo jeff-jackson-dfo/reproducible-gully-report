@@ -782,9 +782,11 @@ on their computer.
 It also helps to eliminate possible errors by installing the devtools R
 package.
 
-**Step 1.** Download the repository from GitHub by clicking the Code
-button, and ‘Download ZIP’ option. Unzip the contents of the project
-directory.
+**Step 1.** 
+
+Option a: Clone the repository https://happygitwithr.com/clone.html
+
+Option b: Download the repository from GitHub by clicking the Code button, and ‘Download ZIP’ option. Unzip the contents of the project directory.
 
 You will see that the ‘chapter’ .Rmd files are slightly different from
 those unpacked from `draft("techreport")`. Additional chapters were
