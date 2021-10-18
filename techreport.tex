@@ -68,7 +68,7 @@
 % Protect lower case words (i.e., species names) in \Addlcwords{}, in "TechReport.sty"
 \newcommand{\trTitle}{Oceanographic monitoring of the Gully MPA -- A synopsis of data collected by the Atlantic Zone Monitoring Program}
 \newcommand{\trYear}{2021}
-\newcommand{\trReportNum}{nnn}
+\newcommand{\trReportNum}{337}
 % Optional
 \newcommand{\trAuthFootA}{Email: Jeffrey.Jackson @ dfo-mpo.gc.ca}
 \newcommand{\trAuthsLong}{Jeffrey W. Jackson\textsuperscript{1}, Erica J. H. Head\textsuperscript{1}, Lindsay I. Beazley\textsuperscript{1}, and Andrew T. Cogswell\textsuperscript{1}}
@@ -88,7 +88,7 @@ Canada, B2Y 4A2}
 % Resume (i.e., French abstract)
 \newcommand{\trResume}{En 2004, le Gully est devenu la toute première zone de protection marine (ZPM) désignée dans la région de l'Atlantique en vertu de la Loi sur les océans, dans le but de protéger sa grande biodiversité de coraux d'eau froide et l'habitat d'une population de baleines à bec communes en voie de disparition. Bien que le milieu océanographique de la ZPM du Gully ait été décrit, peu de choses ont été faites pour évaluer les changements dans ses propriétés physiques, chimiques ou biologiques, un élément clé pour déterminer si la ZPM atteint ses objectifs de conservation. Depuis la fin des années 1990, le Programme de monitorage de la zone Atlantique (PMZA) recueille régulièrement des données hydrographiques et biologiques dans la ZPM du Gully dans le cadre des objectifs auxiliaires du programme. Ces données n'avaient cependant pas encore été compilées et analysées en vue d'une surveillance environnementale à long terme. Grâce à une initiative conjointe entre le Secrétariat canadien de consultation scientifique de la région des Maritimes de Pêches et Océans Canada et le PMZA, nous présentons une compilation et une analyse reproductible des données océanographiques physiques, chimiques et biologiques recueillies à quatre stations d'échantillonnage fixes dans le Gully entre 2000 et 2018. Les données sur la température moyenne, la salinité, l'oxygène dissous, les nutriments et la chlorophylle \emph{a} qui ont été recueillies au moyen des profils de CTP et des bouteilles d'échantillonnage ont été évaluées à l'intérieur des stations et entre elles. On a également évalué les modèles de poids humide de la biomasse et de l'abondance des taxons de copépodes les plus communs observés dans les échantillons de zooplancton prélevés au moyen de filets à anneaux verticaux. De plus, les différences de température de la surface de la mer et de chlorophylle \emph{a} observées sur les images satellites recueillies entre 1998 et 2018 ont été examinées afin de déterminer si les propriétés de la surface de la ZPM sont uniques comparativement aux zones adjacentes du rebord du plateau continental. Le principal objectif de ce rapport est de fournir des conseils opérationnels pour assurer une surveillance efficace des propriétés océanographiques du Gully par le PMZA, en mettant l'accent sur le recensement des redondances et des lacunes dans la stratégie de surveillance existante du programme pour la ZPM. Nous offrons également une évaluation préliminaire des indicateurs de surveillance de l'environnement océanographique présentés dans \protect\hyperlink{ref-kenchington_2010}{Kenchington} (\protect\hyperlink{ref-kenchington_2010}{2010}).}
 
-\newcommand{\trISBN}{}
+\newcommand{\trISBN}{978-0-660-40625-1}
 
 \DeclareGraphicsExtensions{.png,.pdf}
 %%%%% Start %%%%%
@@ -357,7 +357,7 @@ Given that this report represents the first compilation and preliminary analysis
 
 R package `csasdown' (\protect\hyperlink{ref-anderson_2020}{Anderson \textit{et al.} 2020}) was used as the primary mechanism to generate this report. This package was developed by members of DFO's Pacific Region to facilitate the creation of CSAS documents in PDF or Word format using the previously-developed `rmarkdown' and `bookdown' packages, and has recently been applied to generate a CSAS document presenting a synthesis of available fishery and biological data and basic model fits for 109 groundfish species in the Pacific (\protect\hyperlink{ref-anderson_2019}{Anderson \textit{et al.} 2019}).
 
-RStudio, an integrated development environment (IDE) for R, was used to assemble, manipulate, and execute the R code, and produce the analytical products presented in this report. The R code used to create the PDF version of this report is archived in \href{https://github.com/jeff-jackson-dfo/reproducible-gully-report}{GitHub: https://github.com/jeff-jackson-dfo/reproducible-gully-report}.
+RStudio, an integrated development environment (IDE) for R, was used to assemble, manipulate, and execute the R code, and produce the analytical products presented in this report. The R code used to create the PDF version of this report is archived in \href{https://github.com/AtlanticR/reproducible-gully-report}{GitHub: https://github.com/AtlanticR/reproducible-gully-report}.
 
 The analyses presented here are a compilation of both R and excel outputs. All of the tables and more than half of the figures are dynamically generated. While this publication encapsulates the first step towards reproducible reporting on the oceanographic conditions of the Gully MPA, future iterations should strive towards fully automating the analyses presented herein.
 
@@ -581,7 +581,7 @@ While there were no apparent trends in nutrient or chlorophyll concentrations ov
 \hypertarget{sec:acknowledgements}{%
 \section{ACKNOWLEDGEMENTS}\label{sec:acknowledgements}}
 
-The completion of this project could not have been achieved without the input, advice and helpful suggestions of our many colleagues at the Bedford Institute of Oceanography. We thank Tana Worcester, Catalina Gomez, Gordana Lazin, Ryan Stanley, Phillip Greyson, and Nick Jeffery for their ideas, advice and guidance during the development and data synthesis stages of this project. We thank physical oceanographers Dave Hebert, Blair Greenan, Chantelle Layton, and Benoit Casault for their suggestions on data analysis and interpretation. We thank the authors of R `csasdown' for their technical assistance during the generation of this report. We would also like to thank all sea-going, field operations, data management personnel for their support during the collection and processing of data collected during the AZMP biannual surveys. We also thank the captains and crew of the Canadian Coast Guard vessels and chartered platforms used to conduct the surveys over the years.
+The completion of this project could not have been achieved without the input, advice and helpful suggestions of our many colleagues at the Bedford Institute of Oceanography. We thank Tana Worcester, Catalina Gomez, Gordana Lazin, Ryan Stanley, Phillip Greyson, and Nick Jeffery for their ideas, advice and guidance during the development and data synthesis stages of this project. We thank Dave Hebert, Blair Greenan, Chantelle Layton, and Benoit Casault for their suggestions on data analysis and interpretation, and particularly Benoit Casault for his R code on the trapezoidal method for numerical integration. We thank the authors of R `csasdown' for their technical assistance during the generation of this report. We would also like to thank all sea-going, field operations, data management personnel for their support during the collection and processing of data collected during the AZMP biannual surveys. We also thank the captains and crew of the Canadian Coast Guard vessels and chartered platforms used to conduct the surveys over the years.
 
 We thank reviewers Chantelle Layton and Nick Jeffery (both of DFO) for their reviews of this publication.
 
@@ -1000,7 +1000,7 @@ HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 
 \end{landscapepage}
 \clearpage
 \begin{landscapepage}
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table4}Ring net samples collected at the four AZMP fixed stations in the Gully MPA and at core AZMP stations HL\_06 and LL\_07 in spring and fall between 1999 and 2018. The numbers represent the month of sample collection, where April-June represent spring and September-December represent fall. The total number of ring net tows collected at each station in each season is given below.}
 \centering
@@ -1039,11 +1039,11 @@ HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 
 \end{landscapepage}
 \clearpage
 \begin{landscapepage}
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table5}Pearson correlation coefficients (R\textsuperscript{2}) and p-value significance resulting from linear regression models of the relationship between temperature and year measured at 5 depth intervals in spring and fall at each of the four AZMP fixed stations in the Gully MPA. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
-\begin{tabular}[t]{>{}c|lll>{}l|llll}
+\begin{tabular}[t!]{>{}c|lll>{}l|llll}
 \toprule
 \multicolumn{1}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{ }\egroup{}} & \multicolumn{4}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{Spring}\egroup{}} & \multicolumn{4}{c}{\bgroup\fontsize{12}{14}\selectfont \textbf{Fall}\egroup{}} \\
 \cmidrule(l{3pt}r{3pt}){2-5} \cmidrule(l{3pt}r{3pt}){6-9}
@@ -1060,7 +1060,7 @@ HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 
 \end{landscapepage}
 \clearpage
 \begin{landscapepage}
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table6}Pearson correlation coefficients (R\textsuperscript{2}) between the four bloom metrics, between the metrics and winter-spring sea surface temperatures (Jan to Apr SSTs) and trends over the 1998 to 2018 period. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
@@ -1103,7 +1103,7 @@ HUD2018030 & SG\_23 & 156 & Fall AZMP & September & -58.7290 & 43.8597 & 1202 & 
 \end{table}
 \end{landscapepage}
 \clearpage
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table7}Pearson correlation coefficients (R\textsuperscript{2}) between zooplankton abundances and near surface temperatures and trends in both over time at HL\_06, GULD\_03 and LL\_07 in spring (April) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
@@ -1147,7 +1147,7 @@ Year &  &  & \\
 \end{tabular}
 \end{table}
 \clearpage
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:table8}Pearson correlation coefficients (R\textsuperscript{2}) between zooplankton abundances and near surface temperatures and trends in both over time at HL\_06, GULD\_03 and LL\_07 in fall (Sept to Dec) between 1999 and 2018. Negative relationships are denoted by minus signs. Levels of significance are: * for p < 0.05, ** for p < 0.01 and *** for p < 0.001.}
 \centering
@@ -1197,23 +1197,18 @@ Year &  &  \vphantom{2} & \\
 \end{tabular}
 \end{table}
 \clearpage
-
+\begin{landscapepage}
 \hypertarget{sec:figures}{%
 \section{FIGURES}\label{sec:figures}}
-
-
-
-\vspace*{\fill}
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=6in]{figure/Figure01}}{Figure \ref{fig:figure1}} 
+{\centering \pdftooltip{\includegraphics[width=6.5in]{figure/Figure01}}{Figure \ref{fig:figure1}} 
 
 }
 
-\caption{Location of the four AZMP fixed stations in the Gully MPA (blue circles). The boundaries of the three Gully Management Zones are also shown. Top-right map inset shows the position of the Gully MPA in relation to Atlantic Canada and DFO's Maritime Region administrative boundary.}\label{fig:figure1}
+\caption{Location of the four AZMP fixed stations in the Gully MPA (blue circles). The boundaries of the three Gully Management Zones are also shown. Top-right map inset shows the position of the Gully MPA in relation to Atlantic Canada and DFO’s Maritime Region administrative boundary.}\label{fig:figure1}
 \end{figure}
-\vspace*{\fill}
-
+\end{landscapepage}
 \clearpage
 
 
@@ -1228,14 +1223,16 @@ Year &  &  \vphantom{2} & \\
 \clearpage
 
 
+\begin{landscapepage}
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=6in]{figure/Figure03}}{Figure \ref{fig:figure3}} 
+{\centering \pdftooltip{\includegraphics[width=7.0in]{figure/Figure03}}{Figure \ref{fig:figure3}} 
 
 }
 
 \caption{The Gully MPA in relation to comparative upstream (LL\_07) and downstream (HL\_06) stations from the AZMP's core Louisbourg and Halifax lines, respectively.}\label{fig:figure3}
 \end{figure}
+\end{landscapepage}
 \clearpage
 
 
@@ -1305,7 +1302,7 @@ Year &  &  \vphantom{2} & \\
 \begin{landscapepage}
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=7.5in]{figure/Figure09}}{Figure \ref{fig:figure9}} 
+{\centering \pdftooltip{\includegraphics[width=9in]{figure/Figure09}}{Figure \ref{fig:figure9}} 
 
 }
 

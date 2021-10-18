@@ -1,7 +1,7 @@
 ---
 title: "Oceanographic monitoring of the Gully MPA – A synopsis of data collected by the Atlantic Zone Monitoring Program"
 year: 2021
-report_number: nnn
+report_number: 337
 author: |
   Jeffrey W. Jackson^1^,
   Erica J. H. Head^1^,
@@ -9,7 +9,7 @@ author: |
   Andrew T. Cogswell^1^
 author_list: "Jackson, J.W., Head, E.J.H., Beazley, L.I. and Cogswell, A.T."
 region: Maritimes Region
-isbn: ""
+isbn: "978-0-660-40625-1"
 address: |
   ^1^Ocean and Ecosystem Sciences Division\
      Fisheries and Oceans Canada\
@@ -112,6 +112,7 @@ library(ggplot2)
 library(readr)
 library(rosettafish)
 library(tibble)
+library(remotes)
 library(csasdown)
 library(kableExtra)
 library(lubridate)
@@ -121,6 +122,13 @@ library(scales)
 library(stringi)
 library(stringr)
 library(oce)
+library(fs)
+library(tidyverse)
+library(cowplot)
+library(egg)
+library(ggpubr)
+library(pracma)
+library(ggthemes)
 
 ```
 
