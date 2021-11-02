@@ -37,6 +37,8 @@ on the oceanographic conditions of the Gully MPA could utilize these
 instructions and code to produce a report with consistent analytical
 products and formatting.
 
+This README is divided in two parts: 1) Demonstration of how to Create a Template DFO Technical Report using csasdown; 2) Replication of the Gully Oceanographic Monitoring DFO Technical Report. If you have never render a csasdown document, we recommend you follow all steps laid out in part 1 before moving on to part 2.
+
 </br>
 
 ## Demonstration of how to Create a Template DFO Technical Report using csasdown
@@ -778,9 +780,11 @@ on their computer.
 It also helps to eliminate possible errors by installing the devtools R
 package.
 
-**Step 1.** Download the repository from GitHub by clicking the Code
-button, and ‘Download ZIP’ option. Unzip the contents of the project
-directory.
+**Step 1.** 
+
+Option a: Clone the repository https://happygitwithr.com/clone.html
+
+Option b: Download the repository from GitHub by clicking the Code button, and ‘Download ZIP’ option. Unzip the contents of the project directory.
 
 You will see that the ‘chapter’ .Rmd files are slightly different from
 those unpacked from `draft("techreport")`. Additional chapters were
@@ -830,7 +834,8 @@ Type 'q()' to quit R.
 To re-sync the environment, execute the following:
 
 ``` r
-> renv::restore()
+> renv::restore() 
+This step may take several minutes to complete (10 - 20 mins).
 The following package(s) will be updated:
 
 # CRAN ===============================
@@ -1172,9 +1177,8 @@ packages.
 Use `renv::status()` to check the that the project is in sync with the
 lockfile, and if not, execute `renv::snapshot()`.
 
-Press the **Knit** button to compile the various .Rmd chapters into a
-single report. The output in the R Markdown pane will resemble the
-following:
+From the Index.Rmd file, press the **Knit** button to compile the various .Rmd chapters into a
+single report. This step may take several minutes to complete. The output in the R Markdown pane will resemble the following:
 
 ``` r
 processing file: techreport.Rmd
