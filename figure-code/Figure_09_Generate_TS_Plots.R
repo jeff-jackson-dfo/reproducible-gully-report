@@ -67,7 +67,7 @@ yLabel <- paste0("Temperature (", "\u00b0", "C)")
 
 # Save the plot to a file.
 figpath <- paste0(projpath, "/figure/")
-png(paste0(figpath, "Figure09.png"), units = "in", width = 11, height = 8.5, res = 400)
+png(paste0(figpath, "Figure09.png"), units = "in", width = 11, height = 7.3, res = 400)
 
 # Change the plotting figure so it plots 2 rows each with four plots.
 # par(mfrow=c(2,4))
@@ -123,16 +123,16 @@ for (x in 1:2) {
         plotTS(ctd, inSitu = TRUE, Tlim = templim, Slim = sallim, pt.bg = tsDsColors[1], lwd = 1, cex = 2, cex.rho = 1, xaxt = "n", xlab = "", yaxt = "n", ylab = "", mar=c(0.5,6,5,0.75))
         axis(2, at = seq(0,20,2), cex.axis = 1.7, font.axis = 2)
         box()
-        title(main = "GULD_03", line = 2, cex.main = 3, font.main = 2)
+        title(main = "GULD_03", line = 2, cex.main = 2, font.main = 1.5)
       } else if (y == 2) {
         plotTS(ctd, inSitu = TRUE, Tlim = templim, Slim = sallim, pch = 21, pt.bg = tsDsColors[1], lwd = 1, cex = 2, cex.rho = 1, xaxt = "n", xlab = "", yaxt = "n", ylab = "", mar=c(0.5,0.5,5,0.75))
-        title(main = "SG_28", line = 2, cex.main = 3, font.main = 2)
+        title(main = "SG_28", line = 2, cex.main = 2, font.main = 1.5)
       } else if (y == 3) {
         plotTS(ctd, inSitu = TRUE, Tlim = templim, Slim = sallim, pch = 21, pt.bg = tsDsColors[1], lwd = 1, cex = 2, cex.rho = 1, xaxt = "n", xlab = "", yaxt = "n", ylab = "", mar=c(0.5,0.5,5,0.75))
-        title(main = "GULD_04", line = 2, cex.main = 3, font.main = 2)
+        title(main = "GULD_04", line = 2, cex.main = 2, font.main = 1.5)
       } else if (y == 4) {
         plotTS(ctd, inSitu = TRUE, Tlim = templim, Slim = sallim, pch = 21, pt.bg = tsDsColors[1], lwd = 1, cex = 2, cex.rho = 1, xaxt = "n", xlab = "", yaxt = "n", ylab = "", mar=c(0.5,0.5,5,1))
-        title(main = "SG_23", line = 2, cex.main = 3, font.main = 2)
+        title(main = "SG_23", line = 2, cex.main = 2, font.main = 1.5)
       }
     } else if (x == 2) {
       if (y == 1) {
@@ -173,7 +173,7 @@ for (x in 1:2) {
     if ((season == "Spring") & (station == "Guld03")) {
       # Get the legend details without plotting the legend.
       leg <- legend(29.5, 20.5, title = "Years", legend = tsYears, col = tsColors,
-                    pch = 21, text.font = 2, bg = 'lightblue', cex = 2, plot = FALSE)
+                    pch = 21, text.font = 1.5, bg = 'lightblue', cex = 1.5, plot = FALSE)
       # Adjust the legend size
       leftx <- leg$rect$left
       rightx <- 30.5
@@ -181,7 +181,7 @@ for (x in 1:2) {
       bottomy <- 6
       # use the new coordinates to define custom
       legend(x = c(leftx, rightx), y = c(topy, bottomy), legend = tsYears,
-             col = tsColors, pch = 16, text.font = 2, bty = "n", cex = 2,
+             col = tsColors, pch = 16, text.font = 1.5, bty = "n", cex = 1.5,
              x.intersp = 0.4, y.intersp = 0.7)
     }
   }
@@ -207,7 +207,7 @@ for (x in 1:2) {
 }
 
 # Add the x and y axis labels for the entire panel of plots.
-mtext(xLabel, side = 1, line = -2, cex = 2, font = 2, outer = TRUE)
-mtext(yLabel, side = 2, line = -2.5, cex = 2, font = 2, outer = TRUE)
+mtext(xLabel, side = 1, line = -2, cex = 1.5, font = 1.5, outer = TRUE)
+mtext(yLabel, side = 2, line = -2.5, cex = 1.5, font = 1.5, outer = TRUE)
 
 dev.off()
